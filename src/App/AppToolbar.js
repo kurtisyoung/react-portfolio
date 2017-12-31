@@ -18,9 +18,9 @@ const Header = styled.header`
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  color: #fff;
+  color: #000;
   flex-direction: column;
-  background-color: black;
+  background-color: #fff;
   justify-content: space-between;
 `;
 
@@ -58,7 +58,8 @@ const TitleLink = styled(Link)`
   margin: 0;
   margin-left: 24px;
   overflow: hidden;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-size: 1.25em;
   line-height: 1.5rem;
   color: #00d8ff;
@@ -89,9 +90,9 @@ const Logo = styled(AppLogo)`
 const NavLink = styled(Link)`
   padding-right: 8px;
   padding-left: 8px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -116,8 +117,8 @@ class AppToolbar extends React.Component {
         <Row>
           <Section start>
             <TitleLink href="/">
-              <Logo />
-              React Static
+              {/* <Logo /> */}
+              Kurtis Young
             </TitleLink>
           </Section>
           <Section end>

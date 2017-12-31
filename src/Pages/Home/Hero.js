@@ -8,13 +8,13 @@ import Link from '../../Components/Link';
 const Container = styled.div`padding: 1em 1em 2em;`;
 
 const Title = styled.h2`
-  font-family: 'Roboto', monospace;
+  font-family: 'Source Sans Pro', monospace;
   font-size: 40px;
   letter-spacing: 1px;
 `;
 
 const Description = styled.p`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1px;
 `;
 
@@ -22,18 +22,18 @@ const Button = styled(Link)`
   display: inline-block;
   padding: 0.5em 2em;
   margin-top: 1em;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: #fff;
+  background-color: #000;
   border-radius: 2px;
 
   &:active,
   &:hover,
   &:visited {
-    color: #333;
+    color: #f1f1f1;
   }
 `;
 

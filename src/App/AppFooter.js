@@ -8,14 +8,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const KRIASOFT_URL = 'https://www.kriasoft.com/';
+const KURTIS_URL = 'https://github.com/kurtisyoung/react-portfolio';
 const LICENSE_URL =
   'https://github.com/kriasoft/react-static-boilerplate/blob/master/LICENSE.txt';
 
 const Footer = styled.div`
   padding: 24px;
-  color: rgba(255, 255, 255, 0.4);
-  background-color: black;
+  color: #000;
+  background-color: #fff;
 `;
 
 const Copyright = styled.span`padding-right: 0.5em;`;
@@ -30,8 +30,9 @@ const ExtLink = styled.a`
   &:hover,
   &:active,
   &:visited {
-    color: rgba(255, 255, 255, 0.6);
+    color: #000;
     text-decoration: none;
+    transition: 300ms ease;
   }
 
   &:hover {
@@ -43,8 +44,8 @@ class AppFooter extends React.Component {
   render() {
     return (
       <Footer>
-        <Copyright css="padding-right: 0.5em">&copy; 2017</Copyright>
-        <ExtLink href={KRIASOFT_URL}>Created by Kurtis Young</ExtLink>
+        <Copyright css="padding-right: 0.5em">&copy; 2018</Copyright>
+        <ExtLink href={KURTIS_URL}>created by Kurtis Young</ExtLink>
         {/* <Separator>|</Separator>
         <ExtLink href={LICENSE_URL}></ExtLink> */}
       </Footer>

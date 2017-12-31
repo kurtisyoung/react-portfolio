@@ -44,7 +44,7 @@ const ErrorCode = styled.h1`
 
 const Title = styled.p`
   padding-bottom: 0.5em;
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
   font-size: 2em;
   font-weight: 400;
   line-height: 1em;

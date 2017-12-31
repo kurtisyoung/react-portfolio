@@ -15,10 +15,10 @@ import ErrorPage from '../Pages/ErrorPage';
 
 const Main = styled.div`
   width: 100%;
-  height: 38vh;
+  height: 100%;
   padding: 1rem;
   margin: 0 auto;
-  background: black;
+  background: #fff;
 `;
 
 type Props = {
