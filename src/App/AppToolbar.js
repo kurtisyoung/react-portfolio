@@ -1,8 +1,3 @@
-/**
- * React Static Boilerplate
- * Copyright (c) 2015-present Kriasoft. All rights reserved.
- */
-
 /* @flow */
 
 import React from 'react';
@@ -129,8 +124,8 @@ class AppToolbar extends React.Component {
         {this.props.hero &&
           React.cloneElement(this.props.hero, {
             style: {
-              maxWidth: '1000px',
-              alignSelf: 'center',
+              maxWidth: '90%',
+              margin: '0 auto',
             },
           })}
       </Header>

@@ -42,7 +42,7 @@ type State = {
 
 const defaults = {
   error: null,
-  title: 'React Static Boilerplate',
+  title: 'Kurtis Young - Portfolio',
   description: '',
   hero: null,
   body: null,
