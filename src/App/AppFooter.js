@@ -8,7 +8,7 @@ const LICENSE_URL =
   'https://github.com/kriasoft/react-static-boilerplate/blob/master/LICENSE.txt';
 
 const Footer = styled.div`
-  padding: 24px;
+  padding: 24px 0;
   color: #000;
   background-color: #fff;
 `;
@@ -38,7 +38,7 @@ const ExtLink = styled.a`
 class AppFooter extends React.Component {
   render() {
     return (
-      <Footer>
+      <Footer className="container">
         <Copyright css="padding-right: 0.5em">&copy; 2018</Copyright>
         <ExtLink href={KURTIS_URL}>created by Kurtis Young</ExtLink>
         {/* <Separator>|</Separator>

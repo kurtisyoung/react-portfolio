@@ -112,7 +112,7 @@ class AppRenderer extends React.Component<any, Props, State> {
     ) : (
       <div>
         <AppToolbar me={null} hero={this.state.hero} />
-        <Main>{this.state.body || <p>Loading...</p>}</Main>
+        <Main className="container">{this.state.body || <p>Loading...</p>}</Main>
         <AppFooter />
       </div>
     );

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="605px" height="627px" viewBox="0 0 605 627" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>K</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3FDFA4" offset="0%"></stop>
+            <stop stop-color="#3E45B9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="KK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-46.000000, 0.000000)">
+        <polygon id="K" fill="url(#linearGradient-1)" points="651 627 454.419881 627 289.256677 383.713267 210.265579 471.368046 210.265579 627 46 627 46 0 210.265579 0 210.265579 271.908702 446.341246 0 636.637982 0 403.255193 258.492154"></polygon>
+    </g>
+</svg>

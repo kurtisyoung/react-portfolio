@@ -51,13 +51,13 @@ const TitleLink = styled(Link)`
   display: inline-flex;
   padding: 16px 0;
   margin: 0;
-  margin-left: 24px;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 1.25em;
   line-height: 1.5rem;
   color: #00d8ff;
+  color: #000;
   text-decoration: none;
   text-overflow: ellipsis;
   letter-spacing: 0.0625em;
@@ -66,7 +66,7 @@ const TitleLink = styled(Link)`
   align-items: center;
 
   @media (max-width: 599px) {
-    margin-left: 16px;
+
   }
 
   &.title:active,
@@ -76,39 +76,47 @@ const TitleLink = styled(Link)`
   }
 `;
 
-const Logo = styled(AppLogo)`
-  width: 48px;
-  height: 48px;
-  margin-right: 16px;
-`;
-
-const NavLink = styled(Link)`
-  padding-right: 8px;
-  padding-left: 8px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-`;
-
-const NavLinkLast = styled(NavLink)`
-  margin-right: 24px;
-  @media (max-width: 599px) {
-    margin-right: 16px;
+const Hamburger = styled.div`
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  span {
+    height: 4px;
+    width: 35px;
+    background: #000;
+    &:nth-of-type(2) {
+      width: 30px;
+    }
+    &:last-of-type {
+      width: 25px;
+    }
   }
 `;
 
+
 class AppToolbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: false,
+    };
+  }
   props: {
     me: AppToolbar_me,
     hero: React.Element<*>,
   };
 
+  toggleClass() {
+    const currentState = this.state.active;
+    this.setState({ active: !currentState });
+  };
+
   render() {
     return (
-      <Header>
+      <Header className="container">
         <Row>
           <Section start>
             <TitleLink href="/">
@@ -117,17 +125,16 @@ class AppToolbar extends React.Component {
             </TitleLink>
           </Section>
           <Section end>
-            <NavLink href="/getting-started">Get Started</NavLink>
-            <NavLinkLast href="/about">About</NavLinkLast>
+            <Hamburger
+              className={this.state.active ? 'active' : null}
+              onClick={this.toggleClass}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </Hamburger>
           </Section>
         </Row>
-        {this.props.hero &&
-          React.cloneElement(this.props.hero, {
-            style: {
-              maxWidth: '90%',
-              margin: '0 auto',
-            },
-          })}
+        {this.props.hero && React.cloneElement(this.props.hero)}
       </Header>
     );
   }

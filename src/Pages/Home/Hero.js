@@ -8,6 +8,44 @@ import Link from '../../Components/Link';
 const Container = styled.div`
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 600px;
+`;
+const ContentContainer = styled.div`
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @media (min-width: 768px) {
+    height: 100%;
+    width: 50%;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .k {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    width: 100%;
+    @media (min-width: 768px) {
+      max-width: 100%;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .k-gradient {
+    left: 53%;
+    @media (min-width: 768px) {
+      left: 0;
+    }
+  }
 `;
 
 const Title = styled.h1`
@@ -57,16 +95,22 @@ class Hero extends React.Component {
   render() {
     return (
       <Container {...this.props}>
-        <Title>Web Developer</Title>
-        <Title2>UX/UI Designer</Title2>
-        <Title3>Creator</Title3>
-        <Description>
+        <ContentContainer>
+          <Title>Web Developer</Title>
+          <Title2>UX/UI Designer</Title2>
+          <Title3>Creator</Title3>
+        </ContentContainer>
+        <ContentContainer>
+          <img className="k k-black" src="./assets/img/k-black.svg" alt="K" />
+          <img className="k k-gradient" src="./assets/img/k-gradient.svg" alt="K" />
+        </ContentContainer>
+        {/* <Description>
           <strong>React Static</strong> is a popular boilerplate for building
           single-page applications and static web sites with React.
         </Description>
         <p>
           <Button href="/getting-started">Get Started</Button>
-        </p>
+        </p> */}
       </Container>
     );
   }
