@@ -20,9 +20,14 @@ const Header = styled.header`
 `;
 
 const Row = styled.div`
-  position: relative;
-  display: flex;
+  position: fixed;
+  z-index: 999;
   width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+  top: 0;
+  left: 0;
+  display: flex;
   height: 64px;
   box-sizing: border-box;
   align-items: center;

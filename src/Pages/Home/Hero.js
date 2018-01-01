@@ -49,19 +49,22 @@ const ContentContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: 40px;
   letter-spacing: 1px;
   margin: 0;
 `;
 const Title2 = styled.h2`
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: 35px;
   letter-spacing: 1px;
   margin: 0;
 `;
 const Title3 = styled.h3`
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   font-size: 30px;
   letter-spacing: 1px;
   margin: 0;
