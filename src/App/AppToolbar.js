@@ -87,11 +87,27 @@ const Hamburger = styled.div`
     height: 4px;
     width: 35px;
     background: #000;
+    transition: 300ms ease;
     &:nth-of-type(2) {
       width: 30px;
+      opacity: 1;
     }
     &:last-of-type {
       width: 25px;
+    }
+  }
+  &.active {
+    span {
+      &:first-of-type {
+        transform: translate(0, 10px) rotate(-45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:last-of-type {
+        width: 35px;
+        transform: translate(0, -5px) rotate(45deg);
+      }
     }
   }
 `;
@@ -127,7 +143,7 @@ class AppToolbar extends React.Component {
           <Section end>
             <Hamburger
               className={this.state.active ? 'active' : null}
-              onClick={this.toggleClass}>
+              onClick={this.toggleClass.bind(this)}>
               <span></span>
               <span></span>
               <span></span>
