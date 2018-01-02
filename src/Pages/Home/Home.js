@@ -43,7 +43,7 @@ const RecGradient = styled.div`
   height: 325px;
   width: 50px;
   position: absolute;
-  top: 0;
+  top: 84px;
   left: 0;
   background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
   display: none;

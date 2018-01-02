@@ -77,7 +77,7 @@ const RecBlack = styled.div`
   width: 50px;
   background-color: #000;
   position: absolute;
-  bottom: -80px;
+  bottom: -120px;
   left: 0;
   display: none;
   @media (min-width: 768px) {
