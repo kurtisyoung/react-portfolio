@@ -7,7 +7,9 @@ import Link from '../../Components/Link';
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 64px);
+  top: 64px;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   min-height: 600px;
@@ -70,6 +72,19 @@ const Title3 = styled.h3`
   margin: 0;
 `;
 
+const RecBlack = styled.div`
+  height: 325px;
+  width: 50px;
+  background-color: #000;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
 const Description = styled.p`
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1px;
@@ -102,6 +117,7 @@ class Hero extends React.Component {
           <Title>Web Developer</Title>
           <Title2>UX/UI Designer</Title2>
           <Title3>Creator</Title3>
+          <RecBlack/>
         </ContentContainer>
         <ContentContainer>
           <img className="k k-black" src="./assets/img/k-black.svg" alt="K" />
