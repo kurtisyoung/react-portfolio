@@ -22,7 +22,7 @@ const routes = [
     render: ([Home, Hero], data) => ({
       title: 'Home page',
       hero: <Hero />,
-      body: <Home stories={data.stories} />,
+      body: <Home story={data.story}/>,
     }),
   },
   {

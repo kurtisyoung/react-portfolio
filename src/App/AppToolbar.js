@@ -101,6 +101,11 @@ const Hamburger = styled.div`
       width: 25px;
     }
   }
+  &:hover {
+    span {
+      width: 35px;
+    }
+  }
   &.active {
     span {
       &:first-of-type {
