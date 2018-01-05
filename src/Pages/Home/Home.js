@@ -7,7 +7,8 @@ import type { Home_stories } from './__generated__/Home_stories.graphql';
 
 // import Link from '../../Components/Link';
 
-import QuoteComponent from './Quote.js';
+import QuoteComponent from './Quote';
+import ProjectComponent from './Projects';
 
 
 const HomeContainer = styled.div``;
@@ -20,7 +21,8 @@ class Home extends React.Component {
   render() {
     return (
       <HomeContainer>
-        <QuoteComponent></QuoteComponent>
+        <QuoteComponent/>
+        <ProjectComponent/>
       </HomeContainer>
     );
   }

@@ -53,23 +53,28 @@ const ContentContainer = styled.div`
 const Title = styled.h1`
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 40px;
   letter-spacing: 1px;
   margin: 0;
-`;
-const Title2 = styled.h2`
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 35px;
-  letter-spacing: 1px;
-  margin: 0;
-`;
-const Title3 = styled.h3`
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 30px;
-  letter-spacing: 1px;
-  margin: 0;
+  &.large {
+    font-size: 35px;
+  }
+  &.medium {
+    font-size: 30px;
+  }
+  &.small {
+    font-size: 25px;
+  }
+  @media (min-width: 768px) {
+    &.large {
+      font-size: 40px;
+    }
+    &.medium {
+      font-size: 35px;
+    }
+    &.small {
+      font-size: 30px;
+    }
+  }
 `;
 
 const RecBlack = styled.div`
@@ -114,14 +119,14 @@ class Hero extends React.Component {
     return (
       <Container {...this.props}>
         <ContentContainer>
-          <Title>Web Developer</Title>
-          <Title2>UX/UI Designer</Title2>
-          <Title3>Creator</Title3>
+          <Title className="large">Web Developer</Title>
+          <Title className="medium">UX/UI Designer</Title>
+          <Title className="small">Creator</Title>
           <RecBlack/>
         </ContentContainer>
         <ContentContainer>
-          <img className="k k-black" src="./assets/img/k-black.svg" alt="K" />
-          <img className="k k-gradient" src="./assets/img/k-gradient.svg" alt="K" />
+          <img className="k k-black" src="./assets/img/home/k-black.svg" alt="K" />
+          <img className="k k-gradient" src="./assets/img/home/k-gradient.svg" alt="K" />
         </ContentContainer>
         {/* <Description>
           <strong>React Static</strong> is a popular boilerplate for building

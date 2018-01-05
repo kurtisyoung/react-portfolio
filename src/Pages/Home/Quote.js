@@ -11,6 +11,9 @@ const QuoteContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (min-width: 768px) {
+    margin-top: 150px;
+  }
 `;
 
 const Quote = styled.div`
@@ -35,7 +38,8 @@ const RecGradient = styled.div`
   height: 325px;
   width: 50px;
   position: absolute;
-  top: 84px;
+  z-index: 1;
+  top: 34px;
   left: 0;
   background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
   display: none;
@@ -61,7 +65,7 @@ class QuoteComponent extends React.Component {
     let randomQuote = Math.floor(Math.random() * 4)
 
     return (
-      <QuoteContainer>
+      <QuoteContainer className="container">
         <RecGradient></RecGradient>
         <Quote>
           <p>{this.state.quote[randomQuote]}</p>

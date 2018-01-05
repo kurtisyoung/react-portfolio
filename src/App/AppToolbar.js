@@ -44,7 +44,7 @@ const Section = styled.section`
   display: inline-flex;
   min-width: 0;
   height: 100%;
-  flex: 1;
+  flex: ${props => props.start ? '1' : props.end ? '0' : null};
   align-items: center;
   justify-content: ${props =>
     props.start ? 'flex-start' : props.end ? 'flex-end' : 'center'};
@@ -63,6 +63,7 @@ const TitleLink = styled(Link)`
   line-height: 1.5rem;
   color: #00d8ff;
   color: #000;
+  text-shadow: 2px 2px 2px #FFF;
   text-decoration: none;
   text-overflow: ellipsis;
   letter-spacing: 0.0625em;
