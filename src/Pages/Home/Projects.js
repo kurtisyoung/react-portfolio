@@ -75,25 +75,49 @@ class ProjectComponent extends React.Component {
     super(props)
     this.state = {
       projectDetail: [
-        'Juneau By Amacon',
-        'Elenore on Fifth',
-        'Landmark',
-        'Salt Digital',
-        'McColl Therapy',
-      ]
+        {
+          src: './assets/img/home/project-juneau.png',
+          name: 'Juneau By Amacon',
+          link: '',
+        },
+        {
+          src: './assets/img/home/project-elenore.png',
+          name: 'Elenore On Fifth',
+          link: '',
+        },
+        {
+          src: './assets/img/home/project-landmark.png',
+          name: 'Landmark',
+          link: '',
+        },
+        {
+          src: './assets/img/home/project-salt.png',
+          name: 'Salt Digital',
+          link: '',
+        },
+        {
+          src: './assets/img/home/project-mccoll.png',
+          name: 'McColl Therapy',
+          link: '',
+        },
+      ],
     }
   }
 
   render() {
+    const projectDetails = this.state.projectDetail;
+    const projectItems = projectDetails.map((detail) =>
+      <ProjectBlock>
+        <img src={detail.src} alt={detail.name}/>
+      </ProjectBlock>
+    );
     return (
       <ProjectContainer>
         <div className="container">
           <h2>Projects</h2>
         </div>
-        <ProjectName>{this.state.projectDetail[0]}</ProjectName>
-        <ProjectBlock>
-          <img src="./assets/img/home/project-juneau.png" alt="Juneau"/>
-        </ProjectBlock>
+        <ProjectName>{this.state.projectDetail[0].name}</ProjectName>
+        {projectItems}
 
       </ProjectContainer>
     )
