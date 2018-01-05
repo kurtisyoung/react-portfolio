@@ -13,6 +13,7 @@ const QuoteContainer = styled.div`
   align-items: center;
   @media (min-width: 768px) {
     margin-top: 150px;
+    margin-bottom: 120px;
   }
 `;
 
@@ -39,7 +40,7 @@ const RecGradient = styled.div`
   width: 50px;
   position: absolute;
   z-index: 1;
-  top: 34px;
+  top: 154px;
   left: 0;
   background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
   display: none;

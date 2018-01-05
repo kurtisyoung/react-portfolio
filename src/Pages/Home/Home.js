@@ -15,7 +15,8 @@ const HomeContainer = styled.div``;
 
 class Home extends React.Component {
   props: {
-    stories: Home_stories,
+    // stories: Home_stories,
+    stories: null,
   };
 
   render() {
@@ -28,16 +29,18 @@ class Home extends React.Component {
   }
 }
 
-export default createFragmentContainer(
-  Home,
-  graphql`
-    fragment Home_stories on StoryConnection {
-      edges {
-        node {
-          id
-          title
-        }
-      }
-    }
-  `,
-);
+export default Home;
+
+// export default createFragmentContainer(
+//   Home,
+//   graphql`
+//     fragment Home_stories on StoryConnection {
+//       edges {
+//         node {
+//           id
+//           title
+//         }
+//       }
+//     }
+//   `,
+// );

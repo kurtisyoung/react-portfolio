@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import Waypoint from 'react-waypoint';
 
 import Link from '../../Components/Link';
 
@@ -18,7 +19,7 @@ const ProjectContainer = styled.div`
     color: #FFF;
     letter-spacing: 2px;
     @media (min-width: 768px) {
-      margin: 47px 0 0 70px;
+      margin: 83px 0 0 70px;
     }
   }
 `;
@@ -52,6 +53,7 @@ const ProjectName = styled(Link)`
   top: 30%;
   text-shadow: 3px 3px 2px #000;
   margin: 0;
+  text-decoration: none;
   @media (min-width: 768px) {
     font-size: 40px;
   }
@@ -104,10 +106,14 @@ class ProjectComponent extends React.Component {
     }
   }
 
+  _handleWaypointEnter() {
+    console.log('hello')
+  }
+
   render() {
     const projectDetails = this.state.projectDetail;
-    const projectItems = projectDetails.map((detail) =>
-      <ProjectBlock>
+    const projectItems = projectDetails.map((detail, index) =>
+      <ProjectBlock key={index}>
         <img src={detail.src} alt={detail.name}/>
       </ProjectBlock>
     );
@@ -117,7 +123,11 @@ class ProjectComponent extends React.Component {
         <div className="container">
           <h2>Projects</h2>
         </div>
-        <ProjectName>{this.state.projectDetail[0].name}</ProjectName>
+        <Waypoint
+          onEnter={this._handleWaypointEnter}
+          threshold={0}
+        />
+        <ProjectName href="/">{this.state.projectDetail[0].name}</ProjectName>
         {projectItems}
 
       </ProjectContainer>
