@@ -94,6 +94,7 @@ const Hamburger = styled.div`
     width: 35px;
     background: #000;
     transition: 300ms ease;
+    box-shadow: 2px 2px 2px 0 #FFF;
     &:nth-of-type(2) {
       width: 30px;
       opacity: 1;
@@ -109,6 +110,7 @@ const Hamburger = styled.div`
   }
   &.active {
     span {
+      box-shadow: none;
       &:first-of-type {
         transform: translate(0, 10px) rotate(-45deg);
       }

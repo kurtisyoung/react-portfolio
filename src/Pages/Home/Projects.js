@@ -62,7 +62,7 @@ const ProjectName = styled(Link)`
       top: 50%;
       transform: translateY(-50%);
       background-color: #FFF;
-      box-shadow: 2px 2px 2px 2px #000;
+      box-shadow: 2px 2px 2px 0 #000;
       right: -120px;
       height: 10px;
       width: 100px;
@@ -111,6 +111,7 @@ class ProjectComponent extends React.Component {
         <img src={detail.src} alt={detail.name}/>
       </ProjectBlock>
     );
+
     return (
       <ProjectContainer>
         <div className="container">
