@@ -19,7 +19,7 @@ const ProjectContainer = styled.div`
     color: #FFF;
     letter-spacing: 2px;
     @media (min-width: 768px) {
-      margin: 83px 0 0 70px;
+      margin: 46px 0 0 70px;
     }
   }
 `;
@@ -29,6 +29,7 @@ const ProjectBlock = styled.div`
   text-align: right;
   img {
     width: 100%;
+    height: auto;
     margin-left: auto;
     @media (min-width: 768px) {
       max-width: 500px;
@@ -50,7 +51,7 @@ const ProjectName = styled(Link)`
   position: absolute;
   z-index: 2;
   left: 5%;
-  top: 30%;
+  top: 13%;
   text-shadow: 3px 3px 2px #000;
   margin: 0;
   text-decoration: none;
@@ -70,12 +71,17 @@ const ProjectName = styled(Link)`
       width: 100px;
     }
   }
+  &.fixed {
+    position: fixed;
+    top: 50%;
+  }
 `;
 
 class ProjectComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      arrayPosition: 0,
       projectDetail: [
         {
           src: './assets/img/home/project-juneau.png',
@@ -107,14 +113,34 @@ class ProjectComponent extends React.Component {
   }
 
   _handleWaypointEnter() {
-    console.log('hello')
+    console.log('entered')
+    const idProjectName = document.getElementById('ProjectName')
+
+    idProjectName.classList.add('fixed')
+  }
+  _handleWaypointLeave() {
+    console.log('left')
+    const idProjectName = document.getElementById('ProjectName')
+
+    idProjectName.classList.remove('fixed')
+  }
+  _sectionEnter(index) {
+
+    this.setState({
+      arrayPosition: index
+    })
+    // console.log(`section-${index}`)
+    console.log(this.state.arrayPosition)
   }
 
   render() {
     const projectDetails = this.state.projectDetail;
     const projectItems = projectDetails.map((detail, index) =>
       <ProjectBlock key={index}>
-        <img src={detail.src} alt={detail.name}/>
+        <Waypoint 
+          key={index}
+          onEnter={this._sectionEnter.bind(this, index)}/>
+        <img src={detail.src} alt={detail.name}/>  
       </ProjectBlock>
     );
 
@@ -124,11 +150,15 @@ class ProjectComponent extends React.Component {
           <h2>Projects</h2>
         </div>
         <Waypoint
+          bottomOffset="50%"
+          scrollableAncestor={window}
           onEnter={this._handleWaypointEnter}
-          threshold={0}
-        />
-        <ProjectName href="/">{this.state.projectDetail[0].name}</ProjectName>
-        {projectItems}
+          onLeave={this._handleWaypointLeave}>
+          <div className="project-section">
+            <ProjectName id="ProjectName" href="/">{this.state.projectDetail[this.state.arrayPosition].name}</ProjectName>
+            {projectItems}
+          </div>
+        </Waypoint>
 
       </ProjectContainer>
     )

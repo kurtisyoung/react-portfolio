@@ -35,6 +35,7 @@ const ContentContainer = styled.div`
     transform: translate(-50%, -50%);
     max-width: 300px;
     width: 100%;
+    height: auto;
     @media (min-width: 768px) {
       max-width: 100%;
       left: -30px;
@@ -126,7 +127,7 @@ class Hero extends React.Component {
         </ContentContainer>
         <ContentContainer>
           <img className="k k-black" src="./assets/img/home/k-black.svg" alt="K" />
-          <img className="k k-gradient" src="./assets/img/home/k-gradient.svg" alt="K" />
+          <img className="k k-gradient" src="./assets/img/home/k-gradient.svg" alt="K"/>
         </ContentContainer>
         {/* <Description>
           <strong>React Static</strong> is a popular boilerplate for building
