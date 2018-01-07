@@ -139,10 +139,13 @@ class ProjectComponent extends React.Component {
       <ProjectBlock key={index}>
         <Waypoint 
           key={index}
-          onEnter={this._sectionEnter.bind(this, index)}
-          topOffset="20px"
-          scrollableAncestor={window}/>
-        <img src={detail.src} alt={detail.name}/>  
+          onEnter={this._sectionEnter.bind(this, index)} 
+          topOffset="40%"
+          bottomOffset="40%"
+          scrollableAncestor={window}>
+          <img key={index} src={detail.src} alt={detail.name}/>  
+        </Waypoint>
+        
       </ProjectBlock>
     );
 
