@@ -58,24 +58,40 @@ const ProjectName = styled(Link)`
   @media (min-width: 768px) {
     font-size: 40px;
   }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    transition: 300ms ease;
+    background-color: #FFF;
+  }
   &:before {
     @media (min-width: 768px) {
-      content: '';
-      position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #FFF;
       box-shadow: 2px 2px 2px 0 #000;
       right: -120px;
       height: 10px;
       width: 100px;
     }
   }
+  &:after {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+  }
+  &:hover {
+    &:before {
+      right: -130px;
+    }
+    &:after {
+      width: 100%;
+    }
+  }
   &.fixed {
     position: fixed;
     top: 50%;
-  }
-`;
+  }`
 
 class ProjectComponent extends React.Component {
   constructor(props) {
