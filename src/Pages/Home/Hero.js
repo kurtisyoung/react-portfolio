@@ -118,7 +118,7 @@ const Button = styled(Link)`
 class Hero extends React.Component {
   render() {
     return (
-      <Container {...this.props}>
+      <Container className="container" {...this.props}>
         <ContentContainer>
           <Title className="large">Web Developer</Title>
           <Title className="medium">UX/UI Designer</Title>

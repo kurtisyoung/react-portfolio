@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { graphql, createFragmentContainer } from 'react-relay';
 
 import Link from '../Components/Link';
-import AppLogo from './AppLogo';
+import AppMenu from './AppMenu';
 import type { AppToolbar_me } from './__generated__/AppToolbar_me.graphql';
 
 const Header = styled.header`
@@ -145,11 +145,10 @@ class AppToolbar extends React.Component {
 
   render() {
     return (
-      <Header className="container">
+      <Header>
         <Row>
           <Section start>
             <TitleLink href="/">
-              {/* <Logo /> */}
               Kurtis Young
             </TitleLink>
           </Section>
@@ -163,6 +162,7 @@ class AppToolbar extends React.Component {
             </Hamburger>
           </Section>
         </Row>
+        <AppMenu/>
         {this.props.hero && React.cloneElement(this.props.hero)}
       </Header>
     );
