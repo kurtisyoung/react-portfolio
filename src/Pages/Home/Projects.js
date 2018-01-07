@@ -91,6 +91,8 @@ const ProjectName = styled(Link)`
   &.fixed {
     position: fixed;
     top: 50%;
+    // left: 30%;
+    // transform: translate(-50%, -50%);
   }`
 
 class ProjectComponent extends React.Component {
@@ -102,27 +104,27 @@ class ProjectComponent extends React.Component {
         {
           src: './assets/img/home/project-juneau.png',
           name: 'Juneau By Amacon',
-          link: '',
+          link: '/juneau-by-amacon',
         },
         {
           src: './assets/img/home/project-elenore.png',
           name: 'Elenore On Fifth',
-          link: '',
+          link: '/elenore-on-fifth',
         },
         {
           src: './assets/img/home/project-landmark.png',
           name: 'Landmark',
-          link: '',
+          link: '/landmark',
         },
         {
           src: './assets/img/home/project-salt.png',
           name: 'Salt Digital',
-          link: '',
+          link: '/salt-digital',
         },
         {
           src: './assets/img/home/project-mccoll.png',
           name: 'McColl Therapy',
-          link: '',
+          link: '/mccoll-therapy',
         },
       ],
     }
@@ -146,7 +148,7 @@ class ProjectComponent extends React.Component {
       arrayPosition: index
     })
     // console.log(`section-${index}`)
-    console.log(this.state.arrayPosition)
+    // console.log(this.state.arrayPosition)
   }
 
   render() {
@@ -176,7 +178,10 @@ class ProjectComponent extends React.Component {
           onEnter={this._handleWaypointEnter}
           onLeave={this._handleWaypointLeave}>
           <div className="project-section">
-            <ProjectName id="ProjectName" href="/">{this.state.projectDetail[this.state.arrayPosition].name}</ProjectName>
+            <ProjectName id="ProjectName" 
+              href={this.state.projectDetail[this.state.arrayPosition].link}>
+              {this.state.projectDetail[this.state.arrayPosition].name}
+            </ProjectName>
             {projectItems}
           </div>
         </Waypoint>

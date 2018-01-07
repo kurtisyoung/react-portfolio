@@ -66,10 +66,19 @@ const routes = [
     }),
   },
   {
+    path: '/juneau-by-amacon',
+    query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
+    components: () => [import(/* webpackChunkName: 'about' */ './Pages/Juneau')],
+    render: ([Juneau]) => ({
+      title: 'Juneau By Amacon',
+      body: <Juneau />,
+    }),
+  },
+  {
     path: '/tasks/:status(pending|completed)?',
     components: () => [import(/* webpackChunkName: 'home' */ './Pages/Home')],
     render: ([Home]) => ({
-      title: 'Untitled Page',
+      title: 'Home',
       body: <Home />,
     }),
   },

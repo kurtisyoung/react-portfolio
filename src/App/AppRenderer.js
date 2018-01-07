@@ -17,8 +17,22 @@ const Main = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background: #fff;
-`;
+  background: #fff;`
+
+const Loading = styled.div`
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
+  p {
+    font-size: 40px;
+    color: #FFF;
+  }
+`
 
 type Props = {
   error: ?Error,
@@ -111,7 +125,7 @@ class AppRenderer extends React.Component<any, Props, State> {
     ) : (
       <div>
         <AppToolbar me={null} hero={this.state.hero} />
-        <Main>{this.state.body || <p>Loading...</p>}</Main>
+        <Main>{this.state.body || <Loading><img src="./assets/img/home/k-gradient.svg" width="300px" alt="K"/></Loading>}</Main>
         <AppFooter />
       </div>
     );
