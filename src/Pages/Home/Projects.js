@@ -51,7 +51,7 @@ const ProjectName = styled(Link)`
   position: absolute;
   z-index: 2;
   left: 5%;
-  top: 13%;
+  top: 10%;
   text-shadow: 3px 3px 2px #000;
   margin: 0;
   text-decoration: none;
@@ -139,7 +139,9 @@ class ProjectComponent extends React.Component {
       <ProjectBlock key={index}>
         <Waypoint 
           key={index}
-          onEnter={this._sectionEnter.bind(this, index)}/>
+          onEnter={this._sectionEnter.bind(this, index)}
+          topOffset="20px"
+          scrollableAncestor={window}/>
         <img src={detail.src} alt={detail.name}/>  
       </ProjectBlock>
     );
