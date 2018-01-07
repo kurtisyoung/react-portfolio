@@ -100,7 +100,7 @@ const Hamburger = styled.div`
       opacity: 1;
     }
     &:last-of-type {
-      width: 25px;
+      width: 20px;
     }
   }
   &:hover {

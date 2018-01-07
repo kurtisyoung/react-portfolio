@@ -27,13 +27,13 @@ const MenuContainer = styled.div`
 
 const Rectangle = styled.div`
   width: 25px;
-  height: 340px;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   @media (min-width: 768px) {
-    width: 18%;
+    width: 25%;
   }
   &.gradient {
     background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
@@ -42,7 +42,7 @@ const Rectangle = styled.div`
 const MenuList = styled.ul`
   padding-left: 50px;
   @media (min-width: 768px) {
-    padding-left: 20%;
+    padding-left: 29%;
   }
   &.main {
     li {
