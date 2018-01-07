@@ -111,6 +111,7 @@ const Hamburger = styled.div`
   &.active {
     span {
       box-shadow: none;
+      background: #FFF;
       &:first-of-type {
         transform: translate(0, 10px) rotate(-45deg);
       }
@@ -138,10 +139,15 @@ class AppToolbar extends React.Component {
     hero: React.Element<*>,
   };
 
-  toggleClass() {
+  toggleMenu() {
     const currentState = this.state.active;
     this.setState({ active: !currentState });
-  };
+  }
+
+  closeMenu() {
+    const currentState = this.state.active;
+    this.setState({ active: false });
+  }
 
   render() {
     return (
@@ -155,14 +161,16 @@ class AppToolbar extends React.Component {
           <Section end>
             <Hamburger
               className={this.state.active ? 'active' : null}
-              onClick={this.toggleClass.bind(this)}>
+              onClick={this.toggleMenu.bind(this)}>
               <span></span>
               <span></span>
               <span></span>
             </Hamburger>
           </Section>
         </Row>
-        <AppMenu/>
+        <AppMenu 
+          active={this.state.active}
+          closeMenu={this.closeMenu.bind(this)}/>
         {this.props.hero && React.cloneElement(this.props.hero)}
       </Header>
     );
