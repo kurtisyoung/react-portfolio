@@ -33,7 +33,9 @@ const Banner = styled.div`
   background-size: cover;
   margin: 30px 0;`
 
-const infoContainer =  styled.div``
+const infoContainer = styled.div`
+  max-width: 90%;
+  margin: 0 auto;`
 
 const detailList = styled.ul`
   `
@@ -54,7 +56,7 @@ class Template extends React.Component {
       <ProjectTemplate>
         <Title>{this.props.title}</Title>
         <Banner style={bannerImage}></Banner>
-        <infoContainer className="container">
+        <infoContainer>
           <p>{this.props.paragraph}</p>
           <detailList>
             <li>

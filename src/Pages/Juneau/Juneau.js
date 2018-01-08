@@ -10,7 +10,8 @@ class JuneauPage extends React.Component {
     super(props)
     this.state = {
       title: 'Juneau By Amacon',
-      banner: './assets/img/juneau/banner.jpg'
+      banner: './assets/img/juneau/banner.jpg',
+      paragraph: 'Juneau is a residential development by Amacon and MLA in the heart of Burnaby. As lead developer, my role involved project management and web development.'
     }
   }
   render() {
@@ -18,7 +19,8 @@ class JuneauPage extends React.Component {
       <section>
         <Template
           title={this.state.title}
-          banner={this.state.banner}></Template>
+          banner={this.state.banner}
+          paragraph={this.state.paragraph}></Template>
       </section>
     )
   }
