@@ -56,8 +56,8 @@ class QuoteComponent extends React.Component {
       quote: [
         '“In life and business, there are two cardinal sins. The first is to act without thought and the second is not to act at all.” - Carl Icahn',
         '“The highest form of ignorance is when you reject something you know nothing about.” - Sadhguru',
-        '“The man who asks a question is a fool for a minute, the man who does not ask is a fool for life.” ― Confucius',
-        `“If Internet Explorer is brave enough to ask to be your default browser, you're brave enough to ask that girl out” - Microsoft`,
+        `“You miss 100% of the shots you don't take.” ― Wayne Gretzky - Michael Scott`,
+        `“If Internet Explorer is brave enough to ask to be your default browser, you're brave enough to follow your dreams.” - Apple Genius`,
       ],
     }
   }

@@ -68,7 +68,7 @@ const routes = [
   {
     path: '/juneau-by-amacon',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
-    components: () => [import(/* webpackChunkName: 'about' */ './Pages/Juneau')],
+    components: () => [import(/* webpackChunkName: 'Juneau' */ './Pages/Juneau')],
     render: ([Juneau]) => ({
       title: 'Juneau By Amacon',
       body: <Juneau />,
