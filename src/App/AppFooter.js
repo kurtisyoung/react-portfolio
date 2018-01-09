@@ -31,21 +31,26 @@ const ExtLink = styled.a`
     transition: 300ms ease;
     opacity: 1;
   }
-
-  &:hover {
-    opacity: 0.8;
-  }
 `;
 
 const LinkList = styled.ul`
   list-style: none;
   a {
-    text-decoration: none;
-    color: #000;
-    transition: 300ms ease;
-    opaciyt: 1;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #000;
+      transition: 300ms ease;
+    }
     &:hover {
-      opacity: 0.8;
+      &:before {
+        width: 100%;
+      }
     }
   }
   li {
@@ -79,9 +84,9 @@ class AppFooter extends React.Component {
         <Rectangle className="gradient"></Rectangle>
         <LinkList>
           <li><a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a></li>
-          <li><a href="https://github.com/kurtisyoung" target="_blank">Github</a></li>
-          <li><a href="https://www.linkedin.com/in/kcyoung1/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/w_areyoung/" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/kcyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/w_areyoung/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         </LinkList>
         <Copyright css="padding-right: 0.5em">&copy; 2018</Copyright>
         <ExtLink href={KURTIS_URL}>created by Kurtis Young</ExtLink>

@@ -26,18 +26,6 @@ const routes = [
     }),
   },
   {
-    path: '/story-:id',
-    query: graphql`query routerStoryQuery($id: ID!) {
-      me { ...App_me }
-      story: node(id: $id) { ...Story_story }
-    }`, // prettier-ignore
-    components: () => [import(/* webpackChunkName: 'home' */ './Components/Story')],
-    render: ([Story], data) => ({
-      title: data.title,
-      body: <Story story={data.story} />,
-    }),
-  },
-  {
     path: '/error',
     components: () => [import(/* webpackChunkName: 'main' */ './Pages/ErrorPage')],
     render: ([ErrorPage]) => ({

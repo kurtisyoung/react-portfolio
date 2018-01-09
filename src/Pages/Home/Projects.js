@@ -165,7 +165,7 @@ class ProjectComponent extends React.Component {
         </Waypoint>
         
       </ProjectBlock>
-    );
+    )
 
     return (
       <ProjectContainer>

@@ -136,9 +136,9 @@ class AppMenu extends React.Component {
 
         <MenuList className="external">
           <li><a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a></li>
-          <li><a href="https://github.com/kurtisyoung" target="_blank">Github</a></li>
-          <li><a href="https://www.linkedin.com/in/kcyoung1/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/w_areyoung/" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/kcyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/w_areyoung/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         </MenuList>
       </MenuContainer>
     )

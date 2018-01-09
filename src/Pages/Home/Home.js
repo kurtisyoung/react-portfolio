@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { graphql, createFragmentContainer } from 'react-relay';
-import type { Home_stories } from './__generated__/Home_stories.graphql';
+// import { graphql, createFragmentContainer } from 'react-relay';
+// import type { Home_stories } from './__generated__/Home_stories.graphql';
 
 // import Link from '../../Components/Link';
 
