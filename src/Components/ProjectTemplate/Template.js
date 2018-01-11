@@ -1,9 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import { link } from 'fs';
 
-const ProjectTemplate = styled.div`
-  padding-top: 100px;`
+const ProjectTemplate = styled.div`padding-top: 100px;`;
 
 const Title = styled.h1`
   font-size: 40px;
@@ -23,7 +22,8 @@ const Title = styled.h1`
       height: 10px;
       width: 100px;
     }
-  }`
+  }
+`;
 
 const Banner = styled.div`
   height: 50vh;
@@ -31,7 +31,8 @@ const Banner = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 30px 0;`
+  margin: 30px 0;
+`;
 
 const InfoContainer = styled.div`
   width: 100%;
@@ -39,6 +40,14 @@ const InfoContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 60px;
+  p {
+    max-width: 580px;
+    width: 100%;
+    @media (min-width: 1024px) {
+      font-size: 20px;
+    }
+  }
   .flex-item {
     flex: 0 1 100%;
   }
@@ -46,7 +55,8 @@ const InfoContainer = styled.div`
     @media (min-width: 768px) {
       flex: 0 1 50%;
     }
-  }`
+  }
+`;
 
 const DetailList = styled.ul`
   padding: 0;
@@ -87,7 +97,8 @@ const DetailList = styled.ul`
     &:last-of-type {
       margin-top: 30px;
     }
-  }`
+  }
+`;
 
 class Template extends React.Component {
   props: {
@@ -95,33 +106,38 @@ class Template extends React.Component {
     banner: String,
     paragraph: String,
     details: Array,
-  }
+  };
 
   render() {
     const bannerImage = {
       backgroundImage: `url('${this.props.banner}')`,
-    }
-    const detailArray = this.props.details.map((detail, index) => 
+    };
+    const detailArray = this.props.details.map((detail, index) => (
       <li key={index}>
         <p className="title">{detail.title}</p>
-        <p className="content" dangerouslySetInnerHTML={{__html: detail.content}}></p>
+        <p
+          className="content"
+          dangerouslySetInnerHTML={{ __html: detail.content }}
+        />
       </li>
-    )
+    ));
     return (
       <ProjectTemplate>
         <div className="container">
           <Title>{this.props.title}</Title>
         </div>
-        <Banner style={bannerImage}></Banner>
+        <Banner style={bannerImage} />
         <InfoContainer>
-          <p className="flex-item flex-half">{this.props.paragraph}</p>
-          <DetailList className="flex-item flex-half">
-            {detailArray}
-          </DetailList>
+          <div className="flex-item flex-half">
+            <p>{this.props.paragraph}</p>
+          </div>
+          <div className="flex-item flex-half">
+            <DetailList>{detailArray}</DetailList>
+          </div>
         </InfoContainer>
       </ProjectTemplate>
-    )
+    );
   }
 }
 
-export default Template
+export default Template;

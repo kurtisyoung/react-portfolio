@@ -16,7 +16,7 @@ const ProjectContainer = styled.div`
   h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    color: #FFF;
+    color: #fff;
     letter-spacing: 2px;
     @media (min-width: 768px) {
       margin: 46px 0 0 70px;
@@ -40,11 +40,14 @@ const ProjectBlock = styled.div`
     @media (min-width: 1200px) {
       max-width: 700px;
     }
+    @media (min-width: 1440px) {
+      max-width: 1000px;
+    }
   }
 `;
 
 const ProjectName = styled(Link)`
-  color: #FFF;
+  color: #fff;
   font-size: 28px;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2.5px;
@@ -58,11 +61,12 @@ const ProjectName = styled(Link)`
   @media (min-width: 768px) {
     font-size: 40px;
   }
-  &:before, &:after {
+  &:before,
+  &:after {
     content: '';
     position: absolute;
     transition: 300ms ease;
-    background-color: #FFF;
+    background-color: #fff;
   }
   &:before {
     @media (min-width: 768px) {
@@ -93,11 +97,12 @@ const ProjectName = styled(Link)`
     top: 50%;
     // left: 30%;
     // transform: translate(-50%, -50%);
-  }`
+  }
+`;
 
 class ProjectComponent extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       arrayPosition: 0,
       projectDetail: [
@@ -127,45 +132,44 @@ class ProjectComponent extends React.Component {
           link: '/mccoll-therapy',
         },
       ],
-    }
+    };
   }
 
   _handleWaypointEnter() {
-    console.log('entered')
-    const idProjectName = document.getElementById('ProjectName')
+    console.log('entered');
+    const idProjectName = document.getElementById('ProjectName');
 
-    idProjectName.classList.add('fixed')
+    idProjectName.classList.add('fixed');
   }
   _handleWaypointLeave() {
-    console.log('left')
-    const idProjectName = document.getElementById('ProjectName')
+    console.log('left');
+    const idProjectName = document.getElementById('ProjectName');
 
-    idProjectName.classList.remove('fixed')
+    idProjectName.classList.remove('fixed');
   }
   _sectionEnter(index) {
-
     this.setState({
-      arrayPosition: index
-    })
+      arrayPosition: index,
+    });
     // console.log(`section-${index}`)
     // console.log(this.state.arrayPosition)
   }
 
   render() {
     const projectDetails = this.state.projectDetail;
-    const projectItems = projectDetails.map((detail, index) =>
+    const projectItems = projectDetails.map((detail, index) => (
       <ProjectBlock key={index}>
-        <Waypoint 
+        <Waypoint
           key={index}
-          onEnter={this._sectionEnter.bind(this, index)} 
+          onEnter={this._sectionEnter.bind(this, index)}
           topOffset="40%"
           bottomOffset="40%"
-          scrollableAncestor={window}>
-          <img key={index} src={detail.src} alt={detail.name}/>  
+          scrollableAncestor={window}
+        >
+          <img key={index} src={detail.src} alt={detail.name} />
         </Waypoint>
-        
       </ProjectBlock>
-    )
+    ));
 
     return (
       <ProjectContainer>
@@ -176,19 +180,21 @@ class ProjectComponent extends React.Component {
           bottomOffset="50%"
           scrollableAncestor={window}
           onEnter={this._handleWaypointEnter}
-          onLeave={this._handleWaypointLeave}>
+          onLeave={this._handleWaypointLeave}
+        >
           <div className="project-section">
-            <ProjectName id="ProjectName" 
-              href={this.state.projectDetail[this.state.arrayPosition].link}>
+            <ProjectName
+              id="ProjectName"
+              href={this.state.projectDetail[this.state.arrayPosition].link}
+            >
               {this.state.projectDetail[this.state.arrayPosition].name}
             </ProjectName>
             {projectItems}
           </div>
         </Waypoint>
-
       </ProjectContainer>
-    )
+    );
   }
 }
 
-export default ProjectComponent
+export default ProjectComponent;

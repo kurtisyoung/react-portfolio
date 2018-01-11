@@ -5,9 +5,9 @@ import styled from 'styled-components';
 
 const QuoteContainer = styled.div`
   position: relative;
-  height: 30vh;
-  width: 100%;
+  height: 235px;
   margin-top: 100px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ const RecGradient = styled.div`
   z-index: 1;
   top: 154px;
   left: 0;
-  background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
+  background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
   display: none;
   @media (min-width: 768px) {
     display: block;
@@ -51,7 +51,7 @@ const RecGradient = styled.div`
 
 class QuoteComponent extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       quote: [
         '“In life and business, there are two cardinal sins. The first is to act without thought and the second is not to act at all.” - Carl Icahn',
@@ -59,21 +59,21 @@ class QuoteComponent extends React.Component {
         `“You miss 100% of the shots you don't take.” ― Wayne Gretzky - Michael Scott`,
         `“If Internet Explorer is brave enough to ask to be your default browser, you're brave enough to follow your dreams.” - Apple Genius`,
       ],
-    }
+    };
   }
 
   render() {
-    let randomQuote = Math.floor(Math.random() * 4)
+    let randomQuote = Math.floor(Math.random() * 4);
 
     return (
       <QuoteContainer className="container">
-        <RecGradient></RecGradient>
+        <RecGradient />
         <Quote>
           <p>{this.state.quote[randomQuote]}</p>
         </Quote>
       </QuoteContainer>
-    )
+    );
   }
 }
 
-export default QuoteComponent
+export default QuoteComponent;

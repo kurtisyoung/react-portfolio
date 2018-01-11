@@ -1,9 +1,9 @@
 /* @flow */
 
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import Link from '../Components/Link'
+import Link from '../Components/Link';
 
 const MenuContainer = styled.div`
   height: 100vh;
@@ -23,10 +23,11 @@ const MenuContainer = styled.div`
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-  }`
+  }
+`;
 
 const Rectangle = styled.div`
-  width: 25px;
+  width: 15px;
   height: 100%;
   position: absolute;
   left: 0;
@@ -36,8 +37,9 @@ const Rectangle = styled.div`
     width: 25%;
   }
   &.gradient {
-    background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
-  }`
+    background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
+  }
+`;
 
 const MenuList = styled.ul`
   padding-left: 50px;
@@ -60,7 +62,7 @@ const MenuList = styled.ul`
     }
   }
   a {
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     position: relative;
     font-size: 20px;
@@ -72,7 +74,7 @@ const MenuList = styled.ul`
       left: 0;
       width: 0;
       height: 1px;
-      background: #FFF;
+      background: #fff;
       transition: 300ms ease;
     }
     &:hover {
@@ -80,9 +82,11 @@ const MenuList = styled.ul`
         width: 100%;
       }
     }
-  }`
-
-
+    @media (min-width: 1024px) {
+      font-size: 30px;
+    }
+  }
+`;
 
 class AppMenu extends React.Component {
   constructor(props) {
@@ -91,58 +95,84 @@ class AppMenu extends React.Component {
       menuList: [
         {
           link: '/',
-          name: 'Home'
+          name: 'Home',
         },
         {
           link: '/juneau-by-amacon',
-          name: 'Juneau By Amacon'
+          name: 'Juneau By Amacon',
         },
         {
           link: '/elenore-on-fifth',
-          name: 'Elenore On Fifth'
+          name: 'Elenore On Fifth',
         },
         {
           link: '/landmark',
-          name: 'Landmark'
+          name: 'Landmark',
         },
         {
           link: '/salt-digital',
-          name: 'Salt Digital'
+          name: 'Salt Digital',
         },
         {
           link: '/mccoll-therapy',
-          name: 'McColl Therapy'
+          name: 'McColl Therapy',
         },
-      ] ,
+      ],
     };
   }
   props: {
     active: Function,
-    closeMenu: Function
-  }
+    closeMenu: Function,
+  };
   render() {
-    const list = this.state.menuList 
-    const arrayList = list.map((item, index) => 
+    const list = this.state.menuList;
+    const arrayList = list.map((item, index) => (
       <li key={index}>
-        <Link onClick={this.props.closeMenu} href={item.link}>{item.name}</Link>
+        <Link onClick={this.props.closeMenu} href={item.link}>
+          {item.name}
+        </Link>
       </li>
-    )
+    ));
     return (
       <MenuContainer className={this.props.active}>
-        <Rectangle className="gradient"></Rectangle>
-        <MenuList className="main">
-          {arrayList}
-        </MenuList>
+        <Rectangle className="gradient" />
+        <MenuList className="main">{arrayList}</MenuList>
 
         <MenuList className="external">
-          <li><a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a></li>
-          <li><a href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</a></li>
-          <li><a href="https://www.linkedin.com/in/kcyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/w_areyoung/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li>
+            <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/kurtisyoung"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/kcyoung1/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/w_areyoung/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+          </li>
         </MenuList>
       </MenuContainer>
-    )
+    );
   }
 }
 
-export default AppMenu
+export default AppMenu;
