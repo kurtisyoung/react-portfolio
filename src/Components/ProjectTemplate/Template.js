@@ -128,9 +128,9 @@ const VideoContent = styled.div`
   video {
     position: absolute;
     z-index: 1;
-    height: calc(100% - 26%);
-    width: 92%;
-    top: 0;
+    height: 63.5%;
+    top: 5%;
+    width: 94.9%;
     left: 50%;
     transform: translateX(-50%);
   }
