@@ -11,7 +11,7 @@ class JuneauPage extends React.Component {
     this.state = {
       title: 'Juneau By Amacon',
       banner: './assets/img/juneau/banner.jpg',
-      paragraph: 'Juneau is a residential development built by Amacon in the heart of Burnaby. Lorem Ipsum blah blah blah.',
+      paragraph: `Juneau is a residential development built by Amacon in the heart of Burnaby. The BAM interactive team was tasked with designing and developing a teaser website, full website and touchscreen app. I was the lead developer on the full website and helped develop the touchscreen app. <br/><br/> The website was built with Vue JS along with Sass and HTML. Incorporating ScrollMagic into the project helped create a more dynamic experience for our users. The Google Maps API was used to create an interactive map of the neighbourhood around Juneau.`,
       details: [
         {
           title: 'Agency',
@@ -35,9 +35,11 @@ class JuneauPage extends React.Component {
         },
         {
           title: 'Tech Stack',
-          content: 'VueJS, JS, HTML5, SCSS, npm, WebPack',
+          content: 'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
-      ]
+      ],
+      buttonLink: 'https://amacon.com/juneau/',
+      videoSrc: 'https://player.vimeo.com/video/250734243',
     }
   }
   render() {
@@ -47,7 +49,9 @@ class JuneauPage extends React.Component {
           title={this.state.title}
           banner={this.state.banner}
           paragraph={this.state.paragraph}
-          details={this.state.details}></Template>
+          details={this.state.details}
+          buttonLink={this.state.buttonLink}
+          videoSrc={this.state.videoSrc}></Template>
       </section>
     )
   }

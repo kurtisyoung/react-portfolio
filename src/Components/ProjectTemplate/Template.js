@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { link } from 'fs';
+
+import Link from '../../Components/Link';
 
 const ProjectTemplate = styled.div`padding-top: 100px;`;
 
@@ -11,7 +12,7 @@ const Title = styled.h1`
   position: relative;
   display: inline;
   @media (min-width: 768px) {
-    font-size: 50px;
+    font-size: 55px;
     &:before {
       content: '';
       position: absolute;
@@ -26,12 +27,14 @@ const Title = styled.h1`
 `;
 
 const Banner = styled.div`
-  height: 50vh;
+  height: 60vh;
   width: 100%;
+  margin: 30px 0;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 30px 0;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
 `;
 
 const InfoContainer = styled.div`
@@ -100,12 +103,50 @@ const DetailList = styled.ul`
   }
 `;
 
+const ButtonGradient = styled(Link)`
+  background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
+  padding: 15px 30px;
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  color: #FFF;
+  z-index: 10;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const VideoContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 5%;
+  .img-wrapper {
+    position: relative;
+    display: inline;
+  }
+  video {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+`;
+
 class Template extends React.Component {
   props: {
     title: String,
     banner: String,
     paragraph: String,
     details: Array,
+    buttonLink: Object,
+    videoSrc: String,
   };
 
   render() {
@@ -115,10 +156,8 @@ class Template extends React.Component {
     const detailArray = this.props.details.map((detail, index) => (
       <li key={index}>
         <p className="title">{detail.title}</p>
-        <p
-          className="content"
-          dangerouslySetInnerHTML={{ __html: detail.content }}
-        />
+        <p className="content"
+          dangerouslySetInnerHTML={{ __html: detail.content }}></p>
       </li>
     ));
     return (
@@ -129,12 +168,19 @@ class Template extends React.Component {
         <Banner style={bannerImage} />
         <InfoContainer>
           <div className="flex-item flex-half">
-            <p>{this.props.paragraph}</p>
+            <p dangerouslySetInnerHTML={{ __html: this.props.paragraph }}></p>
           </div>
           <div className="flex-item flex-half">
             <DetailList>{detailArray}</DetailList>
           </div>
         </InfoContainer>
+        <ButtonGradient href={this.props.buttonLink}>View Website</ButtonGradient>
+        <VideoContent>
+          <div className="img-wrapper">
+            <video src={this.props.videoSrc} loop muted playsInline autoPlay></video>
+            <img src="./assets/img/desktop.png" alt="Desktop"/>
+          </div>
+        </VideoContent>
       </ProjectTemplate>
     );
   }

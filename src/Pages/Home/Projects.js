@@ -54,7 +54,7 @@ const ProjectName = styled(Link)`
   position: absolute;
   z-index: 2;
   left: 5%;
-  top: 10%;
+  top: 6%;
   text-shadow: 3px 3px 2px #000;
   margin: 0;
   text-decoration: none;
