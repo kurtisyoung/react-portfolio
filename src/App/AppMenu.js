@@ -102,12 +102,16 @@ class AppMenu extends React.Component {
           name: 'Juneau By Amacon',
         },
         {
-          link: '/elenore-on-fifth',
-          name: 'Elenore On Fifth',
-        },
-        {
           link: '/landmark',
           name: 'Landmark',
+        },
+        {
+          link: '/gryphon-developments',
+          name: 'Gryphon Developments',
+        },
+        {
+          link: '/elenore-on-fifth',
+          name: 'Elenore On Fifth',
         },
         {
           link: '/salt-digital',

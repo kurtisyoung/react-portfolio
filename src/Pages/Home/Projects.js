@@ -112,14 +112,19 @@ class ProjectComponent extends React.Component {
           link: '/juneau-by-amacon',
         },
         {
-          src: './assets/img/home/project-elenore.png',
-          name: 'Elenore On Fifth',
-          link: '/elenore-on-fifth',
-        },
-        {
           src: './assets/img/home/project-landmark.png',
           name: 'Landmark',
           link: '/landmark',
+        },
+        {
+          src: './assets/img/home/project-gryphon.png',
+          name: 'Gryphon Developments',
+          link: '/gryphon-developments',
+        },
+        {
+          src: './assets/img/home/project-elenore.png',
+          name: 'Elenore On Fifth',
+          link: '/elenore-on-fifth',
         },
         {
           src: './assets/img/home/project-salt.png',
