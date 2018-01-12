@@ -39,7 +39,7 @@ class JuneauPage extends React.Component {
         },
       ],
       buttonLink: 'https://amacon.com/juneau/',
-      videoSrc: 'https://player.vimeo.com/video/250734243',
+      videoSrc: './assets/video/juneau.mp4',
     }
   }
   render() {

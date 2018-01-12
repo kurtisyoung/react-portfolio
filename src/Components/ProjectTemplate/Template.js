@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -128,8 +130,10 @@ const VideoContent = styled.div`
   video {
     position: absolute;
     z-index: 1;
-    height: 100%;
+    height: calc(100% - 26%);
     width: 100%;
+    top: 0; 
+    left: 0;
   }
   img {
     position: relative;
@@ -177,7 +181,10 @@ class Template extends React.Component {
         <ButtonGradient href={this.props.buttonLink}>View Website</ButtonGradient>
         <VideoContent>
           <div className="img-wrapper">
-            <video src={this.props.videoSrc} loop muted playsInline autoPlay></video>
+            <video loop muted playsInline autoPlay>
+              <source src={this.props.videoSrc} type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
             <img src="./assets/img/desktop.png" alt="Desktop"/>
           </div>
         </VideoContent>
