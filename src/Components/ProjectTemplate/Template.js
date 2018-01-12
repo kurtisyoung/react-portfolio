@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import styled from 'styled-components';
 
@@ -35,7 +33,7 @@ const Banner = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
 `;
 
@@ -106,12 +104,12 @@ const DetailList = styled.ul`
 `;
 
 const ButtonGradient = styled(Link)`
-  background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
+  background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
   padding: 15px 30px;
   position: fixed;
   right: 5%;
   bottom: 0;
-  color: #FFF;
+  color: #fff;
   z-index: 10;
   @media (max-width: 768px) {
     display: none;
@@ -131,9 +129,10 @@ const VideoContent = styled.div`
     position: absolute;
     z-index: 1;
     height: calc(100% - 26%);
-    width: 100%;
-    top: 0; 
-    left: 0;
+    width: 92%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
   img {
     position: relative;
@@ -160,8 +159,10 @@ class Template extends React.Component {
     const detailArray = this.props.details.map((detail, index) => (
       <li key={index}>
         <p className="title">{detail.title}</p>
-        <p className="content"
-          dangerouslySetInnerHTML={{ __html: detail.content }}></p>
+        <p
+          className="content"
+          dangerouslySetInnerHTML={{ __html: detail.content }}
+        />
       </li>
     ));
     return (
@@ -172,20 +173,22 @@ class Template extends React.Component {
         <Banner style={bannerImage} />
         <InfoContainer>
           <div className="flex-item flex-half">
-            <p dangerouslySetInnerHTML={{ __html: this.props.paragraph }}></p>
+            <p dangerouslySetInnerHTML={{ __html: this.props.paragraph }} />
           </div>
           <div className="flex-item flex-half">
             <DetailList>{detailArray}</DetailList>
           </div>
         </InfoContainer>
-        <ButtonGradient href={this.props.buttonLink}>View Website</ButtonGradient>
+        <ButtonGradient href={this.props.buttonLink}>
+          View Website
+        </ButtonGradient>
         <VideoContent>
           <div className="img-wrapper">
             <video loop muted playsInline autoPlay>
-              <source src={this.props.videoSrc} type="video/mp4"/>
+              <source src={this.props.videoSrc} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <img src="./assets/img/desktop.png" alt="Desktop"/>
+            <img src="./assets/img/desktop.png" alt="Desktop" />
           </div>
         </VideoContent>
       </ProjectTemplate>
