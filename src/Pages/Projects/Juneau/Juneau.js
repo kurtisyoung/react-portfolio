@@ -1,13 +1,13 @@
 /* @flow */
 
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import Template from '../../Components/ProjectTemplate'
+import Template from '../../../Components/ProjectTemplate';
 
 class JuneauPage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       title: 'Juneau By Amacon',
       banner: './assets/img/juneau/banner.jpg',
@@ -31,16 +31,18 @@ class JuneauPage extends React.Component {
         },
         {
           title: 'Website',
-          content: '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
+          content:
+            '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
         },
         {
           title: 'Tech Stack',
-          content: 'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
+          content:
+            'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
       buttonLink: 'https://amacon.com/juneau/',
       videoSrc: './assets/video/juneau.mp4',
-    }
+    };
   }
   render() {
     return (
@@ -51,10 +53,11 @@ class JuneauPage extends React.Component {
           paragraph={this.state.paragraph}
           details={this.state.details}
           buttonLink={this.state.buttonLink}
-          videoSrc={this.state.videoSrc}></Template>
+          videoSrc={this.state.videoSrc}
+        />
       </section>
-    )
+    );
   }
 }
 
-export default JuneauPage
+export default JuneauPage;
