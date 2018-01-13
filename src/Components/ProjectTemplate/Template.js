@@ -27,7 +27,7 @@ const Title = styled.h1`
 `;
 
 const Banner = styled.div`
-  height: 60vh;
+  height: 40vh;
   width: 100%;
   margin: 30px 0;
   background-position: center center;
@@ -35,6 +35,9 @@ const Banner = styled.div`
   background-size: cover;
   /* background-color: rgba(0, 0, 0, 0.5); */
   /* background-blend-mode: multiply; */
+  @media (min-width: 768px) {
+    height: 60vh;
+  }
 `;
 
 const InfoContainer = styled.div`
@@ -44,6 +47,9 @@ const InfoContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 60px;
+  @media (min-width: 768px) {
+    margin-top: 100px;
+  }
   p {
     max-width: 580px;
     width: 100%;
@@ -107,7 +113,7 @@ const ButtonGradient = styled(Link)`
   background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
   padding: 15px 30px;
   position: fixed;
-  right: 5%;
+  right: 4.9%;
   bottom: 0;
   color: #fff;
   z-index: 10;
@@ -130,7 +136,7 @@ const VideoContent = styled.div`
     z-index: 1;
     height: 63.5%;
     top: 5%;
-    width: 94.9%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -144,7 +150,7 @@ const VideoContent = styled.div`
 
 const MobileContainer = styled.div`
   padding: 100px 0;
-  background-color: #000;
+  background-color: #3A3B3E;
   display: flex; 
   flex-flow: row wrap;
   justify-content: space-around;
@@ -164,7 +170,7 @@ const MobileContainer = styled.div`
   .screenshot {
     position: absolute;
     top: 50px;
-    left: 8px;
+    left: 12px;
     z-index: 1;
     max-width: 90%;
   }
@@ -237,7 +243,6 @@ class Template extends React.Component {
             <img className="screenshot" src={this.props.iphone[2]} alt=""/>
             <img className="iphone" src="./assets/img/iphone.png" alt="iPhone"/>
           </div>
-
         </MobileContainer>
       </ProjectTemplate>
     );

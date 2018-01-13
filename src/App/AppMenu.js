@@ -31,8 +31,8 @@ const Rectangle = styled.div`
   height: 100%;
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  /* transform: translateY(-50%); */
   @media (min-width: 768px) {
     width: 25%;
   }

@@ -44,6 +44,11 @@ class LandmarkPage extends React.Component {
       ],
       buttonLink: 'https://amacon.com/juneau/',
       videoSrc: `./assets/video/${pageName}.mp4`,
+      iphone: [
+        `./assets/img/${pageName}/mobile-1.png`,
+        `./assets/img/${pageName}/mobile-2.png`,
+        `./assets/img/${pageName}/mobile-3.png`,
+      ]
     };
   }
   render() {
@@ -56,6 +61,7 @@ class LandmarkPage extends React.Component {
           details={this.state.details}
           buttonLink={this.state.buttonLink}
           videoSrc={this.state.videoSrc}
+          iphone={this.state.iphone}
         />
       </section>
     );

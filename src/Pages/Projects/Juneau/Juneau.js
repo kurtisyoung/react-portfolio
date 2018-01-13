@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 import Template from '../../../Components/ProjectTemplate';
 
+const pageName = 'juneau'
+
 class JuneauPage extends React.Component {
   constructor(props) {
     super(props);
@@ -43,9 +45,9 @@ class JuneauPage extends React.Component {
       buttonLink: 'https://amacon.com/juneau/',
       videoSrc: './assets/video/juneau.mp4',
       iphone: [
-        './assets/img/juneau/mobile-1.png',
-        './assets/img/juneau/mobile-2.png',
-        './assets/img/juneau/mobile-3.png',
+        `./assets/img/${pageName}/mobile-1.png`,
+        `./assets/img/${pageName}/mobile-2.png`,
+        `./assets/img/${pageName}/mobile-3.png`,
       ]
     };
   }
