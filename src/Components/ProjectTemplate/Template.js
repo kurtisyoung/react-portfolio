@@ -33,8 +33,8 @@ const Banner = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* background-blend-mode: multiply; */
 `;
 
 const InfoContainer = styled.div`
@@ -142,6 +142,38 @@ const VideoContent = styled.div`
   }
 `;
 
+const MobileContainer = styled.div`
+  padding: 100px 0;
+  background-color: #000;
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    justify-content: center;
+  }
+  .mobile-wrapper {
+    position: relative;
+    &:nth-of-type(2) {
+      @media (max-width: 768px) {
+        margin: 40px 0;
+      }
+    }
+  }
+  .screenshot {
+    position: absolute;
+    top: 50px;
+    left: 8px;
+    z-index: 1;
+    max-width: 90%;
+  }
+  .iphone {
+    position: relative;
+    z-index: 3;
+  }
+`;
+
 class Template extends React.Component {
   props: {
     title: String,
@@ -150,6 +182,7 @@ class Template extends React.Component {
     details: Array,
     buttonLink: Object,
     videoSrc: String,
+    iphone: Array,
   };
 
   render() {
@@ -191,6 +224,21 @@ class Template extends React.Component {
             <img src="./assets/img/desktop.png" alt="Desktop" />
           </div>
         </VideoContent>
+        <MobileContainer>
+          <div className="mobile-wrapper">
+            <img className="screenshot" src={this.props.iphone[0]} alt=""/>
+            <img className="iphone" src="./assets/img/iphone.png" alt="iPhone"/>
+          </div>
+          <div className="mobile-wrapper">
+            <img className="screenshot" src={this.props.iphone[1]} alt=""/>
+            <img className="iphone" src="./assets/img/iphone.png" alt="iPhone"/>
+          </div>
+          <div className="mobile-wrapper">
+            <img className="screenshot" src={this.props.iphone[2]} alt=""/>
+            <img className="iphone" src="./assets/img/iphone.png" alt="iPhone"/>
+          </div>
+
+        </MobileContainer>
       </ProjectTemplate>
     );
   }
