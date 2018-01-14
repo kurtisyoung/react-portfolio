@@ -11,9 +11,9 @@ class GryphonPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Gryphon',
+      title: 'Gryphon Developments',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Gryphon is a residential development in the `,
+      paragraph: `Gryphon Developments is a real estate developer with roots from Taiwan. They have`,
       details: [
         {
           title: 'Agency',
@@ -21,7 +21,7 @@ class GryphonPage extends React.Component {
         },
         {
           title: 'Client',
-          content: 'Magnum',
+          content: 'Gryphon Developments',
         },
         {
           title: 'Year',
@@ -34,7 +34,7 @@ class GryphonPage extends React.Component {
         {
           title: 'Website',
           content:
-            '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
+            '<a href="http://gryphonliving.com/" target="_blank" rel="noopener noreferrer">gryphonliving.com/</a>',
         },
         {
           title: 'Tech Stack',
@@ -42,7 +42,7 @@ class GryphonPage extends React.Component {
             'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'https://amacon.com/juneau/',
+      buttonLink: 'http://gryphonliving.com/',
       videoSrc: `./assets/video/${pageName}.mp4`,
       iphone: [
         `./assets/img/${pageName}/mobile-1.png`,

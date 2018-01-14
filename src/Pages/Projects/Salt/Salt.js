@@ -13,36 +13,38 @@ class SaltPage extends React.Component {
     this.state = {
       title: 'Salt Digital',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Salt is a residential development in the `,
+      paragraph: `Salt Digital was a full service marketing agency created by myself and two other co-partners. We specialized in the food industry because we saw a gap in the market. Unfortunately, my partners and I decided to move on from the business but the website has been saved as a reference of my work.
+      <br><br>
+      One of the partners initially designed the website `,
       details: [
         {
-          title: 'Agency',
-          content: 'BAM Communications',
+          title: 'Job',
+          content: 'Freelancer',
         },
         {
           title: 'Client',
-          content: 'Magnum',
+          content: 'Salt Digital',
         },
         {
           title: 'Year',
-          content: '2018',
+          content: '2017',
         },
         {
           title: 'Role',
-          content: 'Web Developer',
+          content: 'Web Developer & UX/UI Designer',
         },
         {
           title: 'Website',
           content:
-            '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
+            '<a href="http://saltdigital.ca" target="_blank" rel="noopener noreferrer">saltdigital.ca</a>',
         },
         {
           title: 'Tech Stack',
           content:
-            'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
+            'HTML, Sass, JQuery, JavaScript, ScrollMagic',
         },
       ],
-      buttonLink: 'https://amacon.com/juneau/',
+      buttonLink: 'http://saltdigital.ca',
       videoSrc: `./assets/video/${pageName}.mp4`,
       iphone: [
         `./assets/img/${pageName}/mobile-1.png`,
