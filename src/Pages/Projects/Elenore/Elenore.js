@@ -21,7 +21,7 @@ class ElenorePage extends React.Component {
         },
         {
           title: 'Client',
-          content: 'Magnum',
+          content: 'Rennie Marketing & Chard Developments',
         },
         {
           title: 'Year',
@@ -34,7 +34,7 @@ class ElenorePage extends React.Component {
         {
           title: 'Website',
           content:
-            '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
+            '<a href="http://elenoreonfifth.com/" target="_blank" rel="noopener noreferrer">elenoreonfifth.com</a>',
         },
         {
           title: 'Tech Stack',
@@ -42,7 +42,7 @@ class ElenorePage extends React.Component {
             'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'https://amacon.com/juneau/',
+      buttonLink: 'http://elenoreonfifth.com/',
       videoSrc: `./assets/video/${pageName}.mp4`,
       iphone: [
         `./assets/img/${pageName}/mobile-1.png`,

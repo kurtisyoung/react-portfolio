@@ -21,7 +21,7 @@ class LandmarkPage extends React.Component {
         },
         {
           title: 'Client',
-          content: 'Magnum',
+          content: 'Asia Standard & Magnum',
         },
         {
           title: 'Year',
