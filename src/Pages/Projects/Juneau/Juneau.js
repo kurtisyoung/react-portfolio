@@ -13,7 +13,10 @@ class JuneauPage extends React.Component {
     this.state = {
       title: 'Juneau By Amacon',
       banner: './assets/img/juneau/banner.jpg',
-      paragraph: `Juneau is a residential development built by Amacon in the heart of Burnaby. The BAM interactive team was tasked with designing and developing a teaser website, full website and touchscreen app. I was the lead developer on the full website and helped develop the touchscreen app. <br/><br/> The website was built with Vue JS along with Sass and HTML. Incorporating ScrollMagic into the project helped create a more dynamic experience for our users. The Google Maps API was used to create an interactive map of the neighbourhood around Juneau.`,
+      paragraph: `Juneau is a residential development being built in the heart of Burnaby. The interactive team designed and developed a teaser website, full website and touchscreen app for Amacon. I worked on both the full website and touchscreen app, but had a bigger role on the website.
+      <br/>
+      <br/> 
+      Juneau was one of my favourite projects that I have worked on at BAM. The UX designer did a great job of recreating a magazine layout that allowed us to create a fun and dynamic experience for our users. I stare at websites all day long and when I come across a static site,`,
       details: [
         {
           title: 'Agency',

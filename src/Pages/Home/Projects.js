@@ -113,7 +113,7 @@ class ProjectComponent extends React.Component {
         },
         {
           src: './assets/img/home/project-landmark.png',
-          name: 'Landmark',
+          name: 'Landmark On Robson',
           link: '/landmark',
         },
         {

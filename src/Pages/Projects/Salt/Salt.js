@@ -13,9 +13,9 @@ class SaltPage extends React.Component {
     this.state = {
       title: 'Salt Digital',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Salt Digital was a full service marketing agency created by myself and two other co-partners. We specialized in the food industry because we saw a gap in the market. Unfortunately, my partners and I decided to move on from the business but the website has been saved as a reference of my work.
+      paragraph: `Salt Digital was a full service marketing agency created by myself and two other partners. We specialized in the food industry because we saw a gap in the market. Unfortunately, my partners and I decided to move on from the business but the website has been saved as a reference of my work.
       <br><br>
-      One of the partners initially designed the website `,
+      Another partner initially designed the website. However, while I was developing it, I tweaked the design here and there to be more user friendly. I also added parallaxing affects with ScrollMagic on the landing page to engage the user a bit more as the site was fairly static.`,
       details: [
         {
           title: 'Job',

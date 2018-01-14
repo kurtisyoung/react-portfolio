@@ -13,7 +13,10 @@ class ElenorePage extends React.Component {
     this.state = {
       title: 'Elenore On Fifth',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Elenore is a residential development in the `,
+      paragraph: `Elenore On Fifth is a residential development being built on Main Street and 5th Ave. A central location both near downtown and false creek. BAM designed and developed a teaser website, full website and touschreen app. I worked on the full website with two other developers.
+      <br>
+      <br>
+      The main challenge for this project was that we had a very tight deadline to meet. I was originally supposed to work on the site by myself but thankfully I pulled in two of my co-workers to help out. With a good team behind me, we got this project done without having to simplify the orignal design. Vue also allowed us to work quickly and efficiently, giving us time to create a more dynamic experience for users.`,
       details: [
         {
           title: 'Agency',
@@ -21,7 +24,7 @@ class ElenorePage extends React.Component {
         },
         {
           title: 'Client',
-          content: 'Rennie Marketing & Chard Developments',
+          content: 'Chard Developments & Rennie Marketing',
         },
         {
           title: 'Year',
@@ -39,7 +42,7 @@ class ElenorePage extends React.Component {
         {
           title: 'Tech Stack',
           content:
-            'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
+            'Vue JS, JavaScript, HTML5, Sass, WebPack, Google Maps API',
         },
       ],
       buttonLink: 'http://elenoreonfifth.com/',
