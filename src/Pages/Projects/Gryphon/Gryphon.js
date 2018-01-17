@@ -13,7 +13,7 @@ class GryphonPage extends React.Component {
     this.state = {
       title: 'Gryphon Developments',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Gryphon Developments is a real estate developer with roots from Taiwan. They have`,
+      paragraph: `Gryphon Developments is a real estate company that has . `,
       details: [
         {
           title: 'Agency',
