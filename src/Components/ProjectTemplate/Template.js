@@ -227,21 +227,21 @@ class Template extends React.Component {
               <source src={this.props.videoSrc} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <img src="./assets/img/desktop.png" alt="Desktop" />
+            <img src="./assets/img/desktop.svg" alt="Desktop" />
           </div>
         </VideoContent>
         <MobileContainer>
           <div className="mobile-wrapper">
             <img className="screenshot" src={this.props.iphone[0]} alt=""/>
-            <img className="iphone" src="./assets/img/iphone.png" alt="iPhone"/>
+            <img className="iphone" src="./assets/img/iphone.svg" alt="iPhone"/>
           </div>
           <div className="mobile-wrapper">
             <img className="screenshot" src={this.props.iphone[1]} alt=""/>
-            <img className="iphone" src="./assets/img/iphone.png" alt="iPhone"/>
+            <img className="iphone" src="./assets/img/iphone.svg" alt="iPhone"/>
           </div>
           <div className="mobile-wrapper">
             <img className="screenshot" src={this.props.iphone[2]} alt=""/>
-            <img className="iphone" src="./assets/img/iphone.png" alt="iPhone"/>
+            <img className="iphone" src="./assets/img/iphone.svg" alt="iPhone"/>
           </div>
         </MobileContainer>
       </ProjectTemplate>

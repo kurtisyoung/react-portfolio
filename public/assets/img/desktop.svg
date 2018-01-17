@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="804px" height="648px" viewBox="0 0 804 648" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>desktop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desktop">
+            <polygon id="Rectangle-3" fill="#A5A7AB" points="305.830078 614 500.416992 614 538.347656 648 267.496094 648"></polygon>
+            <polygon id="Rectangle-4" fill="#C9CACC" points="313.515625 553 491.515625 553 500.425781 614 306.601562 614"></polygon>
+            <rect id="Rectangle-5" fill="#D8D8D8" x="0" y="480" width="804" height="73"></rect>
+            <rect id="Rectangle-6" fill="#000000" x="0" y="0" width="34" height="480"></rect>
+            <polygon id="Rectangle-6" fill="#000000" points="772 0 804 0 804 480 770 480"></polygon>
+            <rect id="Rectangle-6" fill="#000000" x="0" y="0" width="804" height="34"></rect>
+            <rect id="Rectangle-6" fill="#000000" x="0" y="444" width="804" height="36"></rect>
+        </g>
+    </g>
+</svg>

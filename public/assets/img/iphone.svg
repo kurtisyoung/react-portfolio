@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="433px" viewBox="0 0 210 433" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>iphone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="iphone-black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1.000000, 0.000000)">
+        <g id="iphone" transform="translate(-1.000000, 0.000000)">
+            <rect id="Rectangle-9" fill="#000000" x="1" y="37" width="13" height="356"></rect>
+            <path d="M0.99842097,382 L210,382 L210,408.060547 C208.791667,414.238932 206.09375,419.72168 201.90625,424.508789 C197.71875,429.295898 191.969401,432.126302 184.658203,433 L24.3769531,433 C19.2356046,432.205289 14.0907478,429.374885 8.94238281,424.508789 C3.79401781,419.642693 1.14655687,412.167432 1,402.083008 L0.99842097,382 Z" id="Rectangle-9" fill="#000000"></path>
+            <path d="M1,37.4902344 C0.402991932,27.3547746 3.09602579,18.3000871 9.07910156,10.3261719 C14.2444661,3.44205729 25.2652995,2.60532336e-14 42.1416016,2.84217094e-14 L169.375977,2.84217094e-14 C185.744466,0.641276042 196.478841,4.08333333 201.579102,10.3261719 C206.679362,16.5690104 209.486328,24.9427083 210,35.4472656 L210.000431,51 L1,51 L1,37.4902344 Z" id="Rectangle-9" fill="#000000"></path>
+            <circle id="Oval" stroke="#FFFFFF" cx="106.5" cy="408.5" r="15.5"></circle>
+            <rect id="Rectangle-9" fill="#000000" x="197" y="43" width="13" height="350"></rect>
+            <circle id="Oval-2" stroke="#FFFFFF" cx="62.5" cy="26.5" r="4.5"></circle>
+            <rect id="Rectangle-10" stroke="#FFFFFF" x="83.5" y="24.5" width="45" height="5"></rect>
+        </g>
+    </g>
+</svg>
