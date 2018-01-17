@@ -150,7 +150,7 @@ const VideoContent = styled.div`
 
 const MobileContainer = styled.div`
   padding: 100px 0;
-  background-color: #3A3B3E;
+  /* background-color: #3A3B3E; */
   display: flex; 
   flex-flow: row wrap;
   justify-content: space-around;

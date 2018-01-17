@@ -13,10 +13,10 @@ class LandmarkPage extends React.Component {
     this.state = {
       title: 'Landmark On Robson',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Landmark On Robson is a residential development that will be replacing the iconic Empire Landmark Hotel in the West End of Vancouver. BAM was tasked with designing and developing a teaser website, full website and touchscreen app for their presale centre. I have worked on both the full website and touchscreen app. However, this project page features only the full website. 
+      paragraph: `Landmark On Robson is a residential development that will be replacing the iconic Empire Landmark Hotel in the West End of Vancouver. The interactive team designed and developed a teaser website, full website and touchscreen app. To minimize the amount of work, I created reusable components between the website and app.
       <br>
       <br>
-      The biggest challenge I faced during this project was the drawn out timeline. I originally started developing this website last August. Due to client changes in the design and their deadline, it was not completed until this January. Of course, this is normal for projects at an agnecy. Deadlines are never set in stone. They can move up to the next day or be pushed back for half a year. It has taught me to be very flexible and understanding of clients and their needs.`,
+      The biggest challenge I faced during this project was the drawn out timeline. I started coding the website last August but due client changes, it was not completed until this January. Working in an agency environment, you get use to deadlines that are constantly shifting. I have learned to be flexible and understanding of situations that are out of your control.`,
       details: [
         {
           title: 'Agency',

@@ -121,8 +121,8 @@ class Hero extends React.Component {
       <Container className="container" {...this.props}>
         <ContentContainer>
           <Title className="large">Web Developer</Title>
-          <Title className="medium">UX/UI Designer</Title>
-          <Title className="small">Creator</Title>
+          <Title className="medium">Web Creator</Title>
+          <Title className="small">Web Maker</Title>
           <RecBlack/>
         </ContentContainer>
         <ContentContainer>
