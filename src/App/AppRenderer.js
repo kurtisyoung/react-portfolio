@@ -17,7 +17,8 @@ const Main = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background: #fff;`
+  background: #fff;
+`;
 
 const Loading = styled.div`
   height: 100vh;
@@ -30,9 +31,9 @@ const Loading = styled.div`
   z-index: 9999;
   p {
     font-size: 40px;
-    color: #FFF;
+    color: #fff;
   }
-`
+`;
 
 type Props = {
   error: ?Error,
@@ -108,7 +109,6 @@ class AppRenderer extends React.Component<any, Props, State> {
       }
     }
   }
-
   shouldComponentUpdate(nextProps: Props, nextState: State) {
     return (
       this.props.error !== nextState.error ||
@@ -125,7 +125,17 @@ class AppRenderer extends React.Component<any, Props, State> {
     ) : (
       <div>
         <AppToolbar me={null} hero={this.state.hero} />
-        <Main>{this.state.body || <Loading><img src="./assets/img/home/k-gradient.svg" width="300px" alt="K"/></Loading>}</Main>
+        <Main>
+          {this.state.body || (
+            <Loading>
+              <img
+                src="./assets/img/home/k-gradient.svg"
+                width="300px"
+                alt="K"
+              />
+            </Loading>
+          )}
+        </Main>
         <AppFooter />
       </div>
     );

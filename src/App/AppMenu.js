@@ -67,6 +67,7 @@ const MenuList = styled.ul`
     position: relative;
     font-size: 20px;
     letter-spacing: 1px;
+    transition: 300ms ease;
     &:before {
       content: '';
       position: absolute;
@@ -78,6 +79,7 @@ const MenuList = styled.ul`
       transition: 300ms ease;
     }
     &:hover {
+      font-size: 40px;
       &:before {
         width: 100%;
       }

@@ -10,7 +10,6 @@ import styled from 'styled-components';
 import QuoteComponent from './Quote';
 import ProjectComponent from './Projects';
 
-
 const HomeContainer = styled.div``;
 
 class Home extends React.Component {
@@ -18,12 +17,14 @@ class Home extends React.Component {
     // stories: Home_stories,
     stories: null,
   };
-
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <HomeContainer>
-        <QuoteComponent/>
-        <ProjectComponent/>
+        <QuoteComponent />
+        <ProjectComponent />
       </HomeContainer>
     );
   }

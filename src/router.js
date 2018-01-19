@@ -134,7 +134,6 @@ const routes = [
 function resolveRoute({ route, fetch, next }, params) {
   // Skip routes that have no .render() method
   if (!route.render) return next();
-
   // Shape the result to be passed into the top-level React component (App)
   return {
     params,

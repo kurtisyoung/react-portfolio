@@ -151,12 +151,12 @@ const VideoContent = styled.div`
 const MobileContainer = styled.div`
   padding: 100px 0;
   /* background-color: #3A3B3E; */
-  display: flex; 
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   @media (max-width: 768px) {
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
   }
   .mobile-wrapper {
@@ -190,7 +190,9 @@ class Template extends React.Component {
     videoSrc: String,
     iphone: Array,
   };
-
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     const bannerImage = {
       backgroundImage: `url('${this.props.banner}')`,
@@ -232,16 +234,28 @@ class Template extends React.Component {
         </VideoContent>
         <MobileContainer>
           <div className="mobile-wrapper">
-            <img className="screenshot" src={this.props.iphone[0]} alt=""/>
-            <img className="iphone" src="./assets/img/iphone.svg" alt="iPhone"/>
+            <img className="screenshot" src={this.props.iphone[0]} alt="" />
+            <img
+              className="iphone"
+              src="./assets/img/iphone.svg"
+              alt="iPhone"
+            />
           </div>
           <div className="mobile-wrapper">
-            <img className="screenshot" src={this.props.iphone[1]} alt=""/>
-            <img className="iphone" src="./assets/img/iphone.svg" alt="iPhone"/>
+            <img className="screenshot" src={this.props.iphone[1]} alt="" />
+            <img
+              className="iphone"
+              src="./assets/img/iphone.svg"
+              alt="iPhone"
+            />
           </div>
           <div className="mobile-wrapper">
-            <img className="screenshot" src={this.props.iphone[2]} alt=""/>
-            <img className="iphone" src="./assets/img/iphone.svg" alt="iPhone"/>
+            <img className="screenshot" src={this.props.iphone[2]} alt="" />
+            <img
+              className="iphone"
+              src="./assets/img/iphone.svg"
+              alt="iPhone"
+            />
           </div>
         </MobileContainer>
       </ProjectTemplate>
