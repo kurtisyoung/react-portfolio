@@ -54,7 +54,8 @@ const MenuList = styled.ul`
   }
   &.external {
     a {
-      font-size: 16px;
+      font-size: 16px !important;
+      font-weight: 400 !important;
     }
     li {
       &:first-of-type {
@@ -82,6 +83,7 @@ const MenuList = styled.ul`
     &:hover,
     &.active {
       font-size: 40px;
+      font-weight: 700;
       &:before {
         width: 100%;
       }
