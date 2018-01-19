@@ -35,26 +35,26 @@ const routes = [
       body: <ErrorPage />,
     }),
   },
-  {
-    path: '/getting-started',
-    query: graphql`query routerGettingStartedQuery { me { ...App_me } }`, // prettier-ignore
-    components: () => [
-      import(/* webpackChunkName: 'start' */ './Pages/GettingStarted'),
-    ],
-    render: ([GettingStarted]) => ({
-      title: 'Getting Started',
-      body: <GettingStarted />,
-    }),
-  },
-  {
-    path: '/about',
-    query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
-    components: () => [import(/* webpackChunkName: 'about' */ './Pages/About')],
-    render: ([About]) => ({
-      title: 'About Us',
-      body: <About />,
-    }),
-  },
+  // {
+  //   path: '/getting-started',
+  //   query: graphql`query routerGettingStartedQuery { me { ...App_me } }`, // prettier-ignore
+  //   components: () => [
+  //     import(/* webpackChunkName: 'start' */ './Pages/GettingStarted'),
+  //   ],
+  //   render: ([GettingStarted]) => ({
+  //     title: 'Getting Started',
+  //     body: <GettingStarted />,
+  //   }),
+  // },
+  // {
+  //   path: '/about',
+  //   query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
+  //   components: () => [import(/* webpackChunkName: 'about' */ './Pages/About')],
+  //   render: ([About]) => ({
+  //     title: 'About Us',
+  //     body: <About />,
+  //   }),
+  // },
   {
     path: '/juneau-by-amacon',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore

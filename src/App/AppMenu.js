@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import history from '../history';
 
 import Link from '../Components/Link';
 
@@ -78,7 +79,8 @@ const MenuList = styled.ul`
       background: #fff;
       transition: 300ms ease;
     }
-    &:hover {
+    &:hover,
+    &.active {
       font-size: 40px;
       &:before {
         width: 100%;
@@ -134,7 +136,11 @@ class AppMenu extends React.Component {
     const list = this.state.menuList;
     const arrayList = list.map((item, index) => (
       <li key={index}>
-        <Link onClick={this.props.closeMenu} href={item.link}>
+        <Link
+          onClick={this.props.closeMenu}
+          href={item.link}
+          className={history.location.pathname === item.link ? 'active' : null}
+        >
           {item.name}
         </Link>
       </li>
