@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 // import Link from '../../Components/Link';
 
-import QuoteComponent from './Quote';
+import AboutComponent from './About';
 import ProjectComponent from './Projects';
 
 const HomeContainer = styled.div``;
@@ -23,7 +23,7 @@ class Home extends React.Component {
   render() {
     return (
       <HomeContainer>
-        <QuoteComponent />
+        <AboutComponent />
         <ProjectComponent />
       </HomeContainer>
     );

@@ -24,9 +24,13 @@ const ContentContainer = styled.div`
   position: relative;
   @media (min-width: 768px) {
     height: 100%;
-    width: 50%;
+    width: 42%;
     align-items: flex-start;
     text-align: left;
+    &.k-container {
+      text-align: right;
+      width: 58%;
+    }
   }
   .k {
     position: absolute;
@@ -38,7 +42,7 @@ const ContentContainer = styled.div`
     height: auto;
     @media (min-width: 768px) {
       max-width: 100%;
-      left: -30px;
+      left: 0;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -46,7 +50,7 @@ const ContentContainer = styled.div`
   .k-gradient {
     left: 53%;
     @media (min-width: 768px) {
-      left: 0;
+      left: 30px;
     }
   }
 `;
@@ -123,11 +127,19 @@ class Hero extends React.Component {
           <Title className="large">Web Developer</Title>
           <Title className="medium">Web Creator</Title>
           <Title className="small">Web Maker</Title>
-          <RecBlack/>
+          <RecBlack />
         </ContentContainer>
-        <ContentContainer>
-          <img className="k k-black" src="./assets/img/home/k-black.svg" alt="K" />
-          <img className="k k-gradient" src="./assets/img/home/k-gradient.svg" alt="K"/>
+        <ContentContainer className="k-container">
+          <img
+            className="k k-black"
+            src="./assets/img/home/k-black.svg"
+            alt="K"
+          />
+          <img
+            className="k k-gradient"
+            src="./assets/img/home/k-gradient.svg"
+            alt="K"
+          />
         </ContentContainer>
         {/* <Description>
           <strong>React Static</strong> is a popular boilerplate for building

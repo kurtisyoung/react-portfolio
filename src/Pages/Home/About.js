@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const QuoteContainer = styled.div`
+const AboutContainer = styled.div`
   position: relative;
   height: 235px;
   margin-top: 100px;
@@ -17,7 +17,7 @@ const QuoteContainer = styled.div`
   }
 `;
 
-const Quote = styled.div`
+const About = styled.div`
   text-align: center;
   p {
     max-width: 560px;
@@ -49,7 +49,7 @@ const RecGradient = styled.div`
   }
 `;
 
-class QuoteComponent extends React.Component {
+class AboutComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -66,14 +66,14 @@ class QuoteComponent extends React.Component {
     let randomQuote = Math.floor(Math.random() * 4);
 
     return (
-      <QuoteContainer className="container">
+      <AboutContainer className="container">
         <RecGradient />
-        <Quote>
+        <About>
           <p>{this.state.quote[randomQuote]}</p>
-        </Quote>
-      </QuoteContainer>
+        </About>
+      </AboutContainer>
     );
   }
 }
 
-export default QuoteComponent;
+export default AboutComponent;
