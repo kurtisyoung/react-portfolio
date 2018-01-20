@@ -13,9 +13,9 @@ class SaltPage extends React.Component {
     this.state = {
       title: 'Salt Digital',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Salt Digital was a full service marketing agency created by myself and two other partners. We specialized in the food industry because we saw a gap in the market. Unfortunately, my partners and I decided to move on from the business but the website has been saved as a reference of my work.
+      paragraph: `Salt Digital was a full service marketing agency created by myself and two other partners. Unfortunately, my partners and I decided to move on from the business but the website has been saved as a reference of my work.
       <br><br>
-      Another partner initially designed the website. However, while I was developing it, I tweaked the design here and there to be more user friendly. I also added parallaxing affects with ScrollMagic on the landing page to engage the user a bit more as the site was fairly static.`,
+      Starting a business is tough. There was a lot more work than just getting clients and developing websites. We tried to be a full service agency when we should have just focused on one aspect of the industry. Even though it didn't work out, I learned a lot from the experience. Salt digital will be back.`,
       details: [
         {
           title: 'Job',
@@ -39,9 +39,13 @@ class SaltPage extends React.Component {
             '<a href="http://saltdigital.ca" target="_blank" rel="noopener noreferrer">saltdigital.ca</a>',
         },
         {
-          title: 'Tech Stack',
+          title: 'Github',
           content:
-            'HTML, Sass, JQuery, JavaScript, ScrollMagic',
+            '<a href="https://github.com/saltdigital/salt-full" target="_blank" rel="noopener noreferrer">saltdigital/salt-full</a>',
+        },
+        {
+          title: 'Tech Stack',
+          content: 'HTML, Sass, JQuery, JavaScript, Gulp, npm, ScrollMagic',
         },
       ],
       buttonLink: 'http://saltdigital.ca',
@@ -50,7 +54,7 @@ class SaltPage extends React.Component {
         `./assets/img/${pageName}/mobile-1.png`,
         `./assets/img/${pageName}/mobile-2.png`,
         `./assets/img/${pageName}/mobile-3.png`,
-      ]
+      ],
     };
   }
   render() {

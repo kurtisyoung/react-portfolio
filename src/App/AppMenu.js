@@ -54,6 +54,7 @@ const MenuList = styled.ul`
     font-size: 20px;
     letter-spacing: 1px;
     transition: 300ms ease;
+    font-family: 'Montserrat', sans-serif;
     &:before {
       content: '';
       position: absolute;

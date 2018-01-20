@@ -13,10 +13,10 @@ class ElenorePage extends React.Component {
     this.state = {
       title: 'Elenore On Fifth',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Elenore On Fifth is a residential development being built on Main Street and 5th Ave. A central location both near downtown and false creek. BAM designed and developed a teaser website, full website and touschreen app. I worked on the full website with two other developers.
+      paragraph: `Elenore On Fifth is a residential development currently being built on Main and 5th Ave. I worked on the full website and touchscreen app.
       <br>
       <br>
-      The main challenge for this project was that we had a very tight deadline to meet. I was originally supposed to work on the site by myself but thankfully I pulled in two of my co-workers to help out. With a good team behind me, we got this project done without having to simplify the orignal design. Vue also allowed us to work quickly and efficiently, giving us time to create a more dynamic experience for users.`,
+       The biggest challenge for this project was the tight deadline we had to meet. We were able to finish the website on time and within the budget because we had a good system in place. We used Github branches to minimize merge conflicts and Vue allowed us to work quickly and efficiently, giving us time to create a dynamic experience for users.`,
       details: [
         {
           title: 'Agency',
@@ -41,8 +41,7 @@ class ElenorePage extends React.Component {
         },
         {
           title: 'Tech Stack',
-          content:
-            'Vue JS, JavaScript, HTML5, Sass, WebPack, Google Maps API',
+          content: 'Vue JS, JavaScript, HTML5, Sass, WebPack, Google Maps API',
         },
       ],
       buttonLink: 'http://elenoreonfifth.com/',
@@ -51,7 +50,7 @@ class ElenorePage extends React.Component {
         `./assets/img/${pageName}/mobile-1.png`,
         `./assets/img/${pageName}/mobile-2.png`,
         `./assets/img/${pageName}/mobile-3.png`,
-      ]
+      ],
     };
   }
   render() {

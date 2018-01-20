@@ -13,42 +13,48 @@ class MccollPage extends React.Component {
     this.state = {
       title: 'McColl Therapy',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Landmark is a residential development in the `,
+      paragraph: `McColl Therapy, a group of occupational therapists that offer therapy and counselling services, was my first client after graduating from RED Academy. I designed and developed a Custom WordPress Theme with custom post types and field suites, giving them the flexibility to change what they wanted. 
+      <br><br>
+      Since this was my first freelance job, I learned how to interact with clients, meet deadlines and create invoices on the job. I have kept an ongoing relationship with them and in 2018 a new version of their website will be launched.`,
       details: [
         {
-          title: 'Agency',
-          content: 'BAM Communications',
+          title: 'Job',
+          content: 'Freelance',
         },
         {
           title: 'Client',
-          content: 'Magnum',
+          content: 'McColl Therapy',
         },
         {
           title: 'Year',
-          content: '2018',
+          content: '2016',
         },
         {
           title: 'Role',
-          content: 'Web Developer',
+          content: 'Web Developer & UX/UI Designer',
         },
         {
           title: 'Website',
           content:
-            '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
+            '<a href="http://mccolltherapy.com/" target="_blank" rel="noopener noreferrer">mccolltherapy.com</a>',
+        },
+        {
+          title: 'Github',
+          content:
+            '<a href="https://github.com/kurtisyoung/wordpress-mccoll-therapy" target="_blank" rel="noopener noreferrer">kurtisyoung/mccoll-therapy</a>',
         },
         {
           title: 'Tech Stack',
-          content:
-            'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
+          content: 'WordPress, PHP, HTML5, Sass, JQuery, JavaScript, Gulp, npm',
         },
       ],
-      buttonLink: 'https://amacon.com/juneau/',
+      buttonLink: 'http://mccolltherapy.com/',
       videoSrc: `./assets/video/${pageName}.mp4`,
       iphone: [
         `./assets/img/${pageName}/mobile-1.png`,
         `./assets/img/${pageName}/mobile-2.png`,
         `./assets/img/${pageName}/mobile-3.png`,
-      ]
+      ],
     };
   }
   render() {

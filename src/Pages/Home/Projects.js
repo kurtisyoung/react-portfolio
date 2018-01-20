@@ -58,6 +58,7 @@ const ProjectName = styled(Link)`
   text-shadow: 3px 3px 2px #000;
   margin: 0;
   text-decoration: none;
+  font-weight: 600;
   @media (min-width: 768px) {
     font-size: 40px;
   }

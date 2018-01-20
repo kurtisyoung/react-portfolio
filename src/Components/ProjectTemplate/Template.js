@@ -11,6 +11,7 @@ const Title = styled.h1`
   font-family: Montserrat, sans-serif;
   position: relative;
   display: inline;
+  font-weight: 600;
   @media (min-width: 768px) {
     font-size: 55px;
     &:before {
