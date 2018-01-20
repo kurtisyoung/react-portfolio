@@ -3,20 +3,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Template from '../../../Components/ProjectTemplate';
+import Template from '../../Components/ProjectTemplate';
 
-const pageName = 'landmark';
+const pageName = 'juneau';
 
-class LandmarkPage extends React.Component {
+class JuneauPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Landmark On Robson',
-      banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Landmark On Robson is a residential development that will be replacing the iconic Empire Landmark Hotel in the West End of Vancouver. I worked on the full website and touchscreen app.
-      <br>
-      <br>
-      Working in an agency, you get use to timelines that are constantly shifting. Landmark was originally supposed launch last August but it was not completed until this January. Coding and reiterating the same website for half a year is not ideal but it is part of the job. Even though it took a while to complete, I enjoyed Landmark's unique challenge of having parallaxing SVG letters on every page.`,
+      title: 'Juneau By Amacon',
+      banner: './assets/img/juneau/banner.jpg',
+      paragraph: `Juneau is a residential development built in the heart of Burnaby. I worked on both the full website and touchscreen app. Vue made it easy share components between the site and app, minimizing the amount of work we had to do.
+      <br/>
+      <br/> 
+      This was one of my favourite projects that I've worked on. The layout, design and feel of the website is exactly what I look for in other websites. Every page interacts with the user in a different way. It makes the user curious and keeps them guessing. That's what I love about coding. There are endless ways you can be creative.`,
       details: [
         {
           title: 'Agency',
@@ -24,11 +24,11 @@ class LandmarkPage extends React.Component {
         },
         {
           title: 'Client',
-          content: 'Asia Standard Americas & Magnum Projects Ltd',
+          content: 'Amacon, MLA',
         },
         {
           title: 'Year',
-          content: '2018',
+          content: '2017',
         },
         {
           title: 'Role',
@@ -37,7 +37,7 @@ class LandmarkPage extends React.Component {
         {
           title: 'Website',
           content:
-            '<a href="http://landmarkonrobson.com/" target="_blank" rel="noopener noreferrer">landmarkonrobson.com</a>',
+            '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
         },
         {
           title: 'Tech Stack',
@@ -45,8 +45,8 @@ class LandmarkPage extends React.Component {
             'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'http://landmarkonrobson.com/',
-      videoSrc: `./assets/video/${pageName}.mp4`,
+      buttonLink: 'https://amacon.com/juneau/',
+      videoSrc: './assets/video/juneau.mp4',
       iphone: [
         `./assets/img/${pageName}/mobile-1.png`,
         `./assets/img/${pageName}/mobile-2.png`,
@@ -71,4 +71,4 @@ class LandmarkPage extends React.Component {
   }
 }
 
-export default LandmarkPage;
+export default JuneauPage;

@@ -14,6 +14,12 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   min-height: 600px;
+  &.active {
+    h1 {
+      opacity: 1;
+      left: 0;
+    }
+  }
 `;
 const ContentContainer = styled.div`
   height: 300px;
@@ -69,14 +75,20 @@ const Title = styled.h1`
   font-weight: 500;
   letter-spacing: 1px;
   margin: 0;
+  position: relative;
+  opacity: 0;
+  left: 20px;
+  transition: 500ms ease-out;
   &.large {
     font-size: 35px;
   }
   &.medium {
     font-size: 30px;
+    transition-delay: 200ms;
   }
   &.small {
     font-size: 25px;
+    transition-delay: 400ms;
   }
   @media (min-width: 768px) {
     &.large {
@@ -149,6 +161,16 @@ class Hero extends React.Component {
   //     // .addIndicators() // add indicators (requires plugin)
   //     .addTo(controller)
   // }
+  componentDidMount() {
+    window.addEventListener('load', this._loadAnimation());
+  }
+  _loadAnimation() {
+    setTimeout(() => {
+      let heroID = document.getElementById('hero');
+
+      heroID.classList.add('active');
+    }, 200);
+  }
 
   render() {
     return (

@@ -135,7 +135,7 @@ const VideoContent = styled.div`
   video {
     position: absolute;
     z-index: 1;
-    height: 63.5%;
+    height: 64.5%;
     top: 5%;
     width: 100%;
     left: 50%;

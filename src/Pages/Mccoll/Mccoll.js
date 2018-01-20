@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Template from '../../../Components/ProjectTemplate';
+import Template from '../../Components/ProjectTemplate';
 
 const pageName = 'mccoll';
 

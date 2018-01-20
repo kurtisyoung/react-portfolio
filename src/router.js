@@ -56,10 +56,10 @@ const routes = [
   //   }),
   // },
   {
-    path: '/juneau-by-amacon',
+    path: '/juneau',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
     components: () => [
-      import(/* webpackChunkName: 'Juneau' */ './Pages/Projects/Juneau'),
+      import(/* webpackChunkName: 'Juneau' */ './Pages/Juneau'),
     ],
     render: ([Juneau]) => ({
       title: 'Juneau By Amacon',
@@ -67,10 +67,10 @@ const routes = [
     }),
   },
   {
-    path: '/gryphon-developments',
+    path: '/gryphon',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
     components: () => [
-      import(/* webpackChunkName: 'Juneau' */ './Pages/Projects/Gryphon'),
+      import(/* webpackChunkName: 'Juneau' */ './Pages/Gryphon'),
     ],
     render: ([Gryphon]) => ({
       title: 'Gryphon Developments',
@@ -81,7 +81,7 @@ const routes = [
     path: '/landmark',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
     components: () => [
-      import(/* webpackChunkName: 'Juneau' */ './Pages/Projects/Landmark'),
+      import(/* webpackChunkName: 'Juneau' */ './Pages/Landmark'),
     ],
     render: ([Landmark]) => ({
       title: 'Landmark',
@@ -89,10 +89,10 @@ const routes = [
     }),
   },
   {
-    path: '/elenore-on-fifth',
+    path: '/elenore',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
     components: () => [
-      import(/* webpackChunkName: 'Juneau' */ './Pages/Projects/Elenore'),
+      import(/* webpackChunkName: 'Juneau' */ './Pages/Elenore'),
     ],
     render: ([Elenore]) => ({
       title: 'Elenore On Fifth',
@@ -102,9 +102,7 @@ const routes = [
   {
     path: '/salt-digital',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
-    components: () => [
-      import(/* webpackChunkName: 'Juneau' */ './Pages/Projects/Salt'),
-    ],
+    components: () => [import(/* webpackChunkName: 'Juneau' */ './Pages/Salt')],
     render: ([Salt]) => ({
       title: 'Salt Digital',
       body: <Salt />,
@@ -114,7 +112,7 @@ const routes = [
     path: '/mccoll-therapy',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
     components: () => [
-      import(/* webpackChunkName: 'Juneau' */ './Pages/Projects/Mccoll'),
+      import(/* webpackChunkName: 'Juneau' */ './Pages/Mccoll'),
     ],
     render: ([Mccoll]) => ({
       title: 'McColl Therapy',

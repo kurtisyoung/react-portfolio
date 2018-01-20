@@ -3,20 +3,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Template from '../../../Components/ProjectTemplate';
+import Template from '../../Components/ProjectTemplate';
 
-const pageName = 'elenore';
+const pageName = 'gryphon';
 
-class ElenorePage extends React.Component {
+class GryphonPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Elenore On Fifth',
+      title: 'Gryphon Developments',
       banner: `./assets/img/${pageName}/banner.jpg`,
-      paragraph: `Elenore On Fifth is a residential development currently being built on Main and 5th Ave. I worked on the full website and touchscreen app.
-      <br>
-      <br>
-       The biggest challenge for this project was the tight deadline we had to meet. We were able to finish the website on time and within the budget because we had a good system in place. We used Github branches to minimize merge conflicts and Vue allowed us to work quickly and efficiently, giving us time to create a dynamic experience for users.`,
+      paragraph: `Gryphon Developments is a new real estate company that isn't afraid to push the boundries. BAM created the Gryphon brand from the ground up, allowing the interactive team to work side by side with the graphic designers.
+      <br><br>
+      Corporate websites have a different feel from pre-sale building sites. It's more about selling the company and it's brand than floorplans. Gryphon's branding is very well done. Clean, creative and bold. The biggest challenge of this website was creating a slider carousel from the scratch with parallaxing images and an overlaying slide effect.`,
       details: [
         {
           title: 'Agency',
@@ -24,11 +23,11 @@ class ElenorePage extends React.Component {
         },
         {
           title: 'Client',
-          content: 'Chard Developments & Rennie Marketing',
+          content: 'Gryphon Developments',
         },
         {
           title: 'Year',
-          content: '2017',
+          content: '2018',
         },
         {
           title: 'Role',
@@ -37,14 +36,15 @@ class ElenorePage extends React.Component {
         {
           title: 'Website',
           content:
-            '<a href="http://elenoreonfifth.com/" target="_blank" rel="noopener noreferrer">elenoreonfifth.com</a>',
+            '<a href="http://gryphonliving.com/" target="_blank" rel="noopener noreferrer">gryphonliving.com/</a>',
         },
         {
           title: 'Tech Stack',
-          content: 'Vue JS, JavaScript, HTML5, Sass, WebPack, Google Maps API',
+          content:
+            'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'http://elenoreonfifth.com/',
+      buttonLink: 'http://gryphonliving.com/',
       videoSrc: `./assets/video/${pageName}.mp4`,
       iphone: [
         `./assets/img/${pageName}/mobile-1.png`,
@@ -70,4 +70,4 @@ class ElenorePage extends React.Component {
   }
 }
 
-export default ElenorePage;
+export default GryphonPage;
