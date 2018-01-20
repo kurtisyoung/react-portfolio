@@ -59,7 +59,7 @@ const ContentContainer = styled.div`
   .k-gradient {
     left: 53%;
     @media (min-width: 768px) {
-      left: 4%;
+      left: 6%;
     }
   }
 `;
@@ -88,19 +88,6 @@ const Title = styled.h1`
     &.small {
       font-size: 30px;
     }
-  }
-`;
-
-const RecBlack = styled.div`
-  height: 325px;
-  width: 50px;
-  background-color: #000;
-  position: absolute;
-  bottom: -240px;
-  left: 0;
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
   }
 `;
 
@@ -170,10 +157,9 @@ class Hero extends React.Component {
           <Title className="large">Web Developer</Title>
           <Title className="medium">Web Creator</Title>
           <Title className="small">Web Maker</Title>
-          <RecBlack />
         </ContentContainer>
         <ContentContainer className="k-container">
-          <Parallax offsetYMin={-20} offsetYMax={10} className="k k-black">
+          <Parallax offsetYMin={-10} offsetYMax={10} className="k k-black">
             <img
               // id="kBlack"
               // className="k k-black"
@@ -183,7 +169,9 @@ class Hero extends React.Component {
           </Parallax>
           <Parallax
             offsetYMax={10}
-            offsetYMin={-27}
+            offsetYMin={-20}
+            offsetXMax={6}
+            offsetXMin={0}
             slowerScrollRate
             className="k k-gradient"
           >
