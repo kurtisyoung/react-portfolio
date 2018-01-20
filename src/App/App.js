@@ -8,6 +8,7 @@ import relay from '../relay';
 import router from '../router';
 import history from '../history';
 import AppRenderer from './AppRenderer';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 // eslint-disable-next-line no-unused-expressions
 graphql`
@@ -79,12 +80,14 @@ class App extends React.Component<any, any, State> {
 
   render() {
     return (
-      <QueryRenderer
-        environment={relay}
-        query={this.state.query}
-        variables={this.state.variables}
-        render={this.renderState}
-      />
+      <ParallaxProvider>
+        <QueryRenderer
+          environment={relay}
+          query={this.state.query}
+          variables={this.state.variables}
+          render={this.renderState}
+        />
+      </ParallaxProvider>
     );
   }
 }

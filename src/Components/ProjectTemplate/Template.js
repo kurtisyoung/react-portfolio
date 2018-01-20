@@ -46,7 +46,7 @@ const InfoContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 30px;
   @media (min-width: 768px) {
     margin-top: 100px;
   }

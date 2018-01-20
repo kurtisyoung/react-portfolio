@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Link from '../../Components/Link';
+import { Parallax } from 'react-scroll-parallax';
 
 const Container = styled.div`
   width: 100%;
@@ -46,11 +47,19 @@ const ContentContainer = styled.div`
       top: 50%;
       transform: translateY(-50%);
     }
+    img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      @media (min-width: 768px) {
+        max-width: 100%;
+      }
+    }
   }
   .k-gradient {
     left: 53%;
     @media (min-width: 768px) {
-      left: 30px;
+      left: 4%;
     }
   }
 `;
@@ -120,9 +129,43 @@ const Button = styled(Link)`
 `;
 
 class Hero extends React.Component {
+  // scrollParallax() {
+  //   let controller = new ScrollMagic.Controller()
+
+  //   var parallax = new TimelineMax().add([
+  //     TweenMax.fromTo(
+  //       '#kBlack',
+  //       1,
+  //       { transform: 'translate3d(0, 0px, 0)' },
+  //       { transform: 'translate3d(0, -30px, 0)', ease: Linear.easeNone }
+  //     ),
+  //     TweenMax.fromTo(
+  //       '#kGradient',
+  //       1,
+  //       { transform: 'translate3d(0, 0px, 0)', opacity: 1 },
+  //       {
+  //         transform: 'translate3d(0, 280px, 0)',
+  //         opacity: 0,
+  //         ease: Linear.easeNone,
+  //       }
+  //     ),
+  //   ])
+
+  //   // build scene
+  //   var scene = new ScrollMagic.Scene({
+  //     triggerElement: '#hero',
+  //     duration: 1000,
+  //     offset: -200,
+  //   })
+  //     .setTween(parallax)
+  //     // .setPin("#heroImage")
+  //     // .addIndicators() // add indicators (requires plugin)
+  //     .addTo(controller)
+  // }
+
   render() {
     return (
-      <Container className="container" {...this.props}>
+      <Container id="hero" className="container" {...this.props}>
         <ContentContainer>
           <Title className="large">Web Developer</Title>
           <Title className="medium">Web Creator</Title>
@@ -130,16 +173,27 @@ class Hero extends React.Component {
           <RecBlack />
         </ContentContainer>
         <ContentContainer className="k-container">
-          <img
-            className="k k-black"
-            src="./assets/img/home/k-black.svg"
-            alt="K"
-          />
-          <img
+          <Parallax offsetYMin={-20} offsetYMax={10} className="k k-black">
+            <img
+              // id="kBlack"
+              // className="k k-black"
+              src="./assets/img/home/k-black.svg"
+              alt="K"
+            />
+          </Parallax>
+          <Parallax
+            offsetYMax={10}
+            offsetYMin={-27}
+            slowerScrollRate
             className="k k-gradient"
-            src="./assets/img/home/k-gradient.svg"
-            alt="K"
-          />
+          >
+            <img
+              // id="kGradient"
+              // className="k k-gradient"
+              src="./assets/img/home/k-gradient.svg"
+              alt="K"
+            />
+          </Parallax>
         </ContentContainer>
         {/* <Description>
           <strong>React Static</strong> is a popular boilerplate for building
