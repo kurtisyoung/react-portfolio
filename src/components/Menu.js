@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import { Link, NavLink } from 'react-static'
 import styled from 'styled-components'
-// import history from '../../node_modules/history'
-
-console.log(history)
 
 const MenuContainer = styled.div`
   height: 100vh;
@@ -170,7 +167,6 @@ export default class Menu extends Component {
           onClick={this.props.closeMenu}
           to={item.link}
           activeClassName="active"
-          // className={history.location.pathname === item.link ? 'active' : null}
           >
           {item.name}
         </NavLink>

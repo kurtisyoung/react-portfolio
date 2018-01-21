@@ -5,9 +5,6 @@ const QuoteContainer = styled.div`
   height: 235px;
   margin-top: 100px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   @media (min-width: 768px) {
     margin-top: 15%;
     margin-bottom: 120px;
@@ -15,6 +12,9 @@ const QuoteContainer = styled.div`
   .container {
     position: relative;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import { Link } from 'react-static'
-import { Parallax } from 'react-scroll-parallax'
+// import { Parallax } from 'react-scroll-parallax'
+
 
 const Container = styled.div`
   width: 100%;
@@ -129,8 +130,8 @@ const Button = styled(Link)`
 export default class Hero extends Component {
 
   componentDidMount() {
-    // this._loadAnimation()
-    window.addEventListener('load', this._loadAnimation())
+    this._loadAnimation()
+    // window.addEventListener('load', this._loadAnimation())
   }
   _loadAnimation() {
     setTimeout(() => {
@@ -149,29 +150,29 @@ export default class Hero extends Component {
           <Title className="small">Web Maker</Title>
         </ContentContainer>
         <ContentContainer className="k-container">
-          <Parallax offsetYMin={-10} offsetYMax={10} className="k k-black">
+          {/* <Parallax offsetYMin={-10} offsetYMax={10} className="k k-black"> */}
             <img
               // id="kBlack"
-              // className="k k-black"
+              className="k k-black"
               src="./assets/img/home/k-black.svg"
               alt="K"
             />
-          </Parallax>
-          <Parallax
+          {/* </Parallax> */}
+          {/* <Parallax
             offsetYMax={10}
             offsetYMin={-20}
             offsetXMax={6}
             offsetXMin={0}
             slowerScrollRate
             className="k k-gradient"
-          >
+          > */}
             <img
               // id="kGradient"
-              // className="k k-gradient"
+              className="k k-gradient"
               src="./assets/img/home/k-gradient.svg"
               alt="K"
             />
-          </Parallax>
+          {/* </Parallax> */}
         </ContentContainer>
       </Container>
     );

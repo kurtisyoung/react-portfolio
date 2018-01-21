@@ -9,7 +9,7 @@ import routes from '../config/routes'
 
 import Header from 'components/Header'
 import Footer from 'components/Footer'
-import { ParallaxProvider } from 'react-scroll-parallax'
+// import { ParallaxProvider } from 'react-scroll-parallax'
 
 import './styles/main.css'
 
@@ -50,7 +50,7 @@ export default () => (
           return (
             <App id="app">
               <Header type="primary" />
-              <ParallaxProvider>
+              {/* <ParallaxProvider> */}
                 <div className="app-container">
                   <TransitionGroup>
                     <CSSTransition
@@ -62,7 +62,7 @@ export default () => (
                     </CSSTransition>
                   </TransitionGroup>
                 </div>
-              </ParallaxProvider>
+              {/* </ParallaxProvider> */}
               <Footer/>
             </App>
           )
