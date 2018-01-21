@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-static'
 import styled from 'styled-components'
+import history from '../../node_modules/history'
+
+console.log(history)
 
 const MenuContainer = styled.div`
   height: 100vh;
@@ -139,25 +142,47 @@ export default class Menu extends Component {
           name: 'McColl Therapy',
         },
       ],
-    };
+      externalLinks: [
+        {
+          link: 'https://github.com/kurtisyoung',
+          name: 'Github',
+        },
+        {
+          link: 'https://www.linkedin.com/in/kcyoung1/',
+          name: 'LinkedIn',
+        },
+        {
+          link: 'https://www.instagram.com/w_areyoung/',
+          name: 'Instagram',
+        }
+      ],
+    }
   }
   props: {
     active: Function,
     closeMenu: Function,
   };
   render() {
-    const list = this.state.menuList;
+    const list = this.state.menuList
     const arrayList = list.map((item, index) => (
       <li key={index}>
         <Link
           onClick={this.props.closeMenu}
           to={item.link}
-          exact
+          // className={history.location.pathname === item.link ? 'active' : null}
           >
           {item.name}
         </Link>
       </li>
-    ));
+    ))
+
+    const externalArray = this.state.externalLinks.map((item, index) => (
+      <li key={index}>
+        <a href={item.link} target="_blank" rel="noopener noreferrer">
+          {item.name}
+        </a>
+      </li>
+    ))
     return (
       <MenuContainer className={this.props.active}>
         <Rectangle className="gradient" />
@@ -167,7 +192,8 @@ export default class Menu extends Component {
           <li>
             <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>
           </li>
-          <li>
+          {externalArray}
+          {/* <li>
             <a
               href="https://github.com/kurtisyoung"
               target="_blank"
@@ -193,7 +219,7 @@ export default class Menu extends Component {
             >
               Instagram
             </a>
-          </li>
+          </li> */}
         </MenuList>
       </MenuContainer>
     );

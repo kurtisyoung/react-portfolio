@@ -126,17 +126,18 @@ const Button = styled(Link)`
   }
 `;
 
-export default class Hero extends React.Component {
+export default class Hero extends Component {
 
   componentDidMount() {
-    window.addEventListener('load', this._loadAnimation());
+    // this._loadAnimation()
+    window.addEventListener('load', this._loadAnimation())
   }
   _loadAnimation() {
     setTimeout(() => {
-      let heroID = document.getElementById('hero');
+      let heroID = document.getElementById('hero')
 
-      heroID.classList.add('active');
-    }, 200);
+      heroID.classList.add('active')
+    }, 200)
   }
 
   render() {

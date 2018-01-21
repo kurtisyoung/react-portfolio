@@ -8,6 +8,7 @@ import locales from '../config/locales'
 import routes from '../config/routes'
 
 import Header from 'components/Header'
+import Footer from 'components/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import './styles/main.css'
@@ -62,6 +63,7 @@ export default () => (
                   </TransitionGroup>
                 </div>
               </ParallaxProvider>
+              <Footer/>
             </App>
           )
         }}

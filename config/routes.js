@@ -4,20 +4,28 @@ export default [
     component: 'pages/Home',
   },
   {
-    path: '/about',
-    component: 'pages/About',
+    path: '/juneau',
+    component: 'pages/Juneau',
   },
   {
-    path: '/about',
-    component: 'pages/About',
+    path: '/landmark',
+    component: 'pages/Landmark',
   },
   {
-    path: '/about',
-    component: 'pages/About',
+    path: '/gryphon',
+    component: 'pages/Gryphon',
   },
   {
-    path: '/about',
-    component: 'pages/About',
+    path: '/elenore',
+    component: 'pages/Elenore',
+  },
+  {
+    path: '/salt',
+    component: 'pages/Salt',
+  },
+  {
+    path: '/mccoll',
+    component: 'pages/McColl',
   },
   {
     path: '/about',

@@ -16,6 +16,7 @@ const ProjectContainer = styled.div`
     font-weight: bold;
     color: #fff;
     letter-spacing: 2px;
+    text-align: left;
     @media (min-width: 768px) {
       margin: 46px 0 0 70px;
     }
