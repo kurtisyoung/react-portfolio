@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-static'
+import { Link, NavLink } from 'react-static'
 import styled from 'styled-components'
-import history from '../../node_modules/history'
+// import history from '../../node_modules/history'
 
 console.log(history)
 
@@ -163,16 +163,17 @@ export default class Menu extends Component {
     closeMenu: Function,
   };
   render() {
-    const list = this.state.menuList
-    const arrayList = list.map((item, index) => (
+    const arrayList = this.state.menuList.map((item, index) => (
       <li key={index}>
-        <Link
+        <NavLink
+          exact
           onClick={this.props.closeMenu}
           to={item.link}
+          activeClassName="active"
           // className={history.location.pathname === item.link ? 'active' : null}
           >
           {item.name}
-        </Link>
+        </NavLink>
       </li>
     ))
 
@@ -193,33 +194,6 @@ export default class Menu extends Component {
             <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>
           </li>
           {externalArray}
-          {/* <li>
-            <a
-              href="https://github.com/kurtisyoung"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/kcyoung1/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/w_areyoung/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-            </a>
-          </li> */}
         </MenuList>
       </MenuContainer>
     );
