@@ -1,17 +1,13 @@
-# Include your project-specific ignores in this file
-# See https://help.github.com/ignore-files/ for more about ignoring files
-
-# Dependencies
+# dependencies
 /node_modules
 
-# Testing
+# testing
 /coverage
 
-# Production
-/build
+# production
+/dist
 
-# Misc
-__generated__
+# misc
 .DS_Store
 .env.local
 .env.development.local
@@ -21,8 +17,3 @@ __generated__
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# VS Code
-.vscode/*
-!.vscode/snippets
-!.vscode/settings.json

@@ -1,0 +1,11 @@
+:root {
+  --color-primary: #0065b1;
+  --background: #222;
+
+  --font: 'Lato', sans-serif;
+
+  --xs: 480px;
+  --sm: 768px;
+  --md: 992px;
+  --lg: 1200px;
+}
