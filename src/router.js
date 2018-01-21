@@ -109,7 +109,7 @@ const routes = [
     }),
   },
   {
-    path: '/mccoll-therapy',
+    path: '/mccoll',
     query: graphql`query routerAboutQuery { me { ...App_me } }`, // prettier-ignore
     components: () => [
       import(/* webpackChunkName: 'Juneau' */ './Pages/Mccoll'),

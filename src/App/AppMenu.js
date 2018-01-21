@@ -119,7 +119,7 @@ class AppMenu extends React.Component {
           name: 'Home',
         },
         {
-          link: '/juneau-by-amacon',
+          link: '/juneau',
           name: 'Juneau By Amacon',
         },
         {
@@ -127,11 +127,11 @@ class AppMenu extends React.Component {
           name: 'Landmark',
         },
         {
-          link: '/gryphon-developments',
+          link: '/gryphon',
           name: 'Gryphon Developments',
         },
         {
-          link: '/elenore-on-fifth',
+          link: '/elenore',
           name: 'Elenore On Fifth',
         },
         {
@@ -139,7 +139,7 @@ class AppMenu extends React.Component {
           name: 'Salt Digital',
         },
         {
-          link: '/mccoll-therapy',
+          link: '/mccoll',
           name: 'McColl Therapy',
         },
       ],

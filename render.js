@@ -14,6 +14,6 @@ if (
     '/juneau',
     '/elenore',
     '/salt-digital',
-    'mccoll-therapy',
+    'mccoll',
   ]);
 }

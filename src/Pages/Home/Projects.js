@@ -110,7 +110,7 @@ class ProjectComponent extends React.Component {
         {
           src: './assets/img/home/project-juneau.png',
           name: 'Juneau By Amacon',
-          link: '/juneau-by-amacon',
+          link: '/juneau',
         },
         {
           src: './assets/img/home/project-landmark.png',
@@ -120,12 +120,12 @@ class ProjectComponent extends React.Component {
         {
           src: './assets/img/home/project-gryphon.png',
           name: 'Gryphon Developments',
-          link: '/gryphon-developments',
+          link: '/gryphon',
         },
         {
           src: './assets/img/home/project-elenore.png',
           name: 'Elenore On Fifth',
-          link: '/elenore-on-fifth',
+          link: '/elenore',
         },
         {
           src: './assets/img/home/project-salt.png',
@@ -135,7 +135,7 @@ class ProjectComponent extends React.Component {
         {
           src: './assets/img/home/project-mccoll.png',
           name: 'McColl Therapy',
-          link: '/mccoll-therapy',
+          link: '/mccoll',
         },
       ],
     };

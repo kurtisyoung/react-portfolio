@@ -18,8 +18,13 @@ function fetchQuery(
       method: 'POST',
       headers: {
         // Add authentication and other headers here
-        'content-type': 'application/json',
+        Accept: '*/*',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Headers':
+          'Content-Type, Authorization, Content-Length, X-Requested-With',
+        'Access-Control-Allow-Origin': '*',
       },
+      mode: 'no-cors',
       credentials: 'include',
       body: JSON.stringify({
         query: operation.text, // GraphQL text from input
