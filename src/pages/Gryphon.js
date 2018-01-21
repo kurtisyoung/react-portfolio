@@ -10,7 +10,7 @@ export default class GryphonPage extends Component {
     super(props);
     this.state = {
       title: 'Gryphon Developments',
-      banner: `./assets/img/${pageName}/banner.jpg`,
+      banner: `/assets/img/${pageName}/banner.jpg`,
       paragraph: `Gryphon Developments is a new real estate company that isn't afraid to push the boundries. BAM created the Gryphon brand from the ground up, allowing the interactive team to work side by side with the graphic designers.
       <br><br>
       Corporate websites have a different feel from pre-sale building sites. It's more about selling the company and it's brand than floorplans. Gryphon's branding is very well done. Clean, creative and bold. The biggest challenge of this website was creating a slider carousel from the scratch with parallaxing images and an overlaying slide effect.`,
@@ -43,11 +43,11 @@ export default class GryphonPage extends Component {
         },
       ],
       buttonLink: 'http://gryphonliving.com/',
-      videoSrc: `./assets/video/${pageName}.mp4`,
+      videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
-        `./assets/img/${pageName}/mobile-1.png`,
-        `./assets/img/${pageName}/mobile-2.png`,
-        `./assets/img/${pageName}/mobile-3.png`,
+        `/assets/img/${pageName}/mobile-1.png`,
+        `/assets/img/${pageName}/mobile-2.png`,
+        `/assets/img/${pageName}/mobile-3.png`,
       ],
     };
   }

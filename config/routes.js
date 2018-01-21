@@ -20,7 +20,7 @@ export default [
     component: 'pages/Elenore',
   },
   {
-    path: '/salt',
+    path: '/salt-digital',
     component: 'pages/Salt',
   },
   {

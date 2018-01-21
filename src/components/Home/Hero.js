@@ -154,7 +154,7 @@ export default class Hero extends Component {
             <img
               // id="kBlack"
               className="k k-black"
-              src="./assets/img/home/k-black.svg"
+              src="/assets/img/home/k-black.svg"
               alt="K"
             />
           {/* </Parallax> */}
@@ -169,7 +169,7 @@ export default class Hero extends Component {
             <img
               // id="kGradient"
               className="k k-gradient"
-              src="./assets/img/home/k-gradient.svg"
+              src="/assets/img/home/k-gradient.svg"
               alt="K"
             />
           {/* </Parallax> */}

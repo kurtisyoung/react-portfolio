@@ -106,32 +106,32 @@ export default  class ProjectComponent extends React.Component {
       arrayPosition: 0,
       projectDetail: [
         {
-          src: './assets/img/home/project-juneau.png',
+          src: '/assets/img/home/project-juneau.png',
           name: 'Juneau By Amacon',
           link: '/juneau',
         },
         {
-          src: './assets/img/home/project-landmark.png',
+          src: '/assets/img/home/project-landmark.png',
           name: 'Landmark On Robson',
           link: '/landmark',
         },
         {
-          src: './assets/img/home/project-gryphon.png',
+          src: '/assets/img/home/project-gryphon.png',
           name: 'Gryphon Developments',
           link: '/gryphon',
         },
         {
-          src: './assets/img/home/project-elenore.png',
+          src: '/assets/img/home/project-elenore.png',
           name: 'Elenore On Fifth',
           link: '/elenore',
         },
         {
-          src: './assets/img/home/project-salt.png',
+          src: '/assets/img/home/project-salt.png',
           name: 'Salt Digital',
           link: '/salt-digital',
         },
         {
-          src: './assets/img/home/project-mccoll.png',
+          src: '/assets/img/home/project-mccoll.png',
           name: 'McColl Therapy',
           link: '/mccoll',
         },

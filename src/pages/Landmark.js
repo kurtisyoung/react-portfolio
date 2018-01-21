@@ -10,7 +10,7 @@ export default class LandmarkPage extends Component {
     super(props);
     this.state = {
       title: 'Landmark On Robson',
-      banner: `./assets/img/${pageName}/banner.jpg`,
+      banner: `/assets/img/${pageName}/banner.jpg`,
       paragraph: `Landmark On Robson is a residential development that will be replacing the iconic Empire Landmark Hotel in the West End of Vancouver. I worked on the full website and touchscreen app.
       <br>
       <br>
@@ -44,11 +44,11 @@ export default class LandmarkPage extends Component {
         },
       ],
       buttonLink: 'http://landmarkonrobson.com/',
-      videoSrc: `./assets/video/${pageName}.mp4`,
+      videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
-        `./assets/img/${pageName}/mobile-1.png`,
-        `./assets/img/${pageName}/mobile-2.png`,
-        `./assets/img/${pageName}/mobile-3.png`,
+        `/assets/img/${pageName}/mobile-1.png`,
+        `/assets/img/${pageName}/mobile-2.png`,
+        `/assets/img/${pageName}/mobile-3.png`,
       ],
     };
   }

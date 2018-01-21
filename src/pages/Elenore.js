@@ -10,7 +10,7 @@ export default class ElenorePage extends Component {
     super(props);
     this.state = {
       title: 'Elenore On Fifth',
-      banner: `./assets/img/${pageName}/banner.jpg`,
+      banner: `/assets/img/${pageName}/banner.jpg`,
       paragraph: `Elenore On Fifth is a residential development currently being built on Main and 5th Ave. I worked on the full website and touchscreen app.
       <br>
       <br>
@@ -43,11 +43,11 @@ export default class ElenorePage extends Component {
         },
       ],
       buttonLink: 'http://elenoreonfifth.com/',
-      videoSrc: `./assets/video/${pageName}.mp4`,
+      videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
-        `./assets/img/${pageName}/mobile-1.png`,
-        `./assets/img/${pageName}/mobile-2.png`,
-        `./assets/img/${pageName}/mobile-3.png`,
+        `/assets/img/${pageName}/mobile-1.png`,
+        `/assets/img/${pageName}/mobile-2.png`,
+        `/assets/img/${pageName}/mobile-3.png`,
       ],
     };
   }

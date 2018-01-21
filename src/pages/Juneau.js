@@ -10,7 +10,7 @@ export default class JuneauPage extends Component {
     super(props);
     this.state = {
       title: 'Juneau By Amacon',
-      banner: './assets/img/juneau/banner.jpg',
+      banner: '/assets/img/juneau/banner.jpg',
       paragraph: `Juneau is a residential development built in the heart of Burnaby. I worked on both the full website and touchscreen app. Vue made it easy share components between the site and app, minimizing the amount of work we had to do.
       <br/>
       <br/> 
@@ -44,11 +44,11 @@ export default class JuneauPage extends Component {
         },
       ],
       buttonLink: 'https://amacon.com/juneau/',
-      videoSrc: './assets/video/juneau.mp4',
+      videoSrc: '/assets/video/juneau.mp4',
       iphone: [
-        `./assets/img/${pageName}/mobile-1.png`,
-        `./assets/img/${pageName}/mobile-2.png`,
-        `./assets/img/${pageName}/mobile-3.png`,
+        `/assets/img/${pageName}/mobile-1.png`,
+        `/assets/img/${pageName}/mobile-2.png`,
+        `/assets/img/${pageName}/mobile-3.png`,
       ],
     }
   }

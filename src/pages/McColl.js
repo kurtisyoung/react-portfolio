@@ -10,7 +10,7 @@ export default class McCollPage extends Component {
     super(props);
     this.state = {
       title: 'McColl Therapy',
-      banner: `./assets/img/${pageName}/banner.jpg`,
+      banner: `/assets/img/${pageName}/banner.jpg`,
       paragraph: `McColl Therapy, a group of occupational therapists that offer therapy and counselling services, was my first client after graduating from RED Academy. I designed and developed a Custom WordPress Theme with custom post types and field suites, giving them the flexibility to change what they wanted. 
       <br><br>
       Since this was my first freelance job, I learned how to interact with clients, meet deadlines and create invoices on the job. I have kept an ongoing relationship with them and in 2018 a new version of their website will be launched.`,
@@ -47,11 +47,11 @@ export default class McCollPage extends Component {
         },
       ],
       buttonLink: 'http://mccolltherapy.com/',
-      videoSrc: `./assets/video/${pageName}.mp4`,
+      videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
-        `./assets/img/${pageName}/mobile-1.png`,
-        `./assets/img/${pageName}/mobile-2.png`,
-        `./assets/img/${pageName}/mobile-3.png`,
+        `/assets/img/${pageName}/mobile-1.png`,
+        `/assets/img/${pageName}/mobile-2.png`,
+        `/assets/img/${pageName}/mobile-3.png`,
       ],
     };
   }

@@ -10,7 +10,7 @@ export default class SaltPage extends Component {
     super(props);
     this.state = {
       title: 'Salt Digital',
-      banner: `./assets/img/${pageName}/banner.jpg`,
+      banner: `/assets/img/${pageName}/banner.jpg`,
       paragraph: `Salt Digital was a full service marketing agency created by myself and two other partners. Unfortunately, my partners and I decided to move on from the business but the website has been saved as a reference of my work.
       <br><br>
       Starting a business is tough. There was a lot more work than just getting clients and developing websites. We tried to be a full service agency when we should have just focused on one aspect of the industry. Even though it didn't work out, I learned a lot from the experience. Salt digital will be back.`,
@@ -47,11 +47,11 @@ export default class SaltPage extends Component {
         },
       ],
       buttonLink: 'http://saltdigital.ca',
-      videoSrc: `./assets/video/${pageName}.mp4`,
+      videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
-        `./assets/img/${pageName}/mobile-1.png`,
-        `./assets/img/${pageName}/mobile-2.png`,
-        `./assets/img/${pageName}/mobile-3.png`,
+        `/assets/img/${pageName}/mobile-1.png`,
+        `/assets/img/${pageName}/mobile-2.png`,
+        `/assets/img/${pageName}/mobile-3.png`,
       ],
     };
   }
