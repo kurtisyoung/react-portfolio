@@ -57,6 +57,7 @@ const ProjectName = styled(Link)`
   margin: 0;
   text-decoration: none;
   font-weight: 600;
+  text-align: left;
   @media (min-width: 768px) {
     font-size: 40px;
   }
@@ -160,18 +161,19 @@ export default  class ProjectComponent extends React.Component {
   }
 
   render() {
-    const projectDetails = this.state.projectDetail;
-    const projectItems = projectDetails.map((detail, index) => (
+    const projectItems = this.state.projectDetail.map((detail, index) => (
       <ProjectBlock key={index}>
-        <Waypoint
-          key={index}
-          onEnter={this._sectionEnter.bind(this, index)}
-          topOffset="40%"
-          bottomOffset="40%"
-          scrollableAncestor={window}
-        >
-          <img key={index} src={detail.src} alt={detail.name} />
-        </Waypoint>
+        <Link to={detail.link}>
+          <Waypoint
+            key={index}
+            onEnter={this._sectionEnter.bind(this, index)}
+            topOffset="40%"
+            bottomOffset="40%"
+            scrollableAncestor={window}
+          >
+              <img key={index} src={detail.src} alt={detail.name} />
+          </Waypoint>
+        </Link>
       </ProjectBlock>
     ));
 

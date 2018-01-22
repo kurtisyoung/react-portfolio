@@ -21,7 +21,7 @@ const QuoteContainer = styled.div`
 const Quote = styled.div`
   text-align: center;
   p {
-    max-width: 600px;
+    max-width: 610px;
     width: 100%;
     margin: 0 auto;
     font-size: 16px;
