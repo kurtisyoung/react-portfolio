@@ -13,7 +13,7 @@ export default class GryphonPage extends Component {
       banner: `/assets/img/${pageName}/banner.jpg`,
       paragraph: `Gryphon Developments is a new real estate company that isn't afraid to push the boundries. BAM created the Gryphon brand from the ground up, allowing the interactive team to work side by side with the graphic designers.
       <br><br>
-      Corporate websites have a different feel from pre-sale building sites. It's more about selling the company and it's brand than floorplans. Gryphon's branding is very well done. Clean, creative and bold. The biggest challenge of this website was creating a slider carousel from the scratch with parallaxing images and an overlaying slide effect.`,
+      Gryphon's brand is clean, creative and bold. We wanted to bring that to their digital presence by focusing on  their unique take on art and design.`,
       details: [
         {
           title: 'Agency',
@@ -34,7 +34,7 @@ export default class GryphonPage extends Component {
         {
           title: 'Website',
           content:
-            '<a href="http://gryphonliving.com/" target="_blank" rel="noopener noreferrer">gryphonliving.com/</a>',
+            '<a href="http://gryphon.bamcommunications.ca/" target="_blank" rel="noopener noreferrer">gryphonliving.com/</a>',
         },
         {
           title: 'Tech Stack',
@@ -42,7 +42,7 @@ export default class GryphonPage extends Component {
             'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'http://gryphonliving.com/',
+      buttonLink: 'http://gryphon.bamcommunications.ca/',
       videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
         `/assets/img/${pageName}/mobile-1.png`,

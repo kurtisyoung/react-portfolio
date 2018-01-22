@@ -11,10 +11,10 @@ export default class LandmarkPage extends Component {
     this.state = {
       title: 'Landmark On Robson',
       banner: `/assets/img/${pageName}/banner.jpg`,
-      paragraph: `Landmark On Robson is a residential development that will be replacing the iconic Empire Landmark Hotel in the West End of Vancouver. I worked on the full website and touchscreen app.
+      paragraph: `Landmark On Robson is a residential development that will be replacing the iconic Empire Landmark Hotel in the West End of Vancouver. It was challenging to create an equally iconic web presence for Landmark.
       <br>
       <br>
-      Working in an agency, you get use to timelines that are constantly shifting. Landmark was originally supposed launch last August but it was not completed until this January. Coding and reiterating the same website for half a year is not ideal but it is part of the job. Even though it took a while to complete, I enjoyed Landmark's unique challenge of having parallaxing SVG letters on every page.`,
+      We focused on keeping the design simple and user friendly while adding complex animations. The parallaxing SVG letters, page loading animations and hover effects all create a unique experience for users.`,
       details: [
         {
           title: 'Agency',
@@ -35,7 +35,7 @@ export default class LandmarkPage extends Component {
         {
           title: 'Website',
           content:
-            '<a href="http://landmarkonrobson.com/" target="_blank" rel="noopener noreferrer">landmarkonrobson.com</a>',
+            '<a href="http://landmark-full.netlify.com/" target="_blank" rel="noopener noreferrer">landmarkonrobson.com</a>',
         },
         {
           title: 'Tech Stack',
@@ -43,7 +43,7 @@ export default class LandmarkPage extends Component {
             'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'http://landmarkonrobson.com/',
+      buttonLink: 'http://landmark-full.netlify.com/',
       videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
         `/assets/img/${pageName}/mobile-1.png`,

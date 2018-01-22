@@ -59,7 +59,7 @@ const TitleLink = styled(Link)`
   line-height: 1.5rem;
   color: #00d8ff;
   color: #000;
-  text-shadow: 2px 2px 2px #FFF;
+  text-shadow: 2px 2px 0 #FFF;
   text-decoration: none;
   text-overflow: ellipsis;
   letter-spacing: 0.0625em;
@@ -90,7 +90,7 @@ const Hamburger = styled.div`
     width: 35px;
     background: #000;
     transition: 300ms ease;
-    box-shadow: 2px 2px 2px 0 #FFF;
+    box-shadow: 2px 2px 0 0 #FFF;
     &:nth-of-type(2) {
       width: 30px;
       opacity: 1;

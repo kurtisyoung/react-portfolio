@@ -53,7 +53,7 @@ const ProjectName = styled(Link)`
   z-index: 2;
   left: 5%;
   top: 6%;
-  text-shadow: 3px 3px 2px #000;
+  text-shadow: 3px 3px 0 #000;
   margin: 0;
   text-decoration: none;
   font-weight: 600;
