@@ -71,7 +71,7 @@ export default class QuoteComponent extends React.Component {
         '"The highest form of ignorance is when you reject something you know nothing about." <br> - Sadhguru',
         `“You miss 100% of the shots you don't take.” <br> - Wayne Gretzky <br> - Michael Scott`,
         `"If Internet Explorer is brave enough to ask to be your default browser, you're brave enough to follow your dreams."  <br> - Apple Genius`,
-        `"Nothing of me is original. I am the combined efforts of everyone I've every known." <br> - Chuck Palahniuk`,
+        `"Nothing of me is original. I am the combined efforts of everyone I've ever known." <br> - Chuck Palahniuk`,
       ],
     }
   }

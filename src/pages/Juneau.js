@@ -11,7 +11,7 @@ export default class JuneauPage extends Component {
     this.state = {
       title: 'Juneau By Amacon',
       banner: '/assets/img/juneau/banner.jpg',
-      paragraph: `Juneau is a residential development built in the heart of Burnaby. I worked on both the full website and touchscreen app. Vue made it easy share components between the site and app, minimizing the amount of work we had to do.
+      paragraph: `Juneau is a residential development built in the heart of Burnaby. I worked on both the full website and touchscreen app. Vue made it easy to share components between the site and app, minimizing the amount of work we had to do.
       <br/>
       <br/> 
       This was one of my favourite projects that I've worked on. The layout, design and feel of the website is exactly what I look for in other websites. Every page interacts with the user in a different way. It makes the user curious and keeps them guessing. That's what I love about coding. There are endless ways you can be creative.`,
