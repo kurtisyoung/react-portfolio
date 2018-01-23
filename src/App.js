@@ -7,11 +7,16 @@ import store from './redux/store'
 import locales from '../config/locales'
 import routes from '../config/routes'
 
+import ReactLoading from 'react-loading';
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 // import { ParallaxProvider } from 'react-scroll-parallax'
 
 import './styles/main.css'
+
+const Loader = ({ type, color }) => (
+  <ReactLoading type={type} color={color} height='667' width='375' />
+);
 
 const App = styled.div`
   .app-container {
