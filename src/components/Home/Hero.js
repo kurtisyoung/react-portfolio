@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import { Link } from 'react-static'
-// import { Parallax } from 'react-scroll-parallax'
+import Plx from 'react-plx';
 
 
 const Container = styled.div`
@@ -150,14 +150,17 @@ export default class Hero extends Component {
           <Title className="small">Web Maker</Title>
         </ContentContainer>
         <ContentContainer className="k-container">
-          {/* <Parallax offsetYMin={-10} offsetYMax={10} className="k k-black"> */}
+          <Plx
+            className='MyAwesomeParallax'
+            // parallaxData={... } // your parallax effects, see beneath
+          >
             <img
               // id="kBlack"
               className="k k-black"
               src="/assets/img/home/k-black.svg"
               alt="K"
             />
-          {/* </Parallax> */}
+          </Plx>
           {/* <Parallax
             offsetYMax={10}
             offsetYMin={-20}
