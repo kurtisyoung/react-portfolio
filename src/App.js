@@ -14,11 +14,11 @@ import Footer from 'components/Footer'
 
 import './styles/main.css'
 
-const Loader = ({ type, color }) => (
-  <ReactLoading type={type} color={color} height='667' width='375' />
-);
+// const Loader = ({ type, color }) => (
+//   <ReactLoading type={type} color={color} height='667' width='375' />
+// );
 
-const App = styled.div`
+const AppContainer = styled.div`
   .app-container {
     width: 100%;
     position: relative;
@@ -34,45 +34,106 @@ const App = styled.div`
     padding: 20px;
   }
 `
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true
+    }
+  }
+  
+  componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 1500); // simulates an async action, and hides the spinner
+  }
 
-export default () => (
-  <Provider store={store}>
-    <Router>
-      <Route
-        render={({ location, match, history }) => {
-          let generatedRoutes = routes.map((route, index) => {
-            let Component = require(`./${route.component}`).default
-            return (
-              <Route
-                exact
-                path={route.path}
-                component={Component}
-                key={index}
-              />
-            )
-          })
+  render() {
+    const { loading } = this.state;
 
-          return (
-            <App id="app">
-              <Header type="primary" />
-              {/* <ParallaxProvider> */}
-                <div className="app-container">
-                  <TransitionGroup>
-                    <CSSTransition
-                      key={location.key}
-                      classNames="fade"
-                      timeout={500}
-                    >
-                      <Switch location={location}>{generatedRoutes}</Switch>
-                    </CSSTransition>
-                  </TransitionGroup>
-                </div>
-              {/* </ParallaxProvider> */}
-              <Footer/>
-            </App>
-          )
-        }}
-      />
-    </Router>
-  </Provider>
-)
+    if(loading) { // if your component doesn't have to wait for an async action, remove this block 
+      return null; // render null when app is not ready
+    }
+
+    return (
+        <Provider store={store}>
+          <Router>
+            <Route
+              render={({ location, match, history }) => {
+                let generatedRoutes = routes.map((route, index) => {
+                  let Component = require(`./${route.component}`).default
+                  return (
+                    <Route
+                      exact
+                      path={route.path}
+                      component={Component}
+                      key={index}
+                    />
+                  )
+                })
+
+                return (
+                  <AppContainer id="app">
+                    <Header type="primary" />
+                    <div className="app-container">
+                      <TransitionGroup>
+                        <CSSTransition
+                          key={location.key}
+                          classNames="fade"
+                          timeout={500}
+                        >
+                          <Switch location={location}>{generatedRoutes}</Switch>
+                        </CSSTransition>
+                      </TransitionGroup>
+                    </div>
+                    <Footer />
+                  </AppContainer>
+                )
+              }}
+            />
+          </Router>
+        </Provider>
+    )
+  }
+}
+
+
+// export default () => (
+//   <Provider store={store}>
+//     <Router>
+//       <Route
+//         render={({ location, match, history }) => {
+//           let generatedRoutes = routes.map((route, index) => {
+//             let Component = require(`./${route.component}`).default
+//             return (
+//               <Route
+//                 exact
+//                 path={route.path}
+//                 component={Component}
+//                 key={index}
+//               />
+//             )
+//           })
+
+//           return (
+//             <App id="app">
+//               <Header type="primary" />
+//               {/* <ParallaxProvider> */}
+//                 <div className="app-container">
+//                   <TransitionGroup>
+//                     <CSSTransition
+//                       key={location.key}
+//                       classNames="fade"
+//                       timeout={500}
+//                     >
+//                       <Switch location={location}>{generatedRoutes}</Switch>
+//                     </CSSTransition>
+//                   </TransitionGroup>
+//                 </div>
+//               {/* </ParallaxProvider> */}
+//               <Footer/>
+//             </App>
+//           )
+//         }}
+//       />
+//     </Router>
+//   </Provider>
+// )

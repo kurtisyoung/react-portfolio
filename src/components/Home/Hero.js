@@ -142,6 +142,32 @@ export default class Hero extends Component {
   }
 
   render() {
+    const blackParallax = [
+      {
+        start: 0,
+        duration: 400,
+        properties: [
+          {
+            startValue: 0,
+            endValue: 50,
+            property: 'marginTop'
+          }
+        ]
+      }
+    ]
+    const gradParallax = [
+      {
+        start: 0,
+        duration: 400,
+        properties: [
+          {
+            startValue: 0,
+            endValue: -30,
+            property: 'marginTop'
+          }
+        ]
+      }
+    ]
     return (
       <Container id="hero" className="container" {...this.props}>
         <ContentContainer>
@@ -151,31 +177,27 @@ export default class Hero extends Component {
         </ContentContainer>
         <ContentContainer className="k-container">
           <Plx
-            className='MyAwesomeParallax'
-            // parallaxData={... } // your parallax effects, see beneath
+            className="k k-black"
+            parallaxData={blackParallax} // your parallax effects, see beneath
           >
             <img
               // id="kBlack"
-              className="k k-black"
+              // className="k k-black"
               src="/assets/img/home/k-black.svg"
               alt="K"
             />
           </Plx>
-          {/* <Parallax
-            offsetYMax={10}
-            offsetYMin={-20}
-            offsetXMax={6}
-            offsetXMin={0}
-            slowerScrollRate
+          <Plx
             className="k k-gradient"
-          > */}
+            parallaxData={gradParallax} // your parallax effects, see beneath
+          >
             <img
               // id="kGradient"
-              className="k k-gradient"
+              // className="k k-gradient"
               src="/assets/img/home/k-gradient.svg"
               alt="K"
             />
-          {/* </Parallax> */}
+          </Plx>
         </ContentContainer>
       </Container>
     );
