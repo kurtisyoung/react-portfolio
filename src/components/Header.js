@@ -99,9 +99,11 @@ const Hamburger = styled.div`
       width: 20px;
     }
   }
-  &:hover {
-    span {
-      width: 35px;
+  @media (min-width: 1024px) {
+    &:hover {
+      span {
+        width: 35px;
+      }
     }
   }
   &.active {

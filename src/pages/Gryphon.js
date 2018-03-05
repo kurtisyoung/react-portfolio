@@ -34,7 +34,7 @@ export default class GryphonPage extends Component {
         {
           title: 'Website',
           content:
-            '<a href="http://gryphon.bamcommunications.ca/" target="_blank" rel="noopener noreferrer">gryphonliving.com/</a>',
+            '<a href="http://gryphonliving.com/" target="_blank" rel="noopener noreferrer">gryphonliving.com/</a>',
         },
         {
           title: 'Tech Stack',
@@ -42,7 +42,7 @@ export default class GryphonPage extends Component {
             'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'http://gryphon.bamcommunications.ca/',
+      buttonLink: 'http://gryphonliving.com/',
       videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
         `/assets/img/${pageName}/mobile-1.png`,

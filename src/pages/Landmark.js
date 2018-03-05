@@ -35,7 +35,7 @@ export default class LandmarkPage extends Component {
         {
           title: 'Website',
           content:
-            '<a href="http://landmark-full.netlify.com/" target="_blank" rel="noopener noreferrer">landmarkonrobson.com</a>',
+            '<a href="http://landmarkonrobson.com/" target="_blank" rel="noopener noreferrer">landmarkonrobson.com</a>',
         },
         {
           title: 'Tech Stack',
@@ -43,7 +43,7 @@ export default class LandmarkPage extends Component {
             'Vue JS, JavaScript, HTML5, Sass, WebPack, ScrollMagic, Google Maps API',
         },
       ],
-      buttonLink: 'http://landmark-full.netlify.com/',
+      buttonLink: 'http://landmarkonrobson.com/',
       videoSrc: `/assets/video/${pageName}.mp4`,
       iphone: [
         `/assets/img/${pageName}/mobile-1.png`,

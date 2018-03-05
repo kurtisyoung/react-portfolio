@@ -88,9 +88,11 @@ const DetailList = styled.ul`
       background: #000;
       transition: 300ms ease;
     }
-    &:hover {
-      &:before {
-        width: 100%;
+    @media (min-width: 1024px) {
+      &:hover {
+        &:before {
+          width: 100%;
+        }
       }
     }
   }

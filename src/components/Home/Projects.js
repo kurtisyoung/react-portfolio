@@ -84,12 +84,14 @@ const ProjectName = styled(Link)`
     width: 0;
     height: 1px;
   }
-  &:hover {
-    &:before {
-      right: -130px;
-    }
-    &:after {
-      width: 100%;
+  @media (min-width: 1024px) {
+    &:hover {
+      &:before {
+        right: -130px;
+      }
+      &:after {
+        width: 100%;
+      }
     }
   }
   &.fixed {
