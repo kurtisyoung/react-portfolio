@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'react-static'
 
@@ -183,16 +184,7 @@ const MobileContainer = styled.div`
   }
 `;
 
-export default class Template extends Component {
-  props: {
-    title: String,
-    banner: String,
-    paragraph: String,
-    details: Array,
-    buttonLink: Object,
-    videoSrc: String,
-    iphone: Array,
-  };
+class Template extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
@@ -265,3 +257,15 @@ export default class Template extends Component {
     );
   }
 }
+
+Template.PropTypes = {
+  title: PropTypes.string,
+  banner: PropTypes.string,
+  paragraph: PropTypes.string,
+  details: PropTypes.array,
+  buttonLink: PropTypes.object,
+  videoSrc: PropTypes.string,
+  iphone: PropTypes.array,
+}
+
+export default Template

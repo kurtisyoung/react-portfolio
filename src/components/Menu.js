@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Link, NavLink } from 'react-static'
 import styled from 'styled-components'
 
@@ -123,7 +124,7 @@ const MenuList = styled.ul`
   }
 `;
 
-export default class Menu extends Component {
+class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -142,7 +143,7 @@ export default class Menu extends Component {
         },
         {
           link: '/gryphon',
-          name: 'Gryphon Developments',
+          name: 'Gryphon Development',
         },
         {
           link: '/elenore',
@@ -163,20 +164,16 @@ export default class Menu extends Component {
           name: 'Github',
         },
         {
+          link: 'https://codepen.io/kurtisyoung/',
+          name: 'Codepen',
+        },
+        {
           link: 'https://www.linkedin.com/in/kcyoung1/',
           name: 'LinkedIn',
         },
-        {
-          link: 'https://www.instagram.com/w_areyoung/',
-          name: 'Instagram',
-        }
       ],
     }
   }
-  props: {
-    active: Function,
-    closeMenu: Function,
-  };
   render() {
     const arrayList = this.state.menuList.map((item, index) => (
       <li key={index}>
@@ -213,3 +210,10 @@ export default class Menu extends Component {
     );
   }
 }
+
+Menu.PropTypes = {
+  active: PropTypes.func,
+  closeMenu: PropTypes.func,
+}
+
+export default Menu

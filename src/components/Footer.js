@@ -86,8 +86,8 @@ export default class Footer extends Component {
         <LinkList>
           <li><a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a></li>
           <li><a href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="https://codepen.io/kurtisyoung/" target="_blank" rel="noopener noreferrer">Codepen</a></li>
           <li><a href="https://www.linkedin.com/in/kcyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/w_areyoung/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         </LinkList>
         <Copyright css="padding-right: 0.5em">&copy; 2018</Copyright>
         <ExtLink href={KURTIS_URL}>created by Kurtis Young</ExtLink>
