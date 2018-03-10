@@ -120,7 +120,7 @@ export default  class ProjectComponent extends React.Component {
         },
         {
           src: '/assets/img/home/project-gryphon.png',
-          name: 'Gryphon Developments',
+          name: 'Gryphon Development',
           link: '/gryphon',
         },
         {

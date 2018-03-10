@@ -9,9 +9,9 @@ export default class GryphonPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Gryphon Developments',
+      title: 'Gryphon Development',
       banner: `/assets/img/${pageName}/banner.jpg`,
-      paragraph: `Gryphon Developments is a new real estate company that isn't afraid to push the boundries. BAM created the Gryphon brand from the ground up, allowing the interactive team to work side by side with the graphic designers.
+      paragraph: `Gryphon Development is a new real estate company that isn't afraid to push the boundries. BAM created the Gryphon brand from the ground up, allowing the interactive team to work side by side with the graphic designers.
       <br><br>
       Gryphon's brand is clean, creative and bold. We wanted to bring that to their digital presence by focusing on  their unique take on art and design.`,
       details: [
@@ -21,7 +21,7 @@ export default class GryphonPage extends Component {
         },
         {
           title: 'Client',
-          content: 'Gryphon Developments',
+          content: 'Gryphon Development',
         },
         {
           title: 'Year',
