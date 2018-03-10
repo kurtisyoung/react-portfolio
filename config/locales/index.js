@@ -1,11 +1,11 @@
 import LocalizedStrings from '../../src/utils/localization';
 
 import en from './en'
-import jp from './jp'
+// import jp from './jp'
 
 export const languages = {
   en,
-  jp
+  // jp
 }
 
 let locales = new LocalizedStrings(languages)
