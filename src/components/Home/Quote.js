@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactCursorPosition from 'react-cursor-position'
 import styled from 'styled-components'
+import quotes from '../../data/quotes'
 
 const QuoteContainer = styled.div`
   height: 235px;
@@ -24,10 +25,11 @@ const Quote = styled.div`
   text-align: center;
   position: relative;
   z-index: 10;
-  font-size: 25px;
+  font-size: 20px;
   max-width: 600px;
+  cursor: pointer;
   @media (min-width: 768px) {
-    font-size: 40px;
+    font-size: 35px;
     max-width: 850px;
   }
   /* @media (min-width: 1024px) {
@@ -50,7 +52,7 @@ const Quote = styled.div`
   }
   span {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
     margin-top: 10px;
     color: #000;
@@ -58,24 +60,29 @@ const Quote = styled.div`
       white-space: nowrap;
     }
   }
-  .gradient {
-    transition: text-shadow 300ms ease;
+  .cta {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgba(0,0,0, 0.2);
+  }
+  .color {
     /* text-shadow: 5px 5px 0 #000; */
     display: inline-block;
-    background: #3fdfa4;
+    transition: color 300ms ease;
+    /* background: #3fdfa4;
     background: -webkit-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
     background: -o-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
     background: -moz-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
     background: linear-gradient(to right, #3fdfa4 0%, #3e45b9 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
   }
   .shadow {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    transition: transform 300ms linear;
+    transition: transform 100ms linear;
     transform: translate3d(0,0,0);
   }
 `
@@ -93,11 +100,11 @@ const RecBlack = styled.div`
 `
 
 const RecGradient = styled.div`
-  height: 160%;
+  height: 193%;
   width: 50px;
   position: absolute;
   z-index: 1;
-  bottom: -106%;
+  bottom: -136%;
   left: 0;
   background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
   display: none;
@@ -125,14 +132,15 @@ const QuoteText = (props) => {
     quotes: {
       quote = '',
       author = '',
+      color = '',
     } = {},
   } = props;
 
   return (
-    <div className="quote-text" style={{ color: 'black' }}>
+    <div className="quote-text" style={{ padding: '30px 0'}}>
       <p>{props.quotes.quote}</p>
       <div className="author">
-        <span className="gradient">{props.quotes.author}</span>
+        <span className="color" style={{ color: props.quotes.color }}>{props.quotes.author}</span>
         <span className="shadow" style={{ transform: `translate3d(${(x / 10) - 30}px,${(y / 10) - 10}px,0)`}}>{props.quotes.author}</span>
       </div>
       {/* {`x: ${x}`}<br />
@@ -147,49 +155,34 @@ const QuoteText = (props) => {
   );
 };
 
+
 export default class QuoteComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this)
     this.state = {
-      quotes: [
-        {
-          quote: `“The highest form of ignorance is when you reject something you know nothing about.”`,
-          author: `- Carl Icahn`
-        },
-        {
-          quote: `“The highest form of ignorance is when you reject something you know nothing about.”`,
-          author: `- Sadhguru`
-        },
-        {
-          quote: `“If Internet Explorer is brave enough to ask to be your default browser, you're brave enough to follow your dreams.”`,
-          author: '- Apple Genius'
-        },
-        {
-          quote: `“Nothing of me is original. I am the combined efforts of everyone I've ever known.”`,
-          author: `- Chuck Palahniuk`
-        },
-        {
-          quote: `“We are what we repeatedly do. Excellence, then, is not an act, but a habit.”`,
-          author: `- Aristotle`
-        },
-      ],
+      randomNumber: Math.floor(Math.random() * quotes.length),
     }
   }
 
+  handleClick() {
+    this.setState({ randomNumber: Math.floor(Math.random() * quotes.length)})
+  }
+
   render() {
-    let randomQuote = Math.floor(Math.random() * 6);
 
     return (
       <QuoteContainer>
         <div className="container">
           <RecBlack />
           <RecGradient />
-          <Quote>
+          <Quote onClick={this.handleClick}>
             <ReactCursorPosition>
               <QuoteText
-                quotes={this.state.quotes[randomQuote]}
+                quotes={quotes[this.state.randomNumber]}
               />
             </ReactCursorPosition>
+            <span className="cta">Click The Quote</span>
           </Quote>
         </div>
       </QuoteContainer>
