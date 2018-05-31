@@ -143,13 +143,13 @@ export default  class ProjectComponent extends React.Component {
   }
 
   _handleWaypointEnter() {
-    console.log('entered');
+    // console.log('entered');
     const idProjectName = document.getElementById('ProjectName');
 
     idProjectName.classList.add('fixed');
   }
   _handleWaypointLeave() {
-    console.log('left');
+    // console.log('left');
     const idProjectName = document.getElementById('ProjectName');
 
     idProjectName.classList.remove('fixed');

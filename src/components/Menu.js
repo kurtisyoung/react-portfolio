@@ -211,8 +211,8 @@ class Menu extends Component {
   }
 }
 
-Menu.PropTypes = {
-  active: PropTypes.func,
+Menu.propTypes = {
+  active: PropTypes.bool,
   closeMenu: PropTypes.func,
 }
 

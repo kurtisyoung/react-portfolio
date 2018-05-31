@@ -181,8 +181,6 @@ export default class Hero extends Component {
             parallaxData={blackParallax} // your parallax effects, see beneath
           >
             <img
-              // id="kBlack"
-              // className="k k-black"
               src="/assets/img/home/k-black.svg"
               alt="K"
             />
@@ -192,8 +190,6 @@ export default class Hero extends Component {
             parallaxData={gradParallax} // your parallax effects, see beneath
           >
             <img
-              // id="kGradient"
-              // className="k k-gradient"
               src="/assets/img/home/k-gradient.svg"
               alt="K"
             />

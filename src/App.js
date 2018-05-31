@@ -41,7 +41,7 @@ export default class App extends Component {
       loading: true
     }
   }
-  
+
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 1500); // simulates an async action, and hides the spinner
   }
@@ -49,48 +49,48 @@ export default class App extends Component {
   render() {
     const { loading } = this.state;
 
-    if(loading) { // if your component doesn't have to wait for an async action, remove this block 
+    if (loading) { // if your component doesn't have to wait for an async action, remove this block 
       return null; // render null when app is not ready
     }
 
     return (
-        <Provider store={store}>
-          <Router>
-            <Route
-              render={({ location, match, history }) => {
-                let generatedRoutes = routes.map((route, index) => {
-                  let Component = require(`./${route.component}`).default
-                  return (
-                    <Route
-                      exact
-                      path={route.path}
-                      component={Component}
-                      key={index}
-                    />
-                  )
-                })
-
+      <Provider store={store}>
+        <Router>
+          <Route
+            render={({ location, match, history }) => {
+              let generatedRoutes = routes.map((route, index) => {
+                let Component = require(`./${route.component}`).default
                 return (
-                  <AppContainer id="app">
-                    <Header type="primary" />
-                    <div className="app-container">
-                      <TransitionGroup>
-                        <CSSTransition
-                          key={location.key}
-                          classNames="fade"
-                          timeout={500}
-                        >
-                          <Switch location={location}>{generatedRoutes}</Switch>
-                        </CSSTransition>
-                      </TransitionGroup>
-                    </div>
-                    <Footer />
-                  </AppContainer>
+                  <Route
+                    exact
+                    path={route.path}
+                    component={Component}
+                    key={index}
+                  />
                 )
-              }}
-            />
-          </Router>
-        </Provider>
+              })
+
+              return (
+                <AppContainer id="app">
+                  <Header type="primary" />
+                  <div className="app-container">
+                    <TransitionGroup>
+                      <CSSTransition
+                        key={location.key}
+                        classNames="fade"
+                        timeout={500}
+                      >
+                        <Switch location={location}>{generatedRoutes}</Switch>
+                      </CSSTransition>
+                    </TransitionGroup>
+                  </div>
+                  <Footer />
+                </AppContainer>
+              )
+            }}
+          />
+        </Router>
+      </Provider>
     )
   }
 }

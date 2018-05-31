@@ -1,4 +1,4 @@
-# My Portfolio Built with React Static
+# Portfolio Built with React Static
 Web starter kit built on top of [react-static](https://github.com/nozzle/react-static)
 
 ## Installation

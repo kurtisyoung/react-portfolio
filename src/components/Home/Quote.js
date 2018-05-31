@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
+import ReactCursorPosition from 'react-cursor-position'
 import styled from 'styled-components'
 
 const QuoteContainer = styled.div`
   height: 235px;
-  margin-top: 100px;
+  margin-top: 180px;
+  margin-bottom: 100px;
   width: 100%;
   @media (min-width: 768px) {
-    margin-top: 15%;
-    margin-bottom: 120px;
+    margin-top: 25%;
+    margin-bottom: 200px;
   }
   .container {
     position: relative;
@@ -20,19 +22,61 @@ const QuoteContainer = styled.div`
 
 const Quote = styled.div`
   text-align: center;
+  position: relative;
+  z-index: 10;
+  font-size: 25px;
+  max-width: 600px;
+  @media (min-width: 768px) {
+    font-size: 40px;
+    max-width: 850px;
+  }
+  /* @media (min-width: 1024px) {
+    &:hover {
+      span {
+        text-shadow: -5px -5px 0 #000;
+      }
+    }
+  } */
   p {
-    max-width: 610px;
     width: 100%;
     margin: 0 auto;
-    font-size: 16px;
     letter-spacing: 0.5px;
-    @media (min-width: 768px) {
-      font-size: 30px;
-    }
+    text-shadow: 2px 2px 0 #FFF;
+    /* transform: rotate(90deg); */
+  }
+  .author {
+    position: relative;
+    display: inline-block;
   }
   span {
-    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
     margin-top: 10px;
+    color: #000;
+    @media (min-width: 768px) {
+      white-space: nowrap;
+    }
+  }
+  .gradient {
+    transition: text-shadow 300ms ease;
+    /* text-shadow: 5px 5px 0 #000; */
+    display: inline-block;
+    background: #3fdfa4;
+    background: -webkit-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
+    background: -o-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
+    background: -moz-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
+    background: linear-gradient(to right, #3fdfa4 0%, #3e45b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 300ms linear;
+    transform: translate3d(0,0,0);
   }
 `
 const RecBlack = styled.div`
@@ -62,17 +106,72 @@ const RecGradient = styled.div`
   }
 `
 
+const QuoteText = (props) => {
+  const {
+    detectedEnvironment: {
+      isMouseDetected = false,
+      isTouchDetected = false
+    } = {},
+    elementDimensions: {
+      width = 0,
+      height = 0
+    } = {},
+    isActive = false,
+    isPositionOutside = false,
+    position: {
+      x = 0,
+      y = 0
+    } = {},
+    quotes: {
+      quote = '',
+      author = '',
+    } = {},
+  } = props;
+
+  return (
+    <div className="quote-text" style={{ color: 'black' }}>
+      <p>{props.quotes.quote}</p>
+      <div className="author">
+        <span className="gradient">{props.quotes.author}</span>
+        <span className="shadow" style={{ transform: `translate3d(${(x / 10) - 30}px,${(y / 10) - 10}px,0)`}}>{props.quotes.author}</span>
+      </div>
+      {/* {`x: ${x}`}<br />
+      {`y: ${y}`}<br />
+      {`width:: ${width}`}<br />
+      {`height: ${height}`}<br />
+      {`isActive: ${isActive}`}<br />
+      {`isPositionOutside: ${isPositionOutside ? 'true' : 'false'}`}<br />
+      {`isMouseDetected: ${isMouseDetected ? 'true' : 'false'}`}<br />
+      {`isTouchDetected: ${isTouchDetected ? 'true' : 'false'}`} */}
+    </div>
+  );
+};
+
 export default class QuoteComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quote: [
-        '"In life and business, there are two cardinal sins. The first is to act without thought and the second is not to act at all." <br> - Carl Icahn',
-        '"The highest form of ignorance is when you reject something you know nothing about." <br> - Sadhguru',
-        `“You miss 100% of the shots you don't take.” <br> - Wayne Gretzky <br> - Michael Scott`,
-        `"If Internet Explorer is brave enough to ask to be your default browser, you're brave enough to follow your dreams."  <br> - Apple Genius`,
-        `"Nothing of me is original. I am the combined efforts of everyone I've ever known." <br> - Chuck Palahniuk`,
-        `"We are what we repeatedly do. Excellence, then, is not an act, but a habit." <br> -Aristotle`,
+      quotes: [
+        {
+          quote: `“The highest form of ignorance is when you reject something you know nothing about.”`,
+          author: `- Carl Icahn`
+        },
+        {
+          quote: `“The highest form of ignorance is when you reject something you know nothing about.”`,
+          author: `- Sadhguru`
+        },
+        {
+          quote: `“If Internet Explorer is brave enough to ask to be your default browser, you're brave enough to follow your dreams.”`,
+          author: '- Apple Genius'
+        },
+        {
+          quote: `“Nothing of me is original. I am the combined efforts of everyone I've ever known.”`,
+          author: `- Chuck Palahniuk`
+        },
+        {
+          quote: `“We are what we repeatedly do. Excellence, then, is not an act, but a habit.”`,
+          author: `- Aristotle`
+        },
       ],
     }
   }
@@ -86,7 +185,11 @@ export default class QuoteComponent extends React.Component {
           <RecBlack />
           <RecGradient />
           <Quote>
-            <p dangerouslySetInnerHTML={{ __html: this.state.quote[randomQuote] }}/>
+            <ReactCursorPosition>
+              <QuoteText
+                quotes={this.state.quotes[randomQuote]}
+              />
+            </ReactCursorPosition>
           </Quote>
         </div>
       </QuoteContainer>

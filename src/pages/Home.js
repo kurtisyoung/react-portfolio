@@ -3,7 +3,6 @@ import Transition from 'react-transition-group/Transition'
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Logo from 'components/Logo'
 import Button from 'components/Button'
 import locales from '../../config/locales'
 

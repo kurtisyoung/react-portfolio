@@ -258,12 +258,12 @@ class Template extends Component {
   }
 }
 
-Template.PropTypes = {
+Template.propTypes = {
   title: PropTypes.string,
   banner: PropTypes.string,
   paragraph: PropTypes.string,
   details: PropTypes.array,
-  buttonLink: PropTypes.object,
+  buttonLink: PropTypes.string,
   videoSrc: PropTypes.string,
   iphone: PropTypes.array,
 }
