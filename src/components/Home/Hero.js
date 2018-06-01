@@ -93,9 +93,11 @@ const Title = styled.h1`
   @media (min-width: 768px) {
     &.large {
       font-size: 40px;
+      font-weight: 900;
     }
     &.medium {
       font-size: 35px;
+      font-weight: bold;
     }
     &.small {
       font-size: 30px;

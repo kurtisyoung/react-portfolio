@@ -32,32 +32,32 @@ const Quote = styled.div`
     font-size: 35px;
     max-width: 850px;
   }
-  /* @media (min-width: 1024px) {
-    &:hover {
-      span {
-        text-shadow: -5px -5px 0 #000;
-      }
-    }
-  } */
   p {
     width: 100%;
     margin: 0 auto;
     letter-spacing: 0.5px;
     text-shadow: 2px 2px 0 #FFF;
     /* transform: rotate(90deg); */
+    position: relative;
+  }
+  .top-mark, .bottom-mark {
+    font-size: 80px;
+    height: 55px;
+    position: relative;
+    color: #000;
   }
   .author {
     position: relative;
     display: inline-block;
-  }
-  span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #000;
-    @media (min-width: 768px) {
-      white-space: nowrap;
+    span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8em;
+      font-weight: 900;
+      margin-top: 10px;
+      color: #000;
+      @media (min-width: 768px) {
+        white-space: nowrap;
+      }
     }
   }
   .cta {
@@ -137,8 +137,12 @@ const QuoteText = (props) => {
   } = props;
 
   return (
-    <div className="quote-text" style={{ padding: '30px 0'}}>
-      <p>{props.quotes.quote}</p>
+    <div className="quote-wrapper" style={{ padding: '30px 0'}}>
+      <div className="quote-text">
+        <div className="top-mark">“</div>
+        <p>{props.quotes.quote}</p>
+        <div className="bottom-mark">”</div>
+      </div>
       <div className="author">
         <span className="color" style={{ color: props.quotes.color }}>{props.quotes.author}</span>
         <span className="shadow" style={{ transform: `translate3d(${(x / 10) - 30}px,${(y / 10) - 10}px,0)`}}>{props.quotes.author}</span>
