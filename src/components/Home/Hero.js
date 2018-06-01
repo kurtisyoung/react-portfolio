@@ -81,10 +81,12 @@ const Title = styled.h1`
   color: black;
   &.large {
     font-size: 35px;
+    font-weight: 900;
   }
   &.medium {
     font-size: 30px;
     transition-delay: 200ms;
+    font-weight: bold;
   }
   &.small {
     font-size: 25px;
@@ -93,11 +95,9 @@ const Title = styled.h1`
   @media (min-width: 768px) {
     &.large {
       font-size: 40px;
-      font-weight: 900;
     }
     &.medium {
       font-size: 35px;
-      font-weight: bold;
     }
     &.small {
       font-size: 30px;
