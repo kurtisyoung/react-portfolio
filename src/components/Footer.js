@@ -71,8 +71,8 @@ const Rectangle = styled.div`
     background-color: #000;
   }
   &.gradient {
-    top: -30px;
-    height: 170px;
+    top: -46px;
+    height: 200px;
     background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
   }
 `;
