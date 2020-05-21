@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Template from 'components/Projects/Template'
+import Project from '../components/Project'
 import { landmark } from '../data/bamProjects'
 
 
@@ -7,7 +7,7 @@ export default class LandmarkPage extends Component {
   render () {
     return (
       <section>
-        <Template
+        <Project
           title={landmark.title}
           banner={landmark.banner}
           paragraph={landmark.paragraph}

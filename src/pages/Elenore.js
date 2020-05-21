@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Template from 'components/Projects/Template'
+import Project from '../components/Project'
 import { elenore } from '../data/bamProjects'
 
 export default class ElenorePage extends Component {
   render () {
     return (
       <section>
-        <Template
+        <Project
           title={elenore.title}
           banner={elenore.banner}
           paragraph={elenore.paragraph}

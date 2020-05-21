@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Template from 'components/Projects/Template'
+import Project from '../components/Project'
 import { juneau } from '../data/bamProjects'
 
 export default class JuneauPage extends Component {
   render () {
     return (
       <section>
-        <Template
+        <Project
           title={juneau.title}
           banner={juneau.banner}
           paragraph={juneau.paragraph}

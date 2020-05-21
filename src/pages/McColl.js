@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Template from 'components/Projects/Template'
+import Project from '../components/Project'
 import { mccoll } from '../data/bamProjects'
 
 export default class McCollPage extends Component {
   render () {
     return (
       <section>
-        <Template
+        <Project
           title={mccoll.title}
           banner={mccoll.banner}
           paragraph={mccoll.paragraph}

@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Template from 'components/Projects/Template'
+import Project from '../components/Project'
 import { salt } from '../data/bamProjects'
 
 export default class SaltPage extends Component {
   render () {
     return (
       <section>
-        <Template
+        <Project
           title={salt.title}
           banner={salt.banner}
           paragraph={salt.paragraph}

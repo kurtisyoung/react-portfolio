@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-
 import { Link } from 'react-static'
 import Plx from 'react-plx'
 
@@ -106,29 +105,29 @@ const Title = styled.h1`
   }
 `
 
-const Description = styled.p`
-  font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 1px;
-`
+// const Description = styled.p`
+//   font-family: 'Source Sans Pro', sans-serif;
+//   letter-spacing: 1px;
+// `
 
-const Button = styled(Link)`
-  display: inline-block;
-  padding: 0.5em 2em;
-  margin-top: 1em;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background-color: #000;
-  border-radius: 2px;
+// const Button = styled(Link)`
+//   display: inline-block;
+//   padding: 0.5em 2em;
+//   margin-top: 1em;
+//   font-family: 'Source Sans Pro', sans-serif;
+//   color: #fff;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   letter-spacing: 1px;
+//   background-color: #000;
+//   border-radius: 2px;
 
-  &:active,
-  &:hover,
-  &:visited {
-    color: #f1f1f1;
-  }
-`
+//   &:active,
+//   &:hover,
+//   &:visited {
+//     color: #f1f1f1;
+//   }
+// `
 
 export default class Hero extends Component {
   componentDidMount () {
@@ -143,7 +142,7 @@ export default class Hero extends Component {
     }, 200)
   }
 
-  render() {
+  render () {
     const blackParallax = [
       {
         start: 0,

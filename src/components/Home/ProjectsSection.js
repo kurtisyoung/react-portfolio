@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Waypoint from 'react-waypoint'
 import { Link } from 'react-static'
 import projects from '../../data/homeProjects'
-// import Link from '../../Components/Link';
 
 const ProjectContainer = styled.div`
   width: 100%;
@@ -39,8 +38,8 @@ const ProjectBlock = styled.div`
     @media (min-width: 1200px) {
       max-width: 700px;
     }
-    @media (min-width: 1440px) {
-      max-width: 1000px;
+    @media (min-width: 1600px) {
+      max-width: 900px;
     }
   }
 `
@@ -124,6 +123,33 @@ const ProjectYear = styled.span`
     left: -65px;
     font-size: 200px;
   }
+  @media (min-width: 1660px) {
+    top: -130px;
+    left: -80px;
+    font-size: 250px;
+  }
+`
+
+const ProjectCompany = styled.span`
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  left: 0;
+  top: -14px;
+  color: ${props => {
+    const color = props.color
+    
+    if (color === 'Aurora') {
+      return '#26B0E7'
+    } else if (color === 'BAM') {
+      return '#adadad'
+    } else if (color === 'Freelance') {
+      return '#FD243E'
+    } else { 
+      return '#FFFFFF' 
+    }
+  }};
 `
 
 
@@ -191,6 +217,11 @@ export default class ProjectComponent extends React.Component {
             >
               {this.state.projects[this.state.arrayPosition].name}
               <ProjectYear>{this.state.projects[this.state.arrayPosition].year}</ProjectYear>
+              <ProjectCompany
+                color={this.state.projects[this.state.arrayPosition].company}
+              >
+                {this.state.projects[this.state.arrayPosition].company}
+              </ProjectCompany>
             </ProjectName>
             {projectItems}
           </div>
