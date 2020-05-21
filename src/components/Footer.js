@@ -3,22 +3,21 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const KURTIS_URL = 'https://github.com/kurtisyoung/react-portfolio'
-const LICENSE_URL =
-  'https://github.com/kriasoft/react-static-boilerplate/blob/master/LICENSE.txt'
+// const LICENSE_URL =
+//   'https://github.com/kriasoft/react-static-boilerplate/blob/master/LICENSE.txt'
 
 const FooterContainer = styled.div`
   padding: 24px 0;
   color: var(--color-primary);
-  background-color: #fff;
   position: relative;
 `
 
 const Copyright = styled.span`padding-right: 0.5em;`;
 
-const Separator = styled.span`
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-`
+// const Separator = styled.span`
+//   padding-right: 0.5em;
+//   padding-left: 0.5em;
+// `
 
 const ExtLink = styled.a`
   &,

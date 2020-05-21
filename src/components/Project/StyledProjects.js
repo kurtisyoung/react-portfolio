@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
-const ProjectTemplate = styled.div`padding-top: 100px; text-align: left;`
+const ProjectTemplate = styled.div`
+  padding-top: 40px; 
+  text-align: left;
+  @media (min-width: 768px) {
+    padding-top: 100px;
+  }
+`
 
 const Title = styled.h1`
   font-size: 40px;
@@ -16,7 +22,8 @@ const Title = styled.h1`
 `
 
 const Banner = styled.div`
-  height: 40vh;
+  height: 35vh;
+  min-height: 150px;
   width: 100%;
   margin: 30px 0;
   background-position: center center;
@@ -24,7 +31,7 @@ const Banner = styled.div`
   background-size: cover;
   /* background-color: rgba(0, 0, 0, 0.5); */
   /* background-blend-mode: multiply; */
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     height: 60vh;
   }
 `

@@ -8,12 +8,17 @@ html, body, #app {
   margin: 0;
   padding: 0;
   color: #fff;
-  background: #FFF;
+  /* background: #FFF; */
   font-family: var(--font), sans-serif;
   font-size: 16px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(90deg, var(--color-bg) var(--dot-size), transparent 1%) center, linear-gradient(var(--color-bg) var(--dot-size), transparent 1%) center, var(--color-primary);
+  background-size: var(--dot-space) var(--dot-space);
 }
 
 *,

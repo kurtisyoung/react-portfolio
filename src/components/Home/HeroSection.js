@@ -34,7 +34,7 @@ const ContentContainer = styled.div`
     text-align: left;
     &.k-container {
       text-align: right;
-      width: 52%;
+      width: 45%;
     }
   }
   .k {

@@ -1,5 +1,10 @@
 :root {
   --color-primary: #06003c;
+  --color-bg: #FFF;
+
+  --dot-space: 30px;
+  --dot-size: 29px; 
+  /* space - size = dot size */
 
   --font: 'Poppins', sans-serif;
 
