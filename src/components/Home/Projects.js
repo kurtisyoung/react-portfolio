@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Waypoint from 'react-waypoint'
 import { Link } from 'react-static'
+import projects from '../../data/homeProjects'
 // import Link from '../../Components/Link';
 
 const ProjectContainer = styled.div`
@@ -52,8 +53,8 @@ const ProjectName = styled(Link)`
   position: absolute;
   z-index: 2;
   left: 5%;
-  top: 6%;
-  text-shadow: 3px 3px 0 #000;
+  top: 1;
+  text-shadow: 3px 3px 3px #000;
   margin: 0;
   text-decoration: none;
   font-weight: 600;
@@ -97,153 +98,40 @@ const ProjectName = styled(Link)`
   &.fixed {
     position: fixed;
     top: 50%;
-    // left: 30%;
-    // transform: translate(-50%, -50%);
+    /* left: 30%; */
+    /* transform: translate(-50%, -50%); */
   }
 `
+
+const ProjectYear = styled.span`
+  position: absolute;
+  top: -45px;
+  font-size: 100px;
+  left: 75px;
+  z-index: -1;
+  font-weight: bold;
+  color: #A1A1A1;
+  opacity: 0.5;
+  @media (min-width: 768px) {
+    font-size: 150px;
+    top: -70px;
+    left: -40px;
+    opacity: 0.2;
+  }
+  @media (min-width: 1024px) {
+    top: -100px;
+    left: -65px;
+    font-size: 200px;
+  }
+`
+
 
 export default class ProjectComponent extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
       arrayPosition: 0,
-      projectDetail: [
-        {
-          src: '/assets/img/home/auroramed-project.png',
-          name: 'Aurora Medical',
-          link: '/aurora-medical',
-          year: '2020',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Manager',
-        },
-        {
-          src: '/assets/img/home/dailyspecial-project.png',
-          name: 'Daily Special',
-          link: '/daily-special',
-          year: '2020',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Manager',
-        },
-        {
-          src: '/assets/img/home/auroraeurope-project.png',
-          name: 'Aurora Europe',
-          link: '/aurora-europe',
-          year: '2019',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Manager',
-        },
-        {
-          src: '/assets/img/home/investor-project.png',
-          name: 'Aurora Investor',
-          link: '/aurora-investor',
-          year: '2019',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/comox-project.png',
-          name: 'Aurora Comox',
-          link: '/aurora-comox',
-          year: '2019',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/sanraf-project.png',
-          name: 'San Rafael 71',
-          link: '/san-rafael',
-          year: '2018',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/altavie-project.png',
-          name: 'AltaVie',
-          link: '/altavie',
-          year: '2018',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/auroracann-project.png',
-          name: 'AuroraCann',
-          link: '/auroracann',
-          year: '2018',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/auroranordic-project.png',
-          name: 'Aurora Nordic',
-          link: '/aurora-nordic',
-          year: '2018',
-          company: 'Aurora',
-          tech: 'React',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/project-juneau.png',
-          name: 'Juneau By Amacon',
-          link: '/juneau',
-          year: '2018',
-          company: 'BAM',
-          tech: 'Vue',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/project-landmark.png',
-          name: 'Landmark On Robson',
-          link: '/landmark',
-          year: '2018',
-          company: 'BAM',
-          tech: 'Vue',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/project-gryphon.png',
-          name: 'Gryphon Development',
-          link: '/gryphon',
-          year: '2018',
-          company: 'BAM',
-          tech: 'Vue',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/project-elenore.png',
-          name: 'Elenore On Fifth',
-          link: '/elenore',
-          year: '2017',
-          company: 'BAM',
-          tech: 'Vue',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/project-salt.png',
-          name: 'Salt Digital',
-          link: '/salt-digital',
-          year: '2017',
-          company: 'Freelance',
-          tech: 'jQuery',
-          role: 'Developer',
-        },
-        {
-          src: '/assets/img/home/project-mccoll.png',
-          name: 'McColl Therapy',
-          link: '/mccoll',
-          year: '2016',
-          company: 'Freelance',
-          tech: 'WordPress',
-          role: 'Developer',
-        },
-      ],
+      projects,
     }
   }
 
@@ -268,7 +156,7 @@ export default class ProjectComponent extends React.Component {
   }
 
   render () {
-    const projectItems = this.state.projectDetail.map((detail, index) => (
+    const projectItems = this.state.projects.map((detail, index) => (
       <ProjectBlock key={index}>
         <Link to={detail.link}>
           <Waypoint
@@ -298,9 +186,10 @@ export default class ProjectComponent extends React.Component {
           <div className="project-section">
             <ProjectName
               id="ProjectName"
-              to={this.state.projectDetail[this.state.arrayPosition].link}
+              to={this.state.projects[this.state.arrayPosition].link}
             >
-              {this.state.projectDetail[this.state.arrayPosition].name}
+              {this.state.projects[this.state.arrayPosition].name}
+              <ProjectYear>{this.state.projects[this.state.arrayPosition].year}</ProjectYear>
             </ProjectName>
             {projectItems}
           </div>
