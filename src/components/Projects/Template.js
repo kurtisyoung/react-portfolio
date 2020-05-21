@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link } from 'react-static'
+// import { Link } from 'react-static'
 
 const ProjectTemplate = styled.div`padding-top: 100px; text-align: left;`
 
@@ -182,79 +182,77 @@ const MobileContainer = styled.div`
     position: relative;
     z-index: 3;
   }
-`;
+`
 
 class Template extends Component {
-  componentDidMount() {
-    window.scrollTo(0, 0);
+  componentDidMount () {
+    window.scrollTo(0, 0)
   }
-  render() {
-    const bannerImage = {
-      backgroundImage: `url('${this.props.banner}')`,
-    };
-    const detailArray = this.props.details.map((detail, index) => (
-      <li key={index}>
-        <p className="title">{detail.title}</p>
-        <p
-          className="content"
-          dangerouslySetInnerHTML={{ __html: detail.content }}
-        />
-      </li>
-    ));
+  render () {
+    const { 
+      paragraph,
+      title,
+      details,
+      videoSrc,
+      buttonLink,
+      iphone,
+    } = this.props
+    const bannerImage = { backgroundImage: `url('${this.props.banner}')` }
+
     return (
       <ProjectTemplate>
         <div className="container">
-          <Title>{this.props.title}</Title>
+          <Title>{title}</Title>
         </div>
         <Banner style={bannerImage} />
         <InfoContainer>
           <div className="flex-item flex-half">
-            <p dangerouslySetInnerHTML={{ __html: this.props.paragraph }} />
+            <p dangerouslySetInnerHTML={{ __html: paragraph }} />
           </div>
           <div className="flex-item flex-half">
-            <DetailList>{detailArray}</DetailList>
+            <DetailList>
+              {
+                details.map((detail, index) => (
+                  <li key={index}>
+                    <p className="title">{detail.title}</p>
+                    <p
+                      className="content"
+                      dangerouslySetInnerHTML={{ __html: detail.content }}
+                    />
+                  </li>
+                ))
+              }
+            </DetailList>
           </div>
         </InfoContainer>
-        <ButtonGradient href={this.props.buttonLink} target="_blank">
+        <ButtonGradient href={buttonLink} target="_blank">
           View Website
         </ButtonGradient>
         <VideoContent>
           <div className="img-wrapper">
             <video loop muted playsInline autoPlay>
-              <source src={this.props.videoSrc} type="video/mp4" />
+              <source src={videoSrc} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <img src="/assets/img/desktop.svg" alt="Desktop" />
           </div>
         </VideoContent>
         <MobileContainer>
-          <div className="mobile-wrapper">
-            <img className="screenshot" src={this.props.iphone[0]} alt="" />
-            <img
-              className="iphone"
-              src="/assets/img/iphone.svg"
-              alt="iPhone"
-            />
-          </div>
-          <div className="mobile-wrapper">
-            <img className="screenshot" src={this.props.iphone[1]} alt="" />
-            <img
-              className="iphone"
-              src="/assets/img/iphone.svg"
-              alt="iPhone"
-            />
-          </div>
-          <div className="mobile-wrapper">
-            <img className="screenshot" src={this.props.iphone[2]} alt="" />
-            <img
-              className="iphone"
-              src="/assets/img/iphone.svg"
-              alt="iPhone"
-            />
-          </div>
+          {
+            iphone.map((phone, index) => (
+              <div className="mobile-wrapper" key={index}>
+                <img className="screenshot" src={phone} alt="" />
+                <img
+                  className="iphone"
+                  src="/assets/img/iphone.svg"
+                  alt="iPhone"
+                />
+              </div>
+            ))
+          }
         </MobileContainer>
       </ProjectTemplate>
-    );
+    )
   }
 }
 

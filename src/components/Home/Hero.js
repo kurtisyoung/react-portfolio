@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import { Link } from 'react-static'
-import Plx from 'react-plx';
+import Plx from 'react-plx'
 
 
 const Container = styled.div`
@@ -19,7 +19,8 @@ const Container = styled.div`
       left: 0;
     }
   }
-`;
+`
+
 const ContentContainer = styled.div`
   height: 300px;
   width: 100%;
@@ -67,7 +68,7 @@ const ContentContainer = styled.div`
       left: 6%;
     }
   }
-`;
+`
 
 const Title = styled.h1`
   font-family: 'Montserrat', sans-serif;
@@ -103,12 +104,12 @@ const Title = styled.h1`
       font-size: 30px;
     }
   }
-`;
+`
 
 const Description = styled.p`
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1px;
-`;
+`
 
 const Button = styled(Link)`
   display: inline-block;
@@ -127,15 +128,14 @@ const Button = styled(Link)`
   &:visited {
     color: #f1f1f1;
   }
-`;
+`
 
 export default class Hero extends Component {
-
-  componentDidMount() {
+  componentDidMount () {
     this._loadAnimation()
     // window.addEventListener('load', this._loadAnimation())
   }
-  _loadAnimation() {
+  _loadAnimation () {
     setTimeout(() => {
       let heroID = document.getElementById('hero')
 
@@ -152,10 +152,10 @@ export default class Hero extends Component {
           {
             startValue: 0,
             endValue: 50,
-            property: 'marginTop'
-          }
-        ]
-      }
+            property: 'marginTop',
+          },
+        ],
+      },
     ]
     const gradParallax = [
       {
@@ -165,17 +165,17 @@ export default class Hero extends Component {
           {
             startValue: 0,
             endValue: -30,
-            property: 'marginTop'
-          }
-        ]
-      }
+            property: 'marginTop',
+          },
+        ],
+      },
     ]
     return (
       <Container id="hero" className="container" {...this.props}>
         <ContentContainer>
           <Title className="large">Web Developer</Title>
           <Title className="medium">Web Creator</Title>
-          <Title className="small">Web Maker</Title>
+          <Title className="small">Web Spinner</Title>
         </ContentContainer>
         <ContentContainer className="k-container">
           <Plx

@@ -68,5 +68,5 @@ export default [
     quote: `She said she don't believe in God but her shoes Christian.`,
     author: `Belly`,
     color: '#FF6666'
-  }
+  },
 ]

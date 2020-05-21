@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Waypoint from 'react-waypoint'
 import { Link } from 'react-static'
@@ -42,7 +42,7 @@ const ProjectBlock = styled.div`
       max-width: 1000px;
     }
   }
-`;
+`
 
 const ProjectName = styled(Link)`
   color: #fff;
@@ -100,10 +100,10 @@ const ProjectName = styled(Link)`
     // left: 30%;
     // transform: translate(-50%, -50%);
   }
-`;
+`
 
-export default  class ProjectComponent extends React.Component {
-  constructor(props) {
+export default class ProjectComponent extends React.Component {
+  constructor (props) {
     super(props);
     this.state = {
       arrayPosition: 0,
@@ -139,30 +139,30 @@ export default  class ProjectComponent extends React.Component {
           link: '/mccoll',
         },
       ],
-    };
+    }
   }
 
-  _handleWaypointEnter() {
+  _handleWaypointEnter () {
     // console.log('entered');
     const idProjectName = document.getElementById('ProjectName');
 
     idProjectName.classList.add('fixed');
   }
-  _handleWaypointLeave() {
+  _handleWaypointLeave () {
     // console.log('left');
     const idProjectName = document.getElementById('ProjectName');
 
     idProjectName.classList.remove('fixed');
   }
-  _sectionEnter(index) {
+  _sectionEnter (index) {
     this.setState({
       arrayPosition: index,
-    });
+    })
     // console.log(`section-${index}`)
     // console.log(this.state.arrayPosition)
   }
 
-  render() {
+  render () {
     const projectItems = this.state.projectDetail.map((detail, index) => (
       <ProjectBlock key={index}>
         <Link to={detail.link}>
@@ -177,7 +177,7 @@ export default  class ProjectComponent extends React.Component {
           </Waypoint>
         </Link>
       </ProjectBlock>
-    ));
+    ))
 
     return (
       <ProjectContainer>

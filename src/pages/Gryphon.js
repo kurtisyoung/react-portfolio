@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 import Template from 'components/Projects/Template'
 
-const pageName = 'gryphon';
+const pageName = 'gryphon'
 
 export default class GryphonPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       title: 'Gryphon Development',
       banner: `/assets/img/${pageName}/banner.jpg`,
@@ -49,9 +49,9 @@ export default class GryphonPage extends Component {
         `/assets/img/${pageName}/mobile-2.png`,
         `/assets/img/${pageName}/mobile-3.png`,
       ],
-    };
+    } 
   }
-  render() {
+  render () {
     return (
       <section>
         <Template
