@@ -1,12 +1,12 @@
 export default [
   {
     quote: `The greatest weapon against stress is our ability to choose one thought over another.`,
-    author: `William James`,
+    author: 'William James',
     color: '#CC99FF'
   },
   {
     quote: `I always cried that I had no shoes until I met a man with no feet.`,
-    author: `Helen Keller`,
+    author: 'Helen Keller',
     color: '#FFFF66'
   },
   {
