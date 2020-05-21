@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-static'
 import Plx from 'react-plx'
 
 
@@ -30,12 +29,12 @@ const ContentContainer = styled.div`
   position: relative;
   @media (min-width: 768px) {
     height: 100%;
-    width: 42%;
+    width: 48%;
     align-items: flex-start;
     text-align: left;
     &.k-container {
       text-align: right;
-      width: 58%;
+      width: 52%;
     }
   }
   .k {
@@ -78,7 +77,7 @@ const Title = styled.h1`
   opacity: 0;
   left: 20px;
   transition: 500ms ease-out;
-  color: black;
+  color: var(--color-primary);
   &.large {
     font-size: 35px;
     font-weight: 900;
@@ -105,30 +104,6 @@ const Title = styled.h1`
   }
 `
 
-// const Description = styled.p`
-//   font-family: 'Source Sans Pro', sans-serif;
-//   letter-spacing: 1px;
-// `
-
-// const Button = styled(Link)`
-//   display: inline-block;
-//   padding: 0.5em 2em;
-//   margin-top: 1em;
-//   font-family: 'Source Sans Pro', sans-serif;
-//   color: #fff;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   letter-spacing: 1px;
-//   background-color: #000;
-//   border-radius: 2px;
-
-//   &:active,
-//   &:hover,
-//   &:visited {
-//     color: #f1f1f1;
-//   }
-// `
-
 export default class Hero extends Component {
   componentDidMount () {
     this._loadAnimation()
@@ -143,7 +118,7 @@ export default class Hero extends Component {
   }
 
   render () {
-    const blackParallax = [
+    const shadowParallax = [
       {
         start: 0,
         duration: 400,
@@ -178,11 +153,11 @@ export default class Hero extends Component {
         </ContentContainer>
         <ContentContainer className="k-container">
           <Plx
-            className="k k-black"
-            parallaxData={blackParallax} // your parallax effects, see beneath
+            className="k k-shadow"
+            parallaxData={shadowParallax} // your parallax effects, see beneath
           >
             <img
-              src="/assets/img/home/k-black.svg"
+              src="/assets/img/home/k-shadow.svg"
               alt="K"
             />
           </Plx>

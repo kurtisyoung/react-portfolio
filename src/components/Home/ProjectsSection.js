@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Waypoint from 'react-waypoint'
 import { Link } from 'react-static'
-import projects from '../../data/homeProjects'
+import projects from '../../data/homeProjectsSection'
 
 const ProjectContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: #000;
+  background: var(--color-primary);
   padding: 50px 0;
   position: relative;
   z-index: 0;

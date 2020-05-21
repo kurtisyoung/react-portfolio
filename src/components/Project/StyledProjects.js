@@ -9,7 +9,7 @@ const Title = styled.h1`
   position: relative;
   display: inline;
   font-weight: 600;
-  color: black;
+  color: var(--color-primary);
   @media (min-width: 768px) {
     font-size: 55px;
   }
@@ -73,7 +73,7 @@ const DetailList = styled.ul`
       left: 0;
       width: 0;
       height: 1px;
-      background: #000;
+      background: var(--color-primary);
       transition: 300ms ease;
     }
     @media (min-width: 1024px) {

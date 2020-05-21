@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactCursorPosition from 'react-cursor-position'
 import styled from 'styled-components'
-import quotes from '../../data/quotes'
+import quotes from '../../data/homeQuoteSection'
 
 const QuoteContainer = styled.div`
   height: 235px;
@@ -25,17 +25,17 @@ const Quote = styled.div`
   text-align: center;
   position: relative;
   z-index: 10;
-  font-size: 20px;
+  font-size: 18px;
   max-width: 600px;
   cursor: pointer;
   @media (min-width: 768px) {
-    font-size: 35px;
-    max-width: 850px;
+    font-size: 30px;
+    max-width: 750px;
   }
   p {
     width: 100%;
     margin: 0 auto;
-    letter-spacing: 0.5px;
+    letter-spacing: 0;
     text-shadow: 2px 2px 0 #FFF;
     position: relative;
   }
@@ -46,7 +46,7 @@ const Quote = styled.div`
     font-size: 80px;
     height: 55px;
     position: relative;
-    color: #000;
+    color: var(--color-primary);
   }
   .author {
     position: relative;
@@ -56,7 +56,7 @@ const Quote = styled.div`
       font-size: 1.8em;
       font-weight: 900;
       margin-top: 10px;
-      color: #000;
+      color: var(--color-primary);
       @media (min-width: 768px) {
         white-space: nowrap;
       }
@@ -92,7 +92,7 @@ const Quote = styled.div`
 const RecBlack = styled.div`
   height: 150%;
   width: 50px;
-  background-color: #000;
+  background-color: var(--color-primary);
   position: absolute;
   top: -10%;
   left: 17px;

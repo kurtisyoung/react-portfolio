@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link, NavLink } from 'react-static'
+import { NavLink } from 'react-static'
 import styled from 'styled-components'
+import menuLinks from '../data/menuLinks'
 
 const MenuContainer = styled.div`
   height: 100vh;
   width: 100%;
   transition: 500ms ease;
-  background: #000;
+  background: var(--color-primary);
   position: fixed;
   z-index: 888;
   display: flex;
@@ -22,7 +23,7 @@ const MenuContainer = styled.div`
     visibility: visible;
     pointer-events: auto;
   }
-`;
+`
 
 const Rectangle = styled.div`
   width: 15px;
@@ -37,10 +38,11 @@ const Rectangle = styled.div`
   &.gradient {
     background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
   }
-`;
+`
 
 const MenuList = styled.ul`
   padding-left: 50px;
+  list-style: none;
   @media (min-width: 768px) {
     padding-left: 29%;
   }
@@ -122,73 +124,24 @@ const MenuList = styled.ul`
       }
     }
   }
-`;
+`
 
 class Menu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuList: [
-        {
-          link: '/',
-          name: 'Home',
-        },
-        {
-          link: '/juneau',
-          name: 'Juneau By Amacon',
-        },
-        {
-          link: '/landmark',
-          name: 'Landmark',
-        },
-        {
-          link: '/gryphon',
-          name: 'Gryphon Development',
-        },
-        {
-          link: '/elenore',
-          name: 'Elenore On Fifth',
-        },
-        {
-          link: '/salt-digital',
-          name: 'Salt Digital',
-        },
-        {
-          link: '/mccoll',
-          name: 'McColl Therapy',
-        },
-      ],
-      externalLinks: [
-        {
-          link: 'https://github.com/kurtisyoung',
-          name: 'Github',
-        },
-        {
-          link: 'https://codepen.io/kurtisyoung/',
-          name: 'Codepen',
-        },
-        {
-          link: 'https://www.linkedin.com/in/kcyoung1/',
-          name: 'LinkedIn',
-        },
-      ],
-    }
-  }
-  render() {
-    const arrayList = this.state.menuList.map((item, index) => (
+  render () {
+    const arrayList = menuLinks.menuList.map((item, index) => (
       <li key={index}>
         <NavLink
           exact
           onClick={this.props.closeMenu}
           to={item.link}
           activeClassName="active"
-          >
+        >
           {item.name}
         </NavLink>
       </li>
     ))
 
-    const externalArray = this.state.externalLinks.map((item, index) => (
+    const externalArray = menuLinks.externalLinks.map((item, index) => (
       <li key={index}>
         <a href={item.link} target="_blank" rel="noopener noreferrer">
           {item.name}

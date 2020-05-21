@@ -9,8 +9,7 @@ html, body, #app {
   padding: 0;
   color: #fff;
   background: #FFF;
-  font-family: 'Poppins', sans-serif;
-  /* font-family: var(--font); */
+  font-family: var(--font), sans-serif;
   font-size: 16px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -32,13 +31,11 @@ html, body, #app {
 }
 
 p {
-  letter-spacing: 1px;
   line-height: 1.4;
-  color: #000;
+  color: var(--color-primary);
 }
 
 a {
-  color: #000;
+  color: var(--color-primary);
   text-decoration: none;
-  letter-spacing: 0.5px;
 }

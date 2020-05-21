@@ -8,7 +8,7 @@ const LICENSE_URL =
 
 const FooterContainer = styled.div`
   padding: 24px 0;
-  color: #000;
+  color: var(--color-primary);
   background-color: #fff;
   position: relative;
 `
@@ -25,7 +25,7 @@ const ExtLink = styled.a`
   &:hover,
   &:active,
   &:visited {
-    color: #000;
+    color: var(--color-primary);
     text-decoration: none;
     transition: 300ms ease;
     opacity: 1;
@@ -43,7 +43,7 @@ const LinkList = styled.ul`
       left: 0;
       width: 0;
       height: 1px;
-      background: #000;
+      background: var(--color-primary);
       transition: 300ms ease;
     }
     @media (min-width: 1024px) {
@@ -68,7 +68,7 @@ const Rectangle = styled.div`
   &.black {
     top: 0;
     height: 25px;
-    background-color: #000;
+    background-color: var(--color-primary);
   }
   &.gradient {
     top: -46px;
@@ -90,7 +90,7 @@ export default class Footer extends Component {
           <li><a href="https://www.linkedin.com/in/kurtisyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </LinkList>
         <Copyright css="padding-right: 0.5em">&copy; 2020</Copyright>
-        <ExtLink href={KURTIS_URL} target="_blank">created by Kurtis Young</ExtLink>
+        <ExtLink href={KURTIS_URL} target="_blank" rel="noopener noreferrer">created by Kurtis Young</ExtLink>
         {/* <Separator>|</Separator>
         <ExtLink href={LICENSE_URL}></ExtLink> */}
       </FooterContainer>
