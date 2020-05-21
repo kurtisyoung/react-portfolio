@@ -5,6 +5,46 @@ export default {
       name: 'Home',
     },
     {
+      link: '/aurora-medical',
+      name: 'Aurora Medical',
+    },
+    {
+      link: '/daily-special',
+      name: 'Daily Special',
+    },
+    {
+      link: '/aurora-europe',
+      name: 'Aurora Europe',
+    },
+    {
+      link: '/aurora-cannabis-store',
+      name: 'Aurora Cannabis Store',
+    },
+    {
+      link: '/aurora-investor',
+      name: 'Aurora Investor',
+    },
+    {
+      link: '/aurora-comox',
+      name: 'Aurora Comox',
+    },
+    {
+      link: '/san-rafael',
+      name: 'San Rafael 71',
+    },
+    {
+      link: '/altavie',
+      name: 'AltaVie',
+    },
+    {
+      link: '/auroracann',
+      name: 'Aurora Cann',
+    },
+    {
+      link: '/aurora-nordic',
+      name: 'Aurora Nordic',
+    },
+    {
       link: '/juneau',
       name: 'Juneau By Amacon',
     },

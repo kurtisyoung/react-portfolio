@@ -50,7 +50,7 @@ const MenuList = styled.ul`
     color: #fff;
     text-decoration: none;
     position: relative;
-    font-size: 20px;
+    font-size: 12px;
     letter-spacing: 1px;
     transition: 300ms ease;
     font-family: 'Montserrat', sans-serif;
@@ -65,13 +65,13 @@ const MenuList = styled.ul`
       transition: 300ms ease;
     }
     @media (min-width: 1024px) {
-      font-size: 30px;
+      font-size: 16px;
     }
   }
   &.main {
     a {
       &.active {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 700;
         display: inline-block;
         background: #3fdfa4;
@@ -82,12 +82,12 @@ const MenuList = styled.ul`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @media (min-width: 768px) {
-          font-size: 40px;
+          font-size: 25px;
         }
       }
       @media (min-width: 1024px) {
         &:hover {
-          font-size: 25px;
+          font-size: 20px;
           font-weight: 700;
           display: inline-block;
           background: #3fdfa4;
@@ -98,7 +98,7 @@ const MenuList = styled.ul`
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           @media (min-width: 768px) {
-            font-size: 40px;
+            font-size: 25px;
           }
         }
       }

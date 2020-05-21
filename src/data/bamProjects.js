@@ -67,7 +67,7 @@ const gryphon = {
     {
       title: 'Website',
       content:
-        '<a href="http://gryphonliving.com/" target="_blank" rel="noopener noreferrer">gryphonliving.com/</a>',
+        '<a href="http://gryphonliving.com/" target="_blank" rel="noopener noreferrer">gryphonliving.com</a>',
     },
     {
       title: 'Tech Stack',
@@ -111,7 +111,7 @@ const juneau = {
     {
       title: 'Website',
       content:
-        '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau/</a>',
+        '<a href="https://amacon.com/juneau/" target="_blank" rel="noopener noreferrer">amacon.com/juneau</a>',
     },
     {
       title: 'Tech Stack',

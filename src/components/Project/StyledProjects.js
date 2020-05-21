@@ -4,7 +4,7 @@ const ProjectTemplate = styled.div`
   padding-top: 40px; 
   text-align: left;
   @media (min-width: 768px) {
-    padding-top: 100px;
+    padding-top: 60px;
   }
 `
 
@@ -32,7 +32,7 @@ const Banner = styled.div`
   /* background-color: rgba(0, 0, 0, 0.5); */
   /* background-blend-mode: multiply; */
   @media (min-width: 1024px) {
-    height: 60vh;
+    height: 50vh;
   }
 `
 
@@ -44,7 +44,7 @@ const InfoContainer = styled.div`
   flex-wrap: wrap;
   margin-top: 30px;
   @media (min-width: 768px) {
-    margin-top: 100px;
+    margin-top: 40px;
   }
   p {
     max-width: 580px;
