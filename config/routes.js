@@ -27,10 +27,10 @@ export default [
     path: '/mccoll',
     component: 'pages/McColl',
   },
-  {
-    path: '/about',
-    component: 'pages/About',
-  },
+  // {
+  //   path: '/about',
+  //   component: 'pages/About',
+  // },
   {
     path: '/:lang',
     component: 'pages/Home',

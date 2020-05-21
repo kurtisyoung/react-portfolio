@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 import Template from 'components/Projects/Template'
 
-const pageName = 'landmark';
+const pageName = 'landmark'
 
 export default class LandmarkPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       title: 'Landmark On Robson',
       banner: `/assets/img/${pageName}/banner.jpg`,
@@ -50,9 +50,9 @@ export default class LandmarkPage extends Component {
         `/assets/img/${pageName}/mobile-2.png`,
         `/assets/img/${pageName}/mobile-3.png`,
       ],
-    };
+    }
   }
-  render() {
+  render () {
     return (
       <section>
         <Template
@@ -65,6 +65,6 @@ export default class LandmarkPage extends Component {
           iphone={this.state.iphone}
         />
       </section>
-    );
+    )
   }
 }

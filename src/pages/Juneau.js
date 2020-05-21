@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 import Template from 'components/Projects/Template'
 
 const pageName = 'juneau'
 
 export default class JuneauPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       title: 'Juneau By Amacon',
       banner: '/assets/img/juneau/banner.jpg',
@@ -52,7 +52,7 @@ export default class JuneauPage extends Component {
       ],
     }
   }
-  render() {
+  render () {
     return (
       <section>
         <Template

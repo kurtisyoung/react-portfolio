@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 // import styled from 'styled-components'
-
 import Template from 'components/Projects/Template'
 
 const pageName = 'gryphon'
@@ -49,7 +48,7 @@ export default class GryphonPage extends Component {
         `/assets/img/${pageName}/mobile-2.png`,
         `/assets/img/${pageName}/mobile-3.png`,
       ],
-    } 
+    }
   }
   render () {
     return (

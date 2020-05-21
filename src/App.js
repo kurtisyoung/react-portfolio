@@ -4,10 +4,10 @@ import { Router, Route, Switch, Link, matchPath } from 'react-static'
 import styled from 'styled-components'
 import { Provider } from 'react-redux'
 import store from './redux/store'
-import locales from '../config/locales'
+// import locales from '../config/locales'
 import routes from '../config/routes'
 
-import ReactLoading from 'react-loading';
+// import ReactLoading from 'react-loading';
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 // import { ParallaxProvider } from 'react-scroll-parallax'

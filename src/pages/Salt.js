@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-
+// import styled from 'styled-components'
 import Template from 'components/Projects/Template'
 
 const pageName = 'salt'
 
 export default class SaltPage extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       title: 'Salt Digital',
@@ -53,9 +52,9 @@ export default class SaltPage extends Component {
         `/assets/img/${pageName}/mobile-2.png`,
         `/assets/img/${pageName}/mobile-3.png`,
       ],
-    };
+    }
   }
-  render() {
+  render () {
     return (
       <section>
         <Template
@@ -68,6 +67,6 @@ export default class SaltPage extends Component {
           iphone={this.state.iphone}
         />
       </section>
-    );
+    )
   }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactCursorPosition from 'react-cursor-position'
 import styled from 'styled-components'
 import quotes from '../../data/quotes'
@@ -37,8 +37,10 @@ const Quote = styled.div`
     margin: 0 auto;
     letter-spacing: 0.5px;
     text-shadow: 2px 2px 0 #FFF;
-    /* transform: rotate(90deg); */
     position: relative;
+  }
+  .quote-wrapper {
+    transition: 200ms ease;
   }
   .top-mark, .bottom-mark {
     font-size: 80px;
@@ -61,9 +63,10 @@ const Quote = styled.div`
     }
   }
   .cta {
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    color: rgba(0,0,0, 0.2);
+    font-weight: bold;
+    color: rgba(0,0,0, 0.3);
   }
   .color {
     /* text-shadow: 5px 5px 0 #000; */
@@ -134,7 +137,7 @@ const QuoteText = (props) => {
       author = '',
       color = '',
     } = {},
-  } = props;
+  } = props
 
   return (
     <div className="quote-wrapper" style={{ padding: '30px 0'}}>
@@ -147,34 +150,24 @@ const QuoteText = (props) => {
         <span className="color" style={{ color: props.quotes.color }}>{props.quotes.author}</span>
         <span className="shadow" style={{ transform: `translate3d(${(x / 10) - 30}px,${(y / 10) - 10}px,0)`}}>{props.quotes.author}</span>
       </div>
-      {/* {`x: ${x}`}<br />
-      {`y: ${y}`}<br />
-      {`width:: ${width}`}<br />
-      {`height: ${height}`}<br />
-      {`isActive: ${isActive}`}<br />
-      {`isPositionOutside: ${isPositionOutside ? 'true' : 'false'}`}<br />
-      {`isMouseDetected: ${isMouseDetected ? 'true' : 'false'}`}<br />
-      {`isTouchDetected: ${isTouchDetected ? 'true' : 'false'}`} */}
     </div>
-  );
-};
+  )
+}
 
 
 export default class QuoteComponent extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this)
     this.state = {
       randomNumber: Math.floor(Math.random() * quotes.length),
     }
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState({ randomNumber: Math.floor(Math.random() * quotes.length)})
   }
 
-  render() {
-
+  render () {
     return (
       <QuoteContainer>
         <div className="container">
@@ -190,6 +183,6 @@ export default class QuoteComponent extends React.Component {
           </Quote>
         </div>
       </QuoteContainer>
-    );
+    )
   }
 }

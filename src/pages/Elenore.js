@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 import Template from 'components/Projects/Template'
 
-const pageName = 'elenore';
+const pageName = 'elenore'
 
 export default class ElenorePage extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       title: 'Elenore On Fifth',
       banner: `/assets/img/${pageName}/banner.jpg`,
       paragraph: `Elenore On Fifth is a residential development currently being built on Main and 5th Ave. I worked on the full website and touchscreen app.
       <br>
       <br>
-       The biggest challenge for this project was the tight deadline we had to meet. We were able to finish the website on time and within the budget because we had a good system in place. We used Github branches to minimize merge conflicts and Vue allowed us to work quickly and efficiently, giving us time to create a dynamic experience for users.`,
+      The biggest challenge for this project was the tight deadline we had to meet. We were able to finish the website on time and within the budget because we had a good system in place. We used Github branches to minimize merge conflicts and Vue allowed us to work quickly and efficiently, giving us time to create a dynamic experience for users.`,
       details: [
         {
           title: 'Agency',
@@ -49,9 +49,9 @@ export default class ElenorePage extends Component {
         `/assets/img/${pageName}/mobile-2.png`,
         `/assets/img/${pageName}/mobile-3.png`,
       ],
-    };
+    }
   }
-  render() {
+  render () {
     return (
       <section>
         <Template
@@ -64,6 +64,6 @@ export default class ElenorePage extends Component {
           iphone={this.state.iphone}
         />
       </section>
-    );
+    )
   }
 }
