@@ -1,6 +1,6 @@
 export default [
   {
-    src: '/assets/img/home/auroramed-project.png',
+    src: '/assets/img/home/auroramed-project.jpg',
     name: 'Aurora Medical',
     link: '/aurora-medical',
     year: '2020',
@@ -9,7 +9,7 @@ export default [
     role: 'Manager',
   },
   {
-    src: '/assets/img/home/dailyspecial-project.png',
+    src: '/assets/img/home/dailyspecial-project.jpg',
     name: 'Daily Special',
     link: '/daily-special',
     year: '2020',
@@ -18,7 +18,7 @@ export default [
     role: 'Manager',
   },
   {
-    src: '/assets/img/home/auroraeurope-project.png',
+    src: '/assets/img/home/auroraeurope-project.jpg',
     name: 'Aurora Europe',
     link: '/aurora-europe',
     year: '2019',
@@ -27,7 +27,7 @@ export default [
     role: 'Manager',
   },
   {
-    src: '/assets/img/home/investor-project.png',
+    src: '/assets/img/home/investor-project.jpg',
     name: 'Aurora Investor',
     link: '/aurora-investor',
     year: '2019',
@@ -36,7 +36,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/comox-project.png',
+    src: '/assets/img/home/comox-project.jpg',
     name: 'Aurora Comox',
     link: '/aurora-comox',
     year: '2019',
@@ -45,7 +45,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/sanraf-project.png',
+    src: '/assets/img/home/sanraf-project.jpg',
     name: 'San Rafael 71',
     link: '/san-rafael',
     year: '2018',
@@ -54,7 +54,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/altavie-project.png',
+    src: '/assets/img/home/altavie-project.jpg',
     name: 'AltaVie',
     link: '/altavie',
     year: '2018',
@@ -63,7 +63,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/auroracann-project.png',
+    src: '/assets/img/home/auroracann-project.jpg',
     name: 'AuroraCann',
     link: '/auroracann',
     year: '2018',
@@ -72,7 +72,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/auroranordic-project.png',
+    src: '/assets/img/home/auroranordic-project.jpg',
     name: 'Aurora Nordic',
     link: '/aurora-nordic',
     year: '2018',
@@ -81,7 +81,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/project-juneau.png',
+    src: '/assets/img/home/project-juneau.jpg',
     name: 'Juneau By Amacon',
     link: '/juneau',
     year: '2018',
@@ -90,7 +90,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/project-landmark.png',
+    src: '/assets/img/home/project-landmark.jpg',
     name: 'Landmark On Robson',
     link: '/landmark',
     year: '2018',
@@ -99,7 +99,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/project-gryphon.png',
+    src: '/assets/img/home/project-gryphon.jpg',
     name: 'Gryphon Development',
     link: '/gryphon',
     year: '2018',
@@ -108,7 +108,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/project-elenore.png',
+    src: '/assets/img/home/project-elenore.jpg',
     name: 'Elenore On Fifth',
     link: '/elenore',
     year: '2017',
@@ -117,7 +117,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/project-salt.png',
+    src: '/assets/img/home/project-salt.jpg',
     name: 'Salt Digital',
     link: '/salt-digital',
     year: '2017',
@@ -126,7 +126,7 @@ export default [
     role: 'Developer',
   },
   {
-    src: '/assets/img/home/project-mccoll.png',
+    src: '/assets/img/home/project-mccoll.jpg',
     name: 'McColl Therapy',
     link: '/mccoll',
     year: '2016',
