@@ -71,12 +71,12 @@ const ProjectName = styled(Link)`
   }
   &:before {
     @media (min-width: 768px) {
-      top: 50%;
+      /* top: 50%;
       transform: translateY(-50%);
       box-shadow: 2px 2px 2px 0 #000;
       right: -120px;
-      height: 10px;
-      width: 100px;
+      height: 2px;
+      width: 50px; */
     }
   }
   &:after {
@@ -88,7 +88,8 @@ const ProjectName = styled(Link)`
   @media (min-width: 1024px) {
     &:hover {
       &:before {
-        right: -130px;
+        /* left: -130px; */
+        /* width: 75px; */
       }
       &:after {
         width: 100%;
