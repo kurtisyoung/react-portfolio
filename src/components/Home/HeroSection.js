@@ -12,6 +12,9 @@ const Container = styled.div`
   flex-wrap: wrap;
   min-height: 730px;
   justify-content: space-between;
+  @media (min-width: 768px) {
+    min-height: 600px;
+  }
   &.active {
     h1 {
       opacity: 1;
@@ -182,7 +185,7 @@ export default class Hero extends Component {
             I specialize in developing modern applications using <span>React</span>, <span>Redux</span> and <span>Styled Components</span>.
           </Content>
           <Content delay={600}>
-            I've been coding for 4+ years split between my previous role at <span>BAM</span> and my current position at <span>Aurora</span> as a manager and developer. Check out some of my work and favourite quotes <span>below</span>.
+            I've been coding for 4+ years split between my previous role at <span>BAM</span> and my current position at <span>Aurora</span>. Check out some of my work and favourite quotes <span>below</span>.
           </Content>
         </ContentContainer>
         <ContentContainer className="k-container">

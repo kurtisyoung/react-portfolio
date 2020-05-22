@@ -9,7 +9,7 @@ const QuoteContainer = styled.div`
   margin-bottom: 100px;
   width: 100%;
   @media (min-width: 768px) {
-    margin-top: 25%;
+    margin-top: 15%;
     margin-bottom: 200px;
   }
   .container {
