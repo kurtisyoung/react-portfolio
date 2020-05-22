@@ -1,14 +1,17 @@
 :root {
   --color-primary: #06003c;
   --color-secondary: #3FDFA4;
+  --color-aurora: #26B0E7;
+  --color-bam: #adadad;
+  --color-freelance: #FD243E;
   --color-bg: #FFF;
 
   --dot-space: 35px;
   --dot-size: 34px; 
   /* space - size = dot size */
 
-  --font: 'Poppins', sans-serif;
-  --font-title: 'Montserrat', sans-serif;
+  --font: 'Poppins', Arial, sans-serif;
+  --font-title: 'Montserrat', Arial, sans-serif;
 
   --xs: 480px;
   --sm: 768px;

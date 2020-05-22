@@ -119,7 +119,7 @@ const MenuList = styled.ul`
   }
   &.external {
     a {
-      font-size: 16px !important;
+      font-size: 10px !important;
       @media (min-width: 1024px) {
         &:hover {
           &:before {

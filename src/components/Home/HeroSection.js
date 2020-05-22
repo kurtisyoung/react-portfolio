@@ -10,9 +10,14 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  min-height: 600px;
+  min-height: 730px;
+  justify-content: space-between;
   &.active {
     h1 {
+      opacity: 1;
+      left: 0;
+    }
+    p {
       opacity: 1;
       left: 0;
     }
@@ -20,18 +25,18 @@ const Container = styled.div`
 `
 
 const ContentContainer = styled.div`
-  height: 300px;
+  min-height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: right;
   position: relative;
+  text-align: left;
   @media (min-width: 768px) {
     height: 100%;
     width: 48%;
     align-items: flex-start;
-    text-align: left;
     &.k-container {
       text-align: right;
       width: 45%;
@@ -60,11 +65,31 @@ const ContentContainer = styled.div`
       }
     }
   }
-  .k-gradient {
+  .k-color {
     left: 53%;
     @media (min-width: 768px) {
       left: 6%;
     }
+  }
+`
+
+const Content = styled.p`
+  font-size: 18px;
+  max-width: 700px;
+  position: relative;
+  margin-top: 0;
+  opacity: 0;
+  left: 20px;
+  transition: opacity 500ms ease-out, left 500ms ease-out;
+  transition-delay: ${props => props.delay ? props.delay : 0}ms;
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+  @media (min-width: 992px) {
+    font-size: 25px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 30px;
   }
 `
 
@@ -75,7 +100,7 @@ const Title = styled.h1`
   position: relative;
   opacity: 0;
   left: 20px;
-  transition: 500ms ease-out;
+  transition: opacity 500ms ease-out, left 500ms ease-out;
   color: var(--color-primary);
   &.large {
     font-size: 35px;
@@ -146,9 +171,19 @@ export default class Hero extends Component {
     return (
       <Container id="hero" className="container" {...this.props}>
         <ContentContainer>
-          <Title className="large">Web Developer</Title>
+          {/* <Title className="large">Web Developer</Title>
           <Title className="medium">Web Creator</Title>
-          <Title className="small">Web Spinner</Title>
+          <Title className="small">Web Spinner</Title> */}
+          <Title className="large">Hi</Title>
+          <Content delay={300}>
+            My name is Kurtis. Originally from Edmonton, AB, currently living in Vancouver, BC. Forever an <span>Oilers</span> fan.
+          </Content>
+          <Content delay={600}>
+            I specialize in developing modern applications using <span>React</span>, <span>Redux</span> and <span>Styled Components</span>.
+          </Content>
+          <Content delay={600}>
+            I've been coding for 4+ years split between my previous role at <span>BAM</span> and my current position at <span>Aurora</span> as a manager and developer. Check out some of my work and favourite quotes <span>below</span>.
+          </Content>
         </ContentContainer>
         <ContentContainer className="k-container">
           <Plx
@@ -161,11 +196,11 @@ export default class Hero extends Component {
             />
           </Plx>
           <Plx
-            className="k k-gradient"
+            className="k k-color"
             parallaxData={gradParallax} // your parallax effects, see beneath
           >
             <img
-              src="/assets/img/home/k-gradient.svg"
+              src="/assets/img/home/k-color.svg"
               alt="K"
             />
           </Plx>

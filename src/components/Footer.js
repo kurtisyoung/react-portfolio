@@ -29,6 +29,9 @@ const ExtLink = styled.a`
     transition: 300ms ease;
     opacity: 1;
   }
+  &:hover {
+    font-weight: bold;
+  }
 `
 
 const LinkList = styled.ul`
@@ -85,9 +88,9 @@ export default class Footer extends Component {
         <Rectangle className="gradient" />
         <LinkList>
           <li><a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/kurtisyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           <li><a href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</a></li>
           <li><a href="https://codepen.io/kurtisyoung/" target="_blank" rel="noopener noreferrer">Codepen</a></li>
-          <li><a href="https://www.linkedin.com/in/kurtisyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </LinkList>
         <Copyright css="padding-right: 0.5em">&copy; 2020</Copyright>
         <ExtLink href={KURTIS_URL} target="_blank" rel="noopener noreferrer">created by Kurtis Young</ExtLink>

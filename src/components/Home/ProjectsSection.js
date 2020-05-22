@@ -109,12 +109,11 @@ const ProjectYear = styled.span`
   z-index: -1;
   font-weight: bold;
   color: #A1A1A1;
-  opacity: 0.5;
   @media (min-width: 768px) {
     font-size: 150px;
     top: -70px;
     left: -40px;
-    opacity: 0.2;
+    opacity: 0.3;
   }
   @media (min-width: 1024px) {
     top: -100px;

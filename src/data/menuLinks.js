@@ -71,16 +71,16 @@ export default {
   ],
   externalLinks: [
     {
+      link: 'https://www.linkedin.com/in/kurtisyoung1/',
+      name: 'LinkedIn',
+    },
+    {
       link: 'https://github.com/kurtisyoung',
       name: 'Github',
     },
     {
       link: 'https://codepen.io/kurtisyoung/',
       name: 'Codepen',
-    },
-    {
-      link: 'https://www.linkedin.com/in/kurtisyoung1/',
-      name: 'LinkedIn',
     },
   ],
 }
