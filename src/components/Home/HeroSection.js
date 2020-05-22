@@ -69,9 +69,8 @@ const ContentContainer = styled.div`
 `
 
 const Title = styled.h1`
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-title);
   font-weight: 500;
-  letter-spacing: 1px;
   margin: 0;
   position: relative;
   opacity: 0;
@@ -172,7 +171,7 @@ export default class Hero extends Component {
           </Plx>
         </ContentContainer>
       </Container>
-    );
+    )
   }
 }
 

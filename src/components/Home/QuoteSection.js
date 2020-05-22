@@ -35,7 +35,6 @@ const Quote = styled.div`
   p {
     width: 100%;
     margin: 0 auto;
-    letter-spacing: 0;
     text-shadow: 2px 2px 0 #FFF;
     position: relative;
   }
@@ -52,7 +51,7 @@ const Quote = styled.div`
     position: relative;
     display: inline-block;
     span {
-      font-family: 'Montserrat', sans-serif;
+      font-family: var(--font-title);
       font-size: 1.8em;
       font-weight: 900;
       margin-top: 10px;
@@ -72,11 +71,11 @@ const Quote = styled.div`
     /* text-shadow: 5px 5px 0 #000; */
     display: inline-block;
     transition: color 300ms ease;
-    /* background: #3fdfa4;
-    background: -webkit-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-    background: -o-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-    background: -moz-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-    background: linear-gradient(to right, #3fdfa4 0%, #3e45b9 100%);
+    /* background: var(--color-secondary);
+    background: -webkit-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+    background: -o-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+    background: -moz-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+    background: linear-gradient(to right, var(--color-secondary) 0%, #3e45b9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
   }
@@ -109,7 +108,8 @@ const RecGradient = styled.div`
   z-index: 1;
   bottom: -136%;
   left: 0;
-  background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
+  /* background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%); */
+  background-color: var(--color-secondary);
   display: none;
   @media (min-width: 768px) {
     display: block;

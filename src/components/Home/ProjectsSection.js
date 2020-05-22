@@ -12,10 +12,9 @@ const ProjectContainer = styled.div`
   position: relative;
   z-index: 0;
   h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-title);
     font-weight: bold;
     color: #fff;
-    letter-spacing: 2px;
     text-align: left;
     @media (min-width: 768px) {
       margin: 46px 0 0 70px;
@@ -47,8 +46,7 @@ const ProjectBlock = styled.div`
 const ProjectName = styled(Link)`
   color: #fff;
   font-size: 28px;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 2.5px;
+  font-family: var(--font-title);
   position: absolute;
   z-index: 2;
   left: 5%;
@@ -134,7 +132,6 @@ const ProjectCompany = styled.span`
   position: absolute;
   font-size: 12px;
   font-weight: bold;
-  letter-spacing: 0;
   left: 0;
   top: -14px;
   color: ${props => {

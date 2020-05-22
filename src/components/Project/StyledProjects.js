@@ -10,8 +10,7 @@ const ProjectTemplate = styled.div`
 
 const Title = styled.h1`
   font-size: 40px;
-  letter-spacing: 2px;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-title);
   position: relative;
   display: inline;
   font-weight: 600;
@@ -107,8 +106,9 @@ const DetailList = styled.ul`
   }
 `
 
-const ButtonGradient = styled.a`
-  background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
+const StyledButton = styled.a`
+  /* background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%); */
+  background-color: ${props => props.color ? props.color : 'var(--color-secondary)'};
   padding: 15px 30px;
   position: fixed;
   right: 4.9%;
@@ -184,7 +184,7 @@ export {
   Banner,
   InfoContainer,
   DetailList,
-  ButtonGradient,
+  StyledButton,
   VideoContent,
   MobileContainer,
 }

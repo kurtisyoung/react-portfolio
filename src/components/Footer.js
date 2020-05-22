@@ -64,15 +64,16 @@ const Rectangle = styled.div`
   width: 25px;
   position: absolute;
   left: 0;
-  &.black {
+  /* &.black {
     top: 0;
     height: 25px;
     background-color: var(--color-primary);
-  }
+  } */
   &.gradient {
     top: -46px;
     height: 200px;
-    background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%);
+    /* background: linear-gradient(-134deg, #3FDFA4 0%, #3E45B9 100%); */
+    background-color: var(--color-secondary);
   }
 `
 

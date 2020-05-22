@@ -6,7 +6,7 @@ import {
   Banner,
   InfoContainer,
   DetailList,
-  ButtonGradient,
+  StyledButton,
   VideoContent,
   MobileContainer,
 } from './StyledProjects'
@@ -52,9 +52,9 @@ class Template extends Component {
             </DetailList>
           </div>
         </InfoContainer>
-        <ButtonGradient href={buttonLink} target="_blank">
+        <StyledButton href={buttonLink} target="_blank">
           View Website
-        </ButtonGradient>
+        </StyledButton>
         <VideoContent>
           <div className="img-wrapper">
             <video loop muted playsInline autoPlay>

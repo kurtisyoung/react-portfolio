@@ -36,7 +36,10 @@ const Rectangle = styled.div`
     width: 25%;
   }
   &.gradient {
-    background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
+    /* background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%); */
+    /* background-color: var(--color-secondary); */
+    background: linear-gradient(90deg, var(--color-bg) var(--dot-size), transparent 1%) center, linear-gradient(var(--color-bg) var(--dot-size), transparent 1%) center, var(--color-primary);
+    background-size: var(--dot-space) var(--dot-space);
   }
 `
 
@@ -51,9 +54,8 @@ const MenuList = styled.ul`
     text-decoration: none;
     position: relative;
     font-size: 12px;
-    letter-spacing: 1px;
     transition: 300ms ease;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-title);
     &:before {
       content: '';
       position: absolute;
@@ -74,15 +76,19 @@ const MenuList = styled.ul`
         font-size: 20px;
         font-weight: 700;
         display: inline-block;
-        background: #3fdfa4;
-        background: -webkit-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-        background: -o-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-        background: -moz-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-        background: linear-gradient(to right, #3fdfa4 0%, #3e45b9 100%);
+        background: var(--color-secondary);
+        /* background: -webkit-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+        background: -o-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+        background: -moz-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+        background: linear-gradient(to right, var(--color-secondary) 0%, #3e45b9 100%); */
+        background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+        background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+        background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+        background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @media (min-width: 768px) {
-          font-size: 25px;
+          font-size: 30px;
         }
       }
       @media (min-width: 1024px) {
@@ -90,15 +96,19 @@ const MenuList = styled.ul`
           font-size: 20px;
           font-weight: 700;
           display: inline-block;
-          background: #3fdfa4;
-          background: -webkit-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-          background: -o-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-          background: -moz-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-          background: linear-gradient(to right, #3fdfa4 0%, #3e45b9 100%);
+          background: var(--color-secondary);
+          /* background: -webkit-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+          background: -o-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+          background: -moz-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+          background: linear-gradient(to right, var(--color-secondary) 0%, #3e45b9 100%); */
+          background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+          background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+          background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+          background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           @media (min-width: 768px) {
-            font-size: 25px;
+            font-size: 30px;
           }
         }
       }
@@ -152,7 +162,7 @@ class Menu extends Component {
       <MenuContainer className={this.props.active}>
         <Rectangle className="gradient" />
         <MenuList className="main">{arrayList}</MenuList>
-
+d'
         <MenuList className="external">
           <li>
             <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>

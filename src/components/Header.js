@@ -53,7 +53,7 @@ const TitleLink = styled(Link)`
   padding: 16px 0;
   margin: 0;
   overflow: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-title);
   font-weight: 900;
   font-size: 1.25em;
   line-height: 1.5rem;
@@ -61,7 +61,6 @@ const TitleLink = styled(Link)`
   text-shadow: 2px 2px 0 #FFF;
   text-decoration: none;
   text-overflow: ellipsis;
-  letter-spacing: 0.0625em;
   white-space: nowrap;
   align-self: center;
   align-items: center;

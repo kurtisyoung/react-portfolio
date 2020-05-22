@@ -9,7 +9,7 @@ html, body, #app {
   padding: 0;
   color: #fff;
   /* background: #FFF; */
-  font-family: var(--font), sans-serif;
+  font-family: var(--font);
   font-size: 16px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
