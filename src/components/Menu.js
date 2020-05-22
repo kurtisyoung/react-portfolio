@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Link, NavLink } from 'react-static'
+import { NavLink } from 'react-static'
 import styled from 'styled-components'
+import menuLinks from '../data/menuLinks'
 
 const MenuContainer = styled.div`
   height: 100vh;
   width: 100%;
   transition: 500ms ease;
-  background: #000;
+  background: var(--color-primary);
   position: fixed;
   z-index: 888;
   display: flex;
@@ -22,7 +23,7 @@ const MenuContainer = styled.div`
     visibility: visible;
     pointer-events: auto;
   }
-`;
+`
 
 const Rectangle = styled.div`
   width: 15px;
@@ -35,12 +36,16 @@ const Rectangle = styled.div`
     width: 25%;
   }
   &.gradient {
-    background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%);
+    /* background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%); */
+    /* background-color: var(--color-secondary); */
+    background: linear-gradient(90deg, var(--color-bg) var(--dot-size), transparent 1%) center, linear-gradient(var(--color-bg) var(--dot-size), transparent 1%) center, var(--color-primary);
+    background-size: var(--dot-space) var(--dot-space);
   }
-`;
+`
 
 const MenuList = styled.ul`
   padding-left: 50px;
+  list-style: none;
   @media (min-width: 768px) {
     padding-left: 29%;
   }
@@ -48,10 +53,9 @@ const MenuList = styled.ul`
     color: #fff;
     text-decoration: none;
     position: relative;
-    font-size: 20px;
-    letter-spacing: 1px;
+    font-size: 12px;
     transition: 300ms ease;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-title);
     &:before {
       content: '';
       position: absolute;
@@ -63,40 +67,48 @@ const MenuList = styled.ul`
       transition: 300ms ease;
     }
     @media (min-width: 1024px) {
-      font-size: 30px;
+      font-size: 16px;
     }
   }
   &.main {
     a {
       &.active {
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 700;
         display: inline-block;
-        background: #3fdfa4;
-        background: -webkit-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-        background: -o-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-        background: -moz-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-        background: linear-gradient(to right, #3fdfa4 0%, #3e45b9 100%);
+        background: var(--color-secondary);
+        /* background: -webkit-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+        background: -o-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+        background: -moz-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+        background: linear-gradient(to right, var(--color-secondary) 0%, #3e45b9 100%); */
+        background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+        background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+        background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+        background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @media (min-width: 768px) {
-          font-size: 40px;
+          font-size: 30px;
         }
       }
       @media (min-width: 1024px) {
         &:hover {
-          font-size: 25px;
+          font-size: 20px;
           font-weight: 700;
           display: inline-block;
-          background: #3fdfa4;
-          background: -webkit-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-          background: -o-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-          background: -moz-linear-gradient(right, #3fdfa4 0%, #3e45b9 100%);
-          background: linear-gradient(to right, #3fdfa4 0%, #3e45b9 100%);
+          background: var(--color-secondary);
+          /* background: -webkit-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+          background: -o-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+          background: -moz-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
+          background: linear-gradient(to right, var(--color-secondary) 0%, #3e45b9 100%); */
+          background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+          background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+          background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
+          background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           @media (min-width: 768px) {
-            font-size: 40px;
+            font-size: 30px;
           }
         }
       }
@@ -107,7 +119,7 @@ const MenuList = styled.ul`
   }
   &.external {
     a {
-      font-size: 16px !important;
+      font-size: 10px !important;
       @media (min-width: 1024px) {
         &:hover {
           &:before {
@@ -122,73 +134,24 @@ const MenuList = styled.ul`
       }
     }
   }
-`;
+`
 
 class Menu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuList: [
-        {
-          link: '/',
-          name: 'Home',
-        },
-        {
-          link: '/juneau',
-          name: 'Juneau By Amacon',
-        },
-        {
-          link: '/landmark',
-          name: 'Landmark',
-        },
-        {
-          link: '/gryphon',
-          name: 'Gryphon Development',
-        },
-        {
-          link: '/elenore',
-          name: 'Elenore On Fifth',
-        },
-        {
-          link: '/salt-digital',
-          name: 'Salt Digital',
-        },
-        {
-          link: '/mccoll',
-          name: 'McColl Therapy',
-        },
-      ],
-      externalLinks: [
-        {
-          link: 'https://github.com/kurtisyoung',
-          name: 'Github',
-        },
-        {
-          link: 'https://codepen.io/kurtisyoung/',
-          name: 'Codepen',
-        },
-        {
-          link: 'https://www.linkedin.com/in/kcyoung1/',
-          name: 'LinkedIn',
-        },
-      ],
-    }
-  }
-  render() {
-    const arrayList = this.state.menuList.map((item, index) => (
+  render () {
+    const arrayList = menuLinks.menuList.map((item, index) => (
       <li key={index}>
         <NavLink
           exact
           onClick={this.props.closeMenu}
           to={item.link}
           activeClassName="active"
-          >
+        >
           {item.name}
         </NavLink>
       </li>
     ))
 
-    const externalArray = this.state.externalLinks.map((item, index) => (
+    const externalArray = menuLinks.externalLinks.map((item, index) => (
       <li key={index}>
         <a href={item.link} target="_blank" rel="noopener noreferrer">
           {item.name}
@@ -199,7 +162,7 @@ class Menu extends Component {
       <MenuContainer className={this.props.active}>
         <Rectangle className="gradient" />
         <MenuList className="main">{arrayList}</MenuList>
-
+d'
         <MenuList className="external">
           <li>
             <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>

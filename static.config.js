@@ -51,11 +51,13 @@ export default {
   Document: ({ Html, Head, Body, children, siteProps, renderMeta }) => (
     <Html lang="en-US">
       <Head>
-        <title>Kurtis Young - Portfolio</title>
-        <meta charSet="UTF-8" />
+        <title>Kurtis Young - Front End Developer</title>
+        <meta name="description" content="Vancouver based Front End Developer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
+        <meta httpquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         {/* <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"/> */}
-        <link rel="shortcut icon" href="./favicon.ico"/>
+        <link rel="shortcut icon" href="./favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Poppins:400,400i" rel="stylesheet"/>
       </Head>
       <Body>

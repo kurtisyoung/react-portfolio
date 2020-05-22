@@ -9,11 +9,11 @@ const HeaderContainer = styled.header`
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  color: #000;
+  color: var(--color-primary);
   flex-direction: column;
   background-color: #fff;
   justify-content: space-between;
-`;
+`
 
 const Row = styled.div`
   position: fixed;
@@ -33,7 +33,7 @@ const Row = styled.div`
   @media (max-width: 599px) {
     min-height: 56px;
   }
-`;
+`
 
 const Section = styled.section`
   z-index: 1;
@@ -45,7 +45,7 @@ const Section = styled.section`
   justify-content: ${props =>
     props.start ? 'flex-start' : props.end ? 'flex-end' : 'center'};
   order: ${props => (props.start ? -1 : props.end ? 1 : null)};
-`;
+`
 
 const TitleLink = styled(Link)`
   z-index: 1;
@@ -53,16 +53,14 @@ const TitleLink = styled(Link)`
   padding: 16px 0;
   margin: 0;
   overflow: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-title);
   font-weight: 900;
   font-size: 1.25em;
   line-height: 1.5rem;
-  color: #00d8ff;
-  color: #000;
+  color: var(--color-primary);
   text-shadow: 2px 2px 0 #FFF;
   text-decoration: none;
   text-overflow: ellipsis;
-  letter-spacing: 0.0625em;
   white-space: nowrap;
   align-self: center;
   align-items: center;
@@ -71,12 +69,12 @@ const TitleLink = styled(Link)`
 
   }
 
-  &.title:active,
+  /* &.title:active,
   &.title:hover,
   &.title:visited {
     color: #00d8ff;
-  }
-`;
+  } */
+`
 
 const Hamburger = styled.div`
   height: 20px;
@@ -88,7 +86,7 @@ const Hamburger = styled.div`
   span {
     height: 4px;
     width: 35px;
-    background: #000;
+    background: var(--color-primary);
     transition: 300ms ease;
     box-shadow: 2px 2px 0 0 #FFF;
     &:nth-of-type(2) {
@@ -122,7 +120,7 @@ const Hamburger = styled.div`
       }
     }
   }
-`;
+`
 
 
 export default class Header extends Component {
