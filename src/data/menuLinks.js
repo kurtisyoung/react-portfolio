@@ -1,9 +1,5 @@
 export default {
-  menuList: [
-    {
-      link: '/',
-      name: 'Home',
-    },
+  auroraList: [
     {
       link: '/aurora-medical',
       name: 'Aurora Medical',
@@ -44,6 +40,8 @@ export default {
       link: '/aurora-nordic',
       name: 'Aurora Nordic',
     },
+  ],
+  bamList: [
     {
       link: '/juneau',
       name: 'Juneau By Amacon',
@@ -60,6 +58,8 @@ export default {
       link: '/elenore',
       name: 'Elenore On Fifth',
     },
+  ],
+  freelanceList: [
     {
       link: '/salt-digital',
       name: 'Salt Digital',

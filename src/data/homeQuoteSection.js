@@ -10,7 +10,7 @@ export default [
     color: '#e5e5e5',
   },
   {
-    quote: `It's easy to make a buck. It's a lot tougher to make a differnece.`,
+    quote: `It's easy to make a buck. It's a lot tougher to make a difference.`,
     author: 'Tom Brokaw',
     color: '#d9455f',
   },
@@ -40,8 +40,8 @@ export default [
     color: '#6633FF',
   },
   {
-    quote: `There is no sincerer love than the love of food.`,
-    author: `George Bernard Shaw`,
+    quote: `It is never too late to be what you might have been.`,
+    author: `George Eliot`,
     color: '#ffd8a6',
   },
   {

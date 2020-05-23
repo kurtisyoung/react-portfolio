@@ -104,7 +104,7 @@ const ProjectName = styled(Link)`
 const ProjectYear = styled.span`
   position: absolute;
   top: -45px;
-  font-size: 100px;
+  font-size: 80px;
   left: 75px;
   z-index: -1;
   font-weight: bold;
@@ -133,19 +133,15 @@ const ProjectCompany = styled.span`
   font-weight: bold;
   left: 0;
   top: -14px;
-  color: ${props => {
-    const color = props.color
-    
-    if (color === 'Aurora') {
-      return '#26B0E7'
-    } else if (color === 'BAM') {
-      return '#adadad'
-    } else if (color === 'Freelance') {
-      return '#FD243E'
-    } else { 
-      return '#FFFFFF' 
-    }
-  }};
+  &.Aurora {
+    color: var(--color-aurora);
+  }
+  &.BAM {
+    color: var(--color-bam);
+  }
+  &.Freelance {
+    color: var(--color-freelance);
+  }
 `
 
 
@@ -214,7 +210,7 @@ export default class ProjectComponent extends React.Component {
               {this.state.projects[this.state.arrayPosition].name}
               <ProjectYear>{this.state.projects[this.state.arrayPosition].year}</ProjectYear>
               <ProjectCompany
-                color={this.state.projects[this.state.arrayPosition].company}
+                className={this.state.projects[this.state.arrayPosition].company}
               >
                 {this.state.projects[this.state.arrayPosition].company}
               </ProjectCompany>

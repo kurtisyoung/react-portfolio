@@ -4,6 +4,21 @@ import { NavLink } from 'react-static'
 import styled from 'styled-components'
 import menuLinks from '../data/menuLinks'
 
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 50px;
+  grid-gap: 20px;
+  @media (min-width: 768px) {
+    padding-left: 29%;
+    grid-gap: 120px;
+  }
+`
+
+const GridItem = styled.div`
+  
+`
+
 const MenuContainer = styled.div`
   height: 100vh;
   width: 100%;
@@ -44,11 +59,7 @@ const Rectangle = styled.div`
 `
 
 const MenuList = styled.ul`
-  padding-left: 50px;
   list-style: none;
-  @media (min-width: 768px) {
-    padding-left: 29%;
-  }
   a {
     color: #fff;
     text-decoration: none;
@@ -71,9 +82,10 @@ const MenuList = styled.ul`
     }
   }
   &.main {
+    padding-left: 0;
     a {
       &.active {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
         display: inline-block;
         background: var(--color-secondary);
@@ -88,12 +100,12 @@ const MenuList = styled.ul`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         @media (min-width: 768px) {
-          font-size: 30px;
+          font-size: 25px;
         }
       }
       @media (min-width: 1024px) {
         &:hover {
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 700;
           display: inline-block;
           background: var(--color-secondary);
@@ -108,7 +120,7 @@ const MenuList = styled.ul`
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           @media (min-width: 768px) {
-            font-size: 30px;
+            font-size: 25px;
           }
         }
       }
@@ -118,6 +130,10 @@ const MenuList = styled.ul`
     }
   }
   &.external {
+  padding-left: 50px;
+  @media (min-width: 768px) {
+    padding-left: 29%;
+  }
     a {
       font-size: 10px !important;
       @media (min-width: 1024px) {
@@ -135,10 +151,55 @@ const MenuList = styled.ul`
     }
   }
 `
+const CategoryTitle = styled.h3`
+  font-family: var(--font-title);
+  color: #FFF;
+  font-weight: bold;
+  font-size: 10px;
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+  &.aurora {
+    color: var(--color-aurora);
+  }
+  &.bam {
+    color: var(--color-bam);
+  }
+  &.freelance {
+    color: var(--color-freelance);
+    margin-top: 40px;
+  }
+`
 
 class Menu extends Component {
   render () {
-    const arrayList = menuLinks.menuList.map((item, index) => (
+    const auroraArray = menuLinks.auroraList.map((item, index) => (
+      <li key={index}>
+        <NavLink
+          exact
+          onClick={this.props.closeMenu}
+          to={item.link}
+          activeClassName="active"
+        >
+          {item.name}
+        </NavLink>
+      </li>
+    ))
+
+    const bamArray = menuLinks.bamList.map((item, index) => (
+      <li key={index}>
+        <NavLink
+          exact
+          onClick={this.props.closeMenu}
+          to={item.link}
+          activeClassName="active"
+        >
+          {item.name}
+        </NavLink>
+      </li>
+    ))
+
+    const freelanceArray = menuLinks.freelanceList.map((item, index) => (
       <li key={index}>
         <NavLink
           exact
@@ -161,8 +222,40 @@ class Menu extends Component {
     return (
       <MenuContainer className={this.props.active}>
         <Rectangle className="gradient" />
-        <MenuList className="main">{arrayList}</MenuList>
-d'
+        <GridContainer>
+          <MenuList className="main">
+            <li>
+              <NavLink
+                exact
+                onClick={this.props.closeMenu}
+                to="/"
+                activeClassName="active"
+              >
+                Home
+              </NavLink>
+            </li>
+          </MenuList>
+        </GridContainer>
+        
+        <GridContainer>
+          <GridItem>
+            <CategoryTitle className="aurora">Aurora</CategoryTitle>
+            <MenuList className="main">
+              {auroraArray}
+            </MenuList>
+          </GridItem>
+          <GridItem>
+            <CategoryTitle className="bam">BAM</CategoryTitle>
+            <MenuList className="main">
+              {bamArray}
+            </MenuList>
+            <CategoryTitle className="freelance">Freelance</CategoryTitle>
+            <MenuList className="main">
+              {freelanceArray}
+            </MenuList>
+          </GridItem>
+        </GridContainer>
+        
         <MenuList className="external">
           <li>
             <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>
@@ -170,7 +263,7 @@ d'
           {externalArray}
         </MenuList>
       </MenuContainer>
-    );
+    )
   }
 }
 
