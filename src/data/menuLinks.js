@@ -34,7 +34,7 @@ export default {
     },
     {
       link: '/auroracann',
-      name: 'Aurora Cann',
+      name: 'AuroraCann',
     },
     {
       link: '/aurora-nordic',

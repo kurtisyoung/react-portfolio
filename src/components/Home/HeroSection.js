@@ -179,7 +179,7 @@ export default class Hero extends Component {
           <Title className="small">Web Spinner</Title> */}
           <Title className="large">Hi</Title>
           <Content delay={300}>
-            My name is Kurtis, I grew up in Edmonton, AB. I'm currently living in Vancouver, BC but I'll always be an <span>Oilers</span> fan.
+            My name is Kurtis, I grew up in Edmonton, AB. I'm currently living in Vancouver, BC but I'll always be a diehard <span>Oilers</span> fan.
           </Content>
           <Content delay={600}>
             I specialize in developing modern applications using <span>React</span>, <span>Redux</span> and <span>Styled Components</span>.
