@@ -1,8 +1,5 @@
-import React, { Component } from 'react'
-import { Link } from 'react-static'
 import styled from 'styled-components'
-
-import Menu from './Menu'
+import { Link } from 'react-static'
 
 const HeaderContainer = styled.header`
   position: relative;
@@ -35,7 +32,7 @@ const Row = styled.div`
   }
 `
 
-const Section = styled.section`
+const StyledSection = styled.section`
   z-index: 1;
   display: inline-flex;
   min-width: 0;
@@ -64,16 +61,6 @@ const TitleLink = styled(Link)`
   white-space: nowrap;
   align-self: center;
   align-items: center;
-
-  @media (max-width: 599px) {
-
-  }
-
-  /* &.title:active,
-  &.title:hover,
-  &.title:visited {
-    color: #00d8ff;
-  } */
 `
 
 const Hamburger = styled.div`
@@ -121,48 +108,10 @@ const Hamburger = styled.div`
     }
   }
 `
-
-
-export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-    };
-  }
-  toggleMenu() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
-  }
-
-  closeMenu() {
-    const currentState = this.state.active;
-    this.setState({ active: false });
-  }
-
-  render() {
-    return (
-      <HeaderContainer>
-        <Row>
-          <Section start="true">
-            <TitleLink to="/">
-              Kurtis Young
-            </TitleLink>
-          </Section>
-          <Section end="true">
-            <Hamburger
-              className={this.state.active ? 'active' : null}
-              onClick={this.toggleMenu.bind(this)}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </Hamburger>
-          </Section>
-        </Row>
-        <Menu 
-          active={this.state.active}
-          closeMenu={this.closeMenu.bind(this)}/>
-      </HeaderContainer>
-    );
-  }
+export {
+  HeaderContainer,
+  Hamburger,
+  StyledSection,
+  Row,
+  TitleLink,
 }

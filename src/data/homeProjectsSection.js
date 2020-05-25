@@ -1,13 +1,13 @@
 export default [
-  {
-    src: '/assets/img/home/auroramed-project.jpg',
-    name: 'Aurora Medical',
-    link: '/aurora-medical',
-    year: '2020',
-    company: 'Aurora',
-    tech: 'React',
-    role: 'Manager',
-  },
+  // {
+  //   src: '/assets/img/home/auroramed-project.jpg',
+  //   name: 'Aurora Medical',
+  //   link: '/aurora-medical',
+  //   year: '2020',
+  //   company: 'Aurora',
+  //   tech: 'React',
+  //   role: 'Manager',
+  // },
   {
     src: '/assets/img/home/dailyspecial-project.jpg',
     name: 'Daily Special',

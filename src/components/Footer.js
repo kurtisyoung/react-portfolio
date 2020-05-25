@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import { Link } from 'react-static'
 import styled from 'styled-components'
+import { StyledLink } from '../styles/GlobalStyles'
 
 const KURTIS_URL = 'https://github.com/kurtisyoung/react-portfolio'
 // const LICENSE_URL =
@@ -36,26 +37,6 @@ const ExtLink = styled.a`
 
 const LinkList = styled.ul`
   list-style: none;
-  a {
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--color-primary);
-      transition: 300ms ease;
-    }
-    @media (min-width: 1024px) {
-      &:hover {
-        &:before {
-          width: 100%;
-        }
-      }
-    }
-  }
   li {
     &:first-of-type {
       margin-bottom: 20px;
@@ -87,10 +68,10 @@ export default class Footer extends Component {
       <FooterContainer className="container">
         <Rectangle className="gradient" />
         <LinkList>
-          <li><a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a></li>
-          <li><a href="https://www.linkedin.com/in/kurtisyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</a></li>
-          <li><a href="https://codepen.io/kurtisyoung/" target="_blank" rel="noopener noreferrer">Codepen</a></li>
+          <li><StyledLink href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</StyledLink></li>
+          <li><StyledLink href="https://www.linkedin.com/in/kurtisyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</StyledLink></li>
+          <li><StyledLink href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</StyledLink></li>
+          <li><StyledLink href="https://codepen.io/kurtisyoung/" target="_blank" rel="noopener noreferrer">Codepen</StyledLink></li>
         </LinkList>
         <Copyright css="padding-right: 0.5em">&copy; 2020</Copyright>
         <ExtLink href={KURTIS_URL} target="_blank" rel="noopener noreferrer">created by Kurtis Young</ExtLink>

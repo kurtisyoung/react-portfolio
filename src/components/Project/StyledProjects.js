@@ -91,7 +91,7 @@ const DetailList = styled.ul`
     }
   }
   .title {
-    width: 30%;
+    width: 29%;
   }
   .content {
     width: 70%;
@@ -115,8 +115,12 @@ const StyledButton = styled.a`
   bottom: 0;
   color: #fff;
   z-index: 10;
+  transition: 200ms ease;
   @media (max-width: 768px) {
     display: none;
+  }
+  &:hover {
+    background-color: var(--color-primary);
   }
 `
 

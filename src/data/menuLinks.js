@@ -1,13 +1,9 @@
 export default {
-  menuList: [
-    {
-      link: '/',
-      name: 'Home',
-    },
-    {
-      link: '/aurora-medical',
-      name: 'Aurora Medical',
-    },
+  auroraList: [
+    // {
+    //   link: '/aurora-medical',
+    //   name: 'Aurora Medical',
+    // },
     {
       link: '/daily-special',
       name: 'Daily Special',
@@ -38,12 +34,14 @@ export default {
     },
     {
       link: '/auroracann',
-      name: 'Aurora Cann',
+      name: 'AuroraCann',
     },
     {
       link: '/aurora-nordic',
       name: 'Aurora Nordic',
     },
+  ],
+  bamList: [
     {
       link: '/juneau',
       name: 'Juneau By Amacon',
@@ -60,6 +58,8 @@ export default {
       link: '/elenore',
       name: 'Elenore On Fifth',
     },
+  ],
+  freelanceList: [
     {
       link: '/salt-digital',
       name: 'Salt Digital',
