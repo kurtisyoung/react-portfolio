@@ -1,8 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { NavLink } from 'react-static'
 import styled from 'styled-components'
-import menuLinks from '../data/menuLinks'
 
 const GridContainer = styled.div`
   display: grid;
@@ -45,13 +41,10 @@ const Rectangle = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  /* transform: translateY(-50%); */
   @media (min-width: 768px) {
     width: 25%;
   }
   &.gradient {
-    /* background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%); */
-    /* background-color: var(--color-secondary); */
     background: linear-gradient(90deg, var(--color-bg) var(--dot-size), transparent 1%) center, linear-gradient(var(--color-bg) var(--dot-size), transparent 1%) center, var(--color-primary);
     background-size: var(--dot-space) var(--dot-space);
   }
@@ -88,10 +81,6 @@ const MenuList = styled.ul`
         font-weight: 700;
         display: inline-block;
         background: var(--color-secondary);
-        /* background: -webkit-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
-        background: -o-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
-        background: -moz-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
-        background: linear-gradient(to right, var(--color-secondary) 0%, #3e45b9 100%); */
         background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
         background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
         background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
@@ -108,10 +97,6 @@ const MenuList = styled.ul`
           font-weight: 700;
           display: inline-block;
           background: var(--color-secondary);
-          /* background: -webkit-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
-          background: -o-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
-          background: -moz-linear-gradient(right, var(--color-secondary) 0%, #3e45b9 100%);
-          background: linear-gradient(to right, var(--color-secondary) 0%, #3e45b9 100%); */
           background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
           background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
           background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
@@ -171,105 +156,11 @@ const CategoryTitle = styled.h3`
   }
 `
 
-class Menu extends Component {
-  render () {
-    const auroraArray = menuLinks.auroraList.map((item, index) => (
-      <li key={index}>
-        <NavLink
-          exact
-          onClick={this.props.closeMenu}
-          to={item.link}
-          activeClassName="active"
-        >
-          {item.name}
-        </NavLink>
-      </li>
-    ))
-
-    const bamArray = menuLinks.bamList.map((item, index) => (
-      <li key={index}>
-        <NavLink
-          exact
-          onClick={this.props.closeMenu}
-          to={item.link}
-          activeClassName="active"
-        >
-          {item.name}
-        </NavLink>
-      </li>
-    ))
-
-    const freelanceArray = menuLinks.freelanceList.map((item, index) => (
-      <li key={index}>
-        <NavLink
-          exact
-          onClick={this.props.closeMenu}
-          to={item.link}
-          activeClassName="active"
-        >
-          {item.name}
-        </NavLink>
-      </li>
-    ))
-
-    const externalArray = menuLinks.externalLinks.map((item, index) => (
-      <li key={index}>
-        <a href={item.link} target="_blank" rel="noopener noreferrer">
-          {item.name}
-        </a>
-      </li>
-    ))
-    return (
-      <MenuContainer className={this.props.active}>
-        <Rectangle className="gradient" />
-        <GridContainer>
-          <MenuList className="main">
-            <li>
-              <NavLink
-                exact
-                onClick={this.props.closeMenu}
-                to="/"
-                activeClassName="active"
-              >
-                Home
-              </NavLink>
-            </li>
-          </MenuList>
-        </GridContainer>
-        
-        <GridContainer>
-          <GridItem>
-            <CategoryTitle className="aurora">Aurora</CategoryTitle>
-            <MenuList className="main">
-              {auroraArray}
-            </MenuList>
-          </GridItem>
-          <GridItem>
-            <CategoryTitle className="bam">BAM</CategoryTitle>
-            <MenuList className="main">
-              {bamArray}
-            </MenuList>
-            <CategoryTitle className="freelance">Freelance</CategoryTitle>
-            <MenuList className="main">
-              {freelanceArray}
-            </MenuList>
-          </GridItem>
-        </GridContainer>
-        
-        <MenuList className="external">
-          <li>
-            <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>
-          </li>
-          {externalArray}
-        </MenuList>
-      </MenuContainer>
-    )
-  }
+export {
+  GridContainer,
+  GridItem,
+  CategoryTitle,
+  MenuList,
+  Rectangle,
+  MenuContainer,
 }
-
-Menu.propTypes = {
-  active: PropTypes.bool,
-  closeMenu: PropTypes.func,
-}
-
-export default Menu
