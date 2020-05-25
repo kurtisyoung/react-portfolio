@@ -1,9 +1,9 @@
 export default {
   auroraList: [
-    {
-      link: '/aurora-medical',
-      name: 'Aurora Medical',
-    },
+    // {
+    //   link: '/aurora-medical',
+    //   name: 'Aurora Medical',
+    // },
     {
       link: '/daily-special',
       name: 'Daily Special',

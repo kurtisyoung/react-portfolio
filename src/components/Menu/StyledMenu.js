@@ -80,13 +80,7 @@ const MenuList = styled.ul`
         font-size: 16px;
         font-weight: 700;
         display: inline-block;
-        background: var(--color-secondary);
-        background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-        background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-        background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-        background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: var(--color-secondary);
         @media (min-width: 768px) {
           font-size: 25px;
         }
@@ -96,13 +90,7 @@ const MenuList = styled.ul`
           font-size: 16px;
           font-weight: 700;
           display: inline-block;
-          background: var(--color-secondary);
-          background: -webkit-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-          background: -o-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-          background: -moz-linear-gradient(right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-          background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary) 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: var(--color-secondary);
           @media (min-width: 768px) {
             font-size: 25px;
           }
@@ -114,13 +102,14 @@ const MenuList = styled.ul`
     }
   }
   &.external {
-  padding-left: 50px;
-  @media (min-width: 768px) {
-    padding-left: 29%;
-  }
+    padding-left: 50px;
+    @media (min-width: 768px) {
+      padding-left: 29%;
+    }
     a {
       font-size: 10px !important;
       @media (min-width: 1024px) {
+        font-size: 12px !important;
         &:hover {
           &:before {
             width: 100%;
@@ -133,7 +122,7 @@ const MenuList = styled.ul`
         margin-bottom: 20px;
       }
     }
-  }
+  } 
 `
 
 const CategoryTitle = styled.h3`
