@@ -8,13 +8,17 @@ html, body, #app {
   margin: 0;
   padding: 0;
   color: #fff;
-  background: #FFF;
-  font-family: 'Poppins', sans-serif;
-  /* font-family: var(--font); */
+  /* background: #FFF; */
+  font-family: var(--font);
   font-size: 16px;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(90deg, var(--color-bg) var(--dot-size), transparent 1%) center, linear-gradient(var(--color-bg) var(--dot-size), transparent 1%) center, var(--color-primary);
+  background-size: var(--dot-space) var(--dot-space);
 }
 
 *,
@@ -32,13 +36,11 @@ html, body, #app {
 }
 
 p {
-  letter-spacing: 1px;
   line-height: 1.4;
-  color: #000;
+  color: var(--color-primary);
 }
 
 a {
-  color: #000;
+  color: var(--color-primary);
   text-decoration: none;
-  letter-spacing: 0.5px;
 }
