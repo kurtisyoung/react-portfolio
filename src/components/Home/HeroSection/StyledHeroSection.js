@@ -209,7 +209,7 @@ const EmojiSpan = styled.span`
       color: #F0DB4F;
     }
     &:after {
-      content: '🎉';
+      content: '🚀';
     }
   }
   &.bam {
