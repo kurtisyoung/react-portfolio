@@ -58,7 +58,7 @@ export default {
         <meta httpquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         {/* <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"/> */}
         <link rel="shortcut icon" href="./favicon.ico" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Poppins:400,400i" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Poppins:400,400i,500" rel="stylesheet" />
       </Head>
       <Body>
         {/* <Root id="root" className="loading"></Root> */}

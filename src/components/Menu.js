@@ -15,9 +15,7 @@ const GridContainer = styled.div`
   }
 `
 
-const GridItem = styled.div`
-  
-`
+const GridItem = styled.div``
 
 const MenuContainer = styled.div`
   height: 100vh;
@@ -151,6 +149,7 @@ const MenuList = styled.ul`
     }
   }
 `
+
 const CategoryTitle = styled.h3`
   font-family: var(--font-title);
   color: #FFF;
