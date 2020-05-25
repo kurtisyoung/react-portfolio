@@ -68,12 +68,6 @@ const TitleLink = styled(Link)`
   @media (max-width: 599px) {
 
   }
-
-  /* &.title:active,
-  &.title:hover,
-  &.title:visited {
-    color: #00d8ff;
-  } */
 `
 
 const Hamburger = styled.div`
@@ -124,28 +118,31 @@ const Hamburger = styled.div`
 
 
 export default class Header extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       active: false,
-    };
+    }
   }
-  toggleMenu() {
+  toggleMenu () {
     const currentState = this.state.active;
-    this.setState({ active: !currentState });
+    this.setState({ active: !currentState })
   }
 
-  closeMenu() {
+  closeMenu () {
     const currentState = this.state.active;
-    this.setState({ active: false });
+    this.setState({ active: false })
   }
 
-  render() {
+  render () {
     return (
       <HeaderContainer>
         <Row>
           <Section start="true">
-            <TitleLink to="/">
+            <TitleLink 
+              onClick={this.closeMenu.bind(this)}
+              to="/"
+            >
               Kurtis Young
             </TitleLink>
           </Section>

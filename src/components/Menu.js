@@ -31,6 +31,7 @@ const MenuContainer = styled.div`
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  overflow-y: scroll;
   &.true {
     opacity: 1;
     visibility: visible;

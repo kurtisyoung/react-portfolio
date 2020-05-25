@@ -10,6 +10,9 @@ const StyledContainer = styled.div`
   min-height: 730px;
   justify-content: space-between;
   @media (min-width: 768px) {
+    min-height: 840px;
+  }
+  @media (min-width: 992px) {
     min-height: 600px;
   }
   &.active {
@@ -34,6 +37,9 @@ const StyledContentContainer = styled.div`
   position: relative;
   text-align: left;
   @media (min-width: 768px) {
+    min-height: 500px;
+  }
+  @media (min-width: 992px) {
     height: 100%;
     width: 48%;
     align-items: flex-start;
@@ -51,6 +57,9 @@ const StyledContentContainer = styled.div`
     width: 100%;
     height: auto;
     @media (min-width: 768px) {
+      max-width: 400px;
+    }
+    @media (min-width: 992px) {
       max-width: 100%;
       left: 0;
       top: 50%;
@@ -61,13 +70,16 @@ const StyledContentContainer = styled.div`
       width: 100%;
       height: auto;
       @media (min-width: 768px) {
+      max-width: 400px;
+    }
+      @media (min-width: 992px) {
         max-width: 100%;
       }
     }
   }
   .k-color {
     left: 53%;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       left: 6%;
     }
   }
@@ -78,7 +90,7 @@ const StyledContent = styled.p`
   max-width: 700px;
   position: relative;
   margin-top: 0;
-  opacity: 1;
+  opacity: 0;
   left: 20px;
   transition: opacity 500ms ease-out, left 500ms ease-out;
   transition-delay: ${props => props.delay ? props.delay : 0}ms;

@@ -8,7 +8,7 @@ const QuoteContainer = styled.div`
   margin-top: 180px;
   margin-bottom: 100px;
   width: 100%;
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     margin-top: 15%;
     margin-bottom: 200px;
   }
@@ -29,6 +29,10 @@ const Quote = styled.div`
   max-width: 600px;
   cursor: pointer;
   @media (min-width: 768px) {
+    font-size: 22px;
+    max-width: 650px;
+  }
+  @media (min-width: 992px) {
     font-size: 30px;
     max-width: 750px;
   }
@@ -64,7 +68,8 @@ const Quote = styled.div`
   .cta {
     font-size: 14px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: var(--font-title);
+    font-weight: 900;
     color: rgba(0,0,0, 0.3);
   }
   .color {
