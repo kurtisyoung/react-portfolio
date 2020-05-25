@@ -8,6 +8,14 @@ import {
   EmojiSpan,
 } from './StyledHeroSection'
 
+const baseYear = 2016
+
+const today = new Date()
+const currentYear = today.getFullYear()
+
+const developerYears = currentYear - baseYear
+
+
 export default class Hero extends Component {
   componentDidMount () {
     this._loadAnimation()
@@ -62,7 +70,7 @@ export default class Hero extends Component {
             I specialize in developing <EmojiSpan className="web">web</EmojiSpan> applications using modern <EmojiSpan className="js">JavaScript</EmojiSpan> frameworks.
           </StyledContent>
           <StyledContent delay={600}>
-            I've been coding for <EmojiSpan className="old">4+ years</EmojiSpan> split between my previous role at <a href="https://www.bamcommunications.ca/" target="_blank" rel="noopener noreferrer"><EmojiSpan className="bam">BAM</EmojiSpan></a> and my current position at <a href="https://www.auroramj.com/" target="_blank" rel="noopener noreferrer"><EmojiSpan className="aurora">Aurora</EmojiSpan></a>. Check out some of my <EmojiSpan className="work">work</EmojiSpan> and favourite <EmojiSpan className="quotes">quotes</EmojiSpan> below.
+            I've been coding for <EmojiSpan className="old">{developerYears}+ years</EmojiSpan> split between my previous role at <a href="https://www.bamcommunications.ca/" target="_blank" rel="noopener noreferrer"><EmojiSpan className="bam">BAM</EmojiSpan></a> and my current position at <a href="https://www.auroramj.com/" target="_blank" rel="noopener noreferrer"><EmojiSpan className="aurora">Aurora</EmojiSpan></a>. Check out some of my <EmojiSpan className="work">work</EmojiSpan> and favourite <EmojiSpan className="quotes">quotes</EmojiSpan> below.
           </StyledContent>
         </StyledContentContainer>
         <StyledContentContainer className="k-container">
