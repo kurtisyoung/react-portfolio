@@ -59,10 +59,6 @@ export default {
         {/* <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"/> */}
         <link rel="shortcut icon" href="./favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Poppins:400,400i,500" rel="stylesheet" />
-      </Head>
-      <Body>
-        {/* <Root id="root" className="loading"></Root> */}
-        {children}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -74,6 +70,10 @@ export default {
           ga('send', 'pageview');`,
           }}
         />
+      </Head>
+      <Body>
+        {/* <Root id="root" className="loading"></Root> */}
+        {children}
       </Body>
     </Html>
   ),
