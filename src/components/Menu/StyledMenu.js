@@ -69,6 +69,9 @@ const MenuList = styled.ul`
       background: #fff;
       transition: 300ms ease;
     }
+    @media (max-width: 450px) {
+      font-size: 10px;
+    }
     @media (min-width: 1024px) {
       font-size: 16px;
     }
@@ -77,7 +80,7 @@ const MenuList = styled.ul`
     padding-left: 0;
     a {
       &.active {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         display: inline-block;
         color: var(--color-secondary);
@@ -87,18 +90,18 @@ const MenuList = styled.ul`
       }
       @media (min-width: 1024px) {
         &:hover {
-          font-size: 16px;
+          font-size: 25px;
           font-weight: 700;
           display: inline-block;
           color: var(--color-secondary);
-          @media (min-width: 768px) {
-            font-size: 25px;
-          }
         }
       }
     }
     li {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+      @media (min-width: 768px) {
+        margin-bottom: 10px;
+      }
     }
   }
   &.external {
@@ -119,7 +122,10 @@ const MenuList = styled.ul`
     }
     li {
       &:first-of-type {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        @media (min-width: 768px) {
+          margin-bottom: 20px;
+        }
       }
     }
   } 
