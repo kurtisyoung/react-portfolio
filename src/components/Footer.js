@@ -68,7 +68,7 @@ export default class Footer extends Component {
       <FooterContainer className="container">
         <Rectangle className="gradient" />
         <LinkList>
-          <li><StyledLink href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</StyledLink></li>
+          <li><StyledLink href="mailto:hello@kurtisyoung.ca">hello@kurtisyoung.ca</StyledLink></li>
           <li><StyledLink href="https://www.linkedin.com/in/kurtisyoung1/" target="_blank" rel="noopener noreferrer">LinkedIn</StyledLink></li>
           <li><StyledLink href="https://github.com/kurtisyoung" target="_blank" rel="noopener noreferrer">Github</StyledLink></li>
           <li><StyledLink href="https://codepen.io/kurtisyoung/" target="_blank" rel="noopener noreferrer">Codepen</StyledLink></li>

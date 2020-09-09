@@ -45,6 +45,12 @@ const InfoContainer = styled.div`
   @media (min-width: 768px) {
     margin-top: 40px;
   }
+  a {
+    text-decoration: underline;
+    &:hover {
+      font-weight: bold;
+    }
+  }
   p {
     max-width: 580px;
     width: 100%;
@@ -70,26 +76,7 @@ const DetailList = styled.ul`
   p {
     margin: 0;
   }
-  a {
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--color-primary);
-      transition: 300ms ease;
-    }
-    @media (min-width: 1024px) {
-      &:hover {
-        &:before {
-          width: 100%;
-        }
-      }
-    }
-  }
+ 
   .title {
     width: 29%;
   }
@@ -152,11 +139,12 @@ const VideoContent = styled.div`
 
 const MobileContainer = styled.div`
   padding: 100px 0;
-  /* background-color: #3A3B3E; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;

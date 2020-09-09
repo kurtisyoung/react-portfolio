@@ -4,6 +4,10 @@ export default [
     component: 'pages/Home',
   },
   {
+    path: '/aurora-corporate',
+    component: 'pages/AuroraCorp',
+  },
+  {
     path: '/aurora-medical',
     component: 'pages/AuroraMedical',
   },

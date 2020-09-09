@@ -98,7 +98,7 @@ class Menu extends Component {
         
         <MenuList className="external">
           <li>
-            <a href="mailto:kurtiscyoung@gmail.com">kurtiscyoung@gmail.com</a>
+            <a href="mailto:hello@kurtisyoung.ca">hello@kurtisyoung.ca</a>
           </li>
           {externalArray}
         </MenuList>

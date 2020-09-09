@@ -1,7 +1,50 @@
+const auroracorp = {
+  title: 'Aurora Corporate',
+  banner: '/assets/img/auroracorp/auroracorp-banner.jpg',
+  paragraph: `Aurora Corporate is a new website that replaces the old Aurora MJ site. We were initially given a week but it was thankfully pushed out to 2 weeks. With a tight timeline we were only able to create a single page web app that links out to other digital properties in the hopes of building out the site in future iterations.
+  <br><br>
+  We utilized the React Boilerplate that's connected to Contentful for CMS capabilities.
+  `,
+  details: [
+    {
+      title: 'Company',
+      content: 'Aurora Cannabis',
+    },
+    {
+      title: 'Market',
+      content: 'Medical/Recreational',
+    },
+    {
+      title: 'Year',
+      content: '2020',
+    },
+    {
+      title: 'Role',
+      content: 'Manager',
+    },
+    {
+      title: 'Website',
+      content:
+        '<a href="https://auroramj.com/" target="_blank" rel="noopener noreferrer">auroramj.com</a>',
+    },
+    {
+      title: 'Tech Stack',
+      content: 'React JS, Next JS, Redux & Sagas, JavaScript, Styled Components, Contentful',
+    },
+  ],
+  buttonLink: 'https://auroramj.com/',
+  videoSrc: '/assets/video/auroracorp-video.mp4',
+  iphone: [
+    '/assets/img/auroracorp/auroracorp-mobile-1.jpg',
+    '/assets/img/auroracorp/auroracorp-mobile-2.jpg',
+    '/assets/img/auroracorp/auroracorp-mobile-3.jpg',
+  ],
+}
+
 const auroramed = {
   title: 'Aurora Medical',
   banner: '/assets/img/auroramed/auroramed-banner.jpg',
-  paragraph: `Aurora Medical is an ambitious project that combines all 3 major medical cannabis brands owned by Aurora (CanniMed, MedReleaf and Aurora) into one entitiy. It is a multi-million dollar project that will streamline the eCommerce experience for our patients, allowing one single prescription to purchase 3 different brands.
+  paragraph: `Aurora Medical is an ambitious project that amalgamates all 3 major medical cannabis brands owned by Aurora (<a href="https://auroramj.com" target="_blank">Aurora</a>, <a href="https://cannimed.ca" target="_blank">CanniMed</a> and <a href="https://medreleaf.com" target="_blank">MedReleaf</a>) into one entitiy. It is a multi-million dollar project that will streamline the eCommerce experience for our patients, allowing one single prescription to purchase 3 different brands.
   <br><br>
   My role in this project is managing the development of the Shopify eCommerce website that will selling our products online. The Shopify theme we are developing has many unique business requirements that comes with selling medical cannabis online. We have metafields on products for gram limits, THC and CBD percentages and terpene profiles.
   <br><br>
@@ -415,6 +458,7 @@ const auroranordic = {
 }
 
 export {
+  auroracorp,
   auroramed,
   dailyspecial,
   auroraeurope,
