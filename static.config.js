@@ -1,52 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
-
-import { languages } from './config/locales'
-import routes from './config/routes'
-
-// const Root = styled.div`
-//   &.loading:empty {
-//     position: absolute;
-//     top: calc(50% - 4em);
-//     left: calc(50% - 4em);
-//     width: 6em;
-//     height: 6em;
-//     border: 1.1em solid rgba(0, 0, 0, 0.2);
-//     border-left: 1.1em solid #000000;
-//     border-radius: 50%;
-//     animation: load8 1.1s infinite linear;
-//   }
-//   @keyframes load8 {
-//     0% {
-//       transform: rotate(0deg);
-//     }
-//     100% {
-//       transform: rotate(360deg);
-//     }
-//   }
-// `
+import React from 'react';
+import styled from 'styled-components';
+import projects from './src/data/projects';
+import quotes from './src/data/quotes';
 
 export default {
   getSiteProps: () => ({
     title: 'Kurits Young - Portfolio',
   }),
   getRoutes: async () => {
-    let defaultRoutes = routes.map(route => ({ path: route.path }))
-    let allRoutes = [...defaultRoutes]
-
-    Object.keys(languages).forEach(language => {
-      if (language === 'en') {
-        return
-      }
-
-      defaultRoutes.forEach(route => {
-        allRoutes.push({
-          path: `${language}${route.path}`,
-        })
-      })
-    })
-
-    return allRoutes
+    return [
+      {
+        path: '/',
+        component: 'src/pages/Home',
+        getProps: () => ({ projects, quotes }),
+        children: projects.map(project => ({
+          path: `/${project.slug}`,
+          component: 'src/pages/Project',
+          getProps: () => ({ project })
+        })),
+      },
+    ]
   },
   Document: ({ Html, Head, Body, children, siteProps, renderMeta }) => (
     <Html lang="en-US">
@@ -70,10 +43,9 @@ export default {
           ga('send', 'pageview');`,
           }}
         />
+        {renderMeta.styleTags}
       </Head>
       <Body>
-      
-        {/* <Root id="root" className="loading"></Root> */}
         {children}
       </Body>
     </Html>

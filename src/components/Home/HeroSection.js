@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import React, { Component, useEffect } from 'react';
+import Plx from 'react-plx';
+import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -41,7 +43,7 @@ const StyledContentContainer = styled.div`
   }
   @media (min-width: 992px) {
     height: 100%;
-    width: 48%;
+    width: 46%;
     align-items: flex-start;
     &.k-container {
       text-align: right;
@@ -224,7 +226,7 @@ const EmojiSpan = styled.span`
   }
   &.old {
     &:hover, &:active, &:focus{
-      color: #5E5E5E;
+      color: darkgray;
     }
     &:after {
       content: '👴🏽';
@@ -238,6 +240,16 @@ const EmojiSpan = styled.span`
     }
     &:after {
       content: '🌈';
+    }
+  }
+  &.arcteryx {
+    text-decoration: underline;
+    &:hover, &:active, &:focus {
+      color: var(--color-arcteryx);
+      text-decoration-color: var(--color-arcteryx);
+    }
+    &:after {
+      content: '🐥';
     }
   }
   &.work {
@@ -256,12 +268,96 @@ const EmojiSpan = styled.span`
       content: ' 🖋';
     }
   }
+  &.nerd {
+    &:hover, &:active, &:focus{
+      color: purple;
+    }
+    &:after {
+      content: '🤓';
+    }
+  }
 `
 
-export {
-  StyledContainer,
-  StyledContentContainer,
-  StyledTitle,
-  StyledContent,
-  EmojiSpan,
+const HeroSection = (props) => {
+  const baseYear = 2016
+  const today = new Date()
+  const currentYear = today.getFullYear()
+  const developerYears = currentYear - baseYear
+  const shadowParallax = [
+    {
+      start: 0,
+      duration: 400,
+      properties: [
+        {
+          startValue: 0,
+          endValue: 50,
+          property: 'marginTop',
+        },
+      ],
+    },
+  ];
+  const gradParallax = [
+    {
+      start: 0,
+      duration: 400,
+      properties: [
+        {
+          startValue: 0,
+          endValue: -30,
+          property: 'marginTop',
+        },
+      ],
+    },
+  ];
+
+  const _loadAnimation = () => {
+    setTimeout(() => {
+      let heroID = document.getElementById('hero')
+
+      heroID.classList.add('active')
+    }, 200)
+  };
+
+  useEffect(() => {
+    _loadAnimation()
+  }, []);
+
+  return (
+    <StyledContainer id="hero" className="container">
+      <StyledContentContainer>
+        <StyledTitle className="large"><EmojiSpan className="hi">Hi</EmojiSpan></StyledTitle>
+        <StyledContent delay={300}>
+          My name is Kurtis. I grew up in <EmojiSpan className="edm">Edmonton, AB</EmojiSpan> a diehard <EmojiSpan className="oil">Oilers</EmojiSpan> fan. I moved to <EmojiSpan className="van">Vancouver, BC</EmojiSpan> to pursue a career in <s>accounting</s> <EmojiSpan className="nerd">tech</EmojiSpan>.
+        </StyledContent>
+        <StyledContent delay={600}>
+          I specialize in developing <EmojiSpan className="web">web</EmojiSpan> applications using modern <EmojiSpan className="js">JavaScript</EmojiSpan> frameworks.
+        </StyledContent>
+        <StyledContent delay={600}>
+          I've been coding for <EmojiSpan className="old">{developerYears}+ years</EmojiSpan>. I'm currently working at <a href="https://www.arcteryx.com/" target="_blank" rel="noopener noreferrer"><EmojiSpan className="arcteryx">Arc'teryx</EmojiSpan></a>. Previously I worked at <a href="https://www.bamcommunications.ca/" target="_blank" rel="noopener noreferrer"><EmojiSpan className="bam">BAM</EmojiSpan></a> and <a href="https://www.auroramj.com/" target="_blank" rel="noopener noreferrer"><EmojiSpan className="aurora">Aurora</EmojiSpan></a>. Check out some of my <EmojiSpan className="work">work</EmojiSpan> and favourite <EmojiSpan className="quotes">quotes</EmojiSpan> below.
+        </StyledContent>
+      </StyledContentContainer>
+      <StyledContentContainer className="k-container">
+        <Plx
+          className="k k-shadow"
+          parallaxData={shadowParallax} // your parallax effects, see beneath
+        >
+          <img
+            src="/assets/img/home/k-shadow.svg"
+            alt="K"
+          />
+        </Plx>
+        <Plx
+          className="k k-color"
+          parallaxData={gradParallax} // your parallax effects, see beneath
+        >
+          <img
+            src="/assets/img/home/k-color.svg"
+            alt="K"
+          />
+        </Plx>
+      </StyledContentContainer>
+    </StyledContainer>
+  )
 }
+
+export default HeroSection;

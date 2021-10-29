@@ -1,5 +1,7 @@
-import styled from 'styled-components'
-import { Link } from 'react-static'
+import React, { useState } from 'react';
+import Waypoint from 'react-waypoint';
+import { Link } from 'react-static';
+import styled from 'styled-components';
 
 const ProjectContainer = styled.div`
   width: 100%;
@@ -125,10 +127,64 @@ const ProjectCompany = styled.span`
   }
 `
 
-export {
-  ProjectContainer,
-  ProjectBlock,
-  ProjectName,
-  ProjectYear,
-  ProjectCompany,
+const ProjectsSection = ({ projects }) => {
+  const [ projectPosition, setProjectPosition ] = useState(0);
+
+  const _handleWaypointEnter = () => {
+    const idProjectName = document.getElementById('ProjectName');
+
+    idProjectName.classList.add('fixed');
+  };
+  const _handleWaypointLeave = () => {
+    const idProjectName = document.getElementById('ProjectName');
+
+    idProjectName.classList.remove('fixed');
+  };
+  const _sectionEnter = (index) => setProjectPosition(index);
+
+  return (
+    <ProjectContainer>
+      <div className="container">
+        <h2>Projects</h2>
+      </div>
+      <Waypoint
+        bottomOffset="50%"
+        scrollableAncestor={window}
+        onEnter={_handleWaypointEnter}
+        onLeave={_handleWaypointLeave}
+      >
+        <div className="project-section">
+          <ProjectName
+            id="ProjectName"
+            to={`/${projects[projectPosition].slug}`}
+          >
+            {projects[projectPosition].name}
+            <ProjectYear>{projects[projectPosition].year}</ProjectYear>
+            <ProjectCompany
+              className={projects[projectPosition].company}
+            >
+              {projects[projectPosition].company}
+            </ProjectCompany>
+          </ProjectName>
+          {projects.map((project, index) => (
+            <ProjectBlock key={index}>
+              <Link to={`/${project.slug}`}>
+                <Waypoint
+                  key={index}
+                  onEnter={() => _sectionEnter(index)}
+                  topOffset="40%"
+                  bottomOffset="40%"
+                  scrollableAncestor={window}
+                >
+                  <img key={index} src={project.websiteImg} alt={project.name} />
+                </Waypoint>
+              </Link>
+            </ProjectBlock>
+          ))}
+        </div>
+      </Waypoint>
+    </ProjectContainer>
+  )
 }
+
+export default ProjectsSection;

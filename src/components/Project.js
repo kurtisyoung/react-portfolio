@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 const ProjectTemplate = styled.div`
@@ -170,13 +171,75 @@ const MobileContainer = styled.div`
   }
 `
 
-export {
-  ProjectTemplate,
-  Title,
-  Banner,
-  InfoContainer,
-  DetailList,
-  StyledButton,
-  VideoContent,
-  MobileContainer,
+const Template = ({
+  title, 
+  banner,
+  paragraph,
+  buttonLink,
+  videoSrc,
+  iphone,  
+  details = []
+}) => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  const bannerImage = { backgroundImage: `url('${banner}')` }
+
+  return (
+    <ProjectTemplate>
+      <div className="container">
+        <Title>{title}</Title>
+      </div>
+      <Banner style={bannerImage} />
+      <InfoContainer>
+        <div className="flex-item flex-half">
+          <p dangerouslySetInnerHTML={{ __html: paragraph }} />
+        </div>
+        <div className="flex-item flex-half">
+          <DetailList>
+            {
+              details.map((detail, index) => (
+                <li key={index}>
+                  <p className="title">{detail.title}</p>
+                  <p
+                    className="content"
+                    dangerouslySetInnerHTML={{ __html: detail.content }}
+                  />
+                </li>
+              ))
+            }
+          </DetailList>
+        </div>
+      </InfoContainer>
+      <StyledButton href={buttonLink} target="_blank">
+        View Website
+      </StyledButton>
+      <VideoContent>
+        <div className="img-wrapper">
+          <video loop muted playsInline autoPlay>
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <img src="/assets/img/desktop.svg" alt="Desktop" />
+        </div>
+      </VideoContent>
+      <MobileContainer>
+        {
+          iphone.map((phone, index) => (
+            <div className="mobile-wrapper" key={index}>
+              <img className="screenshot" src={phone} alt="" />
+              <img
+                className="iphone"
+                src="/assets/img/iphone.svg"
+                alt="iPhone"
+              />
+            </div>
+          ))
+        }
+      </MobileContainer>
+    </ProjectTemplate>
+  )
 }
+
+export default Template
