@@ -5,7 +5,7 @@ import quotes from './src/data/quotes';
 
 export default {
   getSiteProps: () => ({
-    title: 'Kurits Young - Portfolio',
+    title: 'Kurits Young - Software Developer',
   }),
   getRoutes: async () => {
     return [
@@ -24,8 +24,8 @@ export default {
   Document: ({ Html, Head, Body, children, siteProps, renderMeta }) => (
     <Html lang="en-US">
       <Head>
-        <title>Kurtis Young - Front End Developer</title>
-        <meta name="description" content="Vancouver based Front End Developer" />
+        <title>Kurtis Young - Software Developer</title>
+        <meta name="description" content="Vancouver based Software Developer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
         <meta httpquiv="X-UA-Compatible" content="IE=edge,chrome=1" />

@@ -1,5 +1,76 @@
 export default [
   {
+    name: `Arc'teryx Catalog Display Pages`,
+    slug: 'arcteryx-cdps',
+    banner: '/assets/img/arcteryx/arcteryx-banner-alt.jpg',
+    paragraph: `At Arc'teryx my team's focus was migrating the Catalog Display Page (CDP) to a new merchandising platform called FredHopper. At a high level this required us to rebuild the CDP using React and connect it to the new FredHopper API. The CDP had a lot of different functionality that we as a team had to take into account. The revamp of the CDP affected all 4 of our markets (Arc'teryx, Outlet, Veilance and LEAF).
+    <br/><br/>
+    The most complicated piece to build was the Filter Bar component. Each CDP has different products and filters per collection or category. A user should be able to click a filter category and selected a filter facet to narrow down the products they are looking for. I worked closely with another developer to ensure that the Filter Bar component worked seamlessly in all scenarios. The key challenge was maintaining the different states and data of the Filter Bar when a new query was sent to FredHopper to get the correct product data back.
+    <br/><br/>
+    Another key piece was the Compare Bar component. When a user clicks compare on a product tile, it will add a product to the Compare Bar. A user can select up to 3 products to compare. I had a lot of fun working on the UI and animations of this component. The old version of this component was very bulky and definitely hampered user experience (UX).
+    `,
+    details: [
+      {
+        name: 'Company',
+        content: `Arc'teryx`,
+      },
+      {
+        name: 'Markets',
+        content: `Arc'teryx, Outlet, Veilance, LEAF`,
+      },
+      {
+        name: 'Year',
+        content: '2021',
+      },
+      {
+        name: 'Role',
+        content: 'Software Developer',
+      },
+      {
+        name: 'Catalog Display Pages (CDPs)',
+        content: `
+          <span class="market-title">Arc'teryx:</span>
+          <br/>
+          <a href="https://arcteryx.com/ca/en/c/mens/shell-jackets" target="_blank" rel="noopener noreferrer">arcteryx.com/ca/en/c/mens/shell-jackets</a>
+          <br/>
+          <span class="market-title">Outlet:</span>
+          <br/>
+          <a href="https://outlet.arcteryx.com/ca/en/c/mens/shell-jackets" target="_blank" rel="noopener noreferrer">outlet.arcteryx.com/ca/en/c/mens/shell-jackets</a>
+          <br/>
+          <span class="market-title">Veilance:</span>
+          <br/>
+          <a href="https://veilance.com/ca/en/c/fall-winter-collection" target="_blank" rel="noopener noreferrer">veilance.com/ca/en/c/fall-winter-collection</a>
+          <br/>
+          <span class="market-title">LEAF:</span>
+          <br/>
+          <a href="https://leaf.arcteryx.com/ca/en/c/combat-uniforms" target="_blank" rel="noopener noreferrer">leaf.arcteryx.com/ca/en/c/combat-uniforms</a>
+          <br/>
+        `,
+      },
+      {
+        name: 'Tech Stack',
+        content: 'React JS, Next JS, Redux, GraphQL, JavaScript, Styled Components, Storybook, Fastly, AWS',
+      },
+      {
+        name: 'APIs',
+        content: 'FredHopper, Magento',
+      },
+    ],
+    buttonLink: 'https://arcteryx.com/',
+    videoSrc: '/assets/video/arcteryx-video.mp4',
+    iphone: [
+      '/assets/img/arcteryx/arcteryx-mobile-1.jpg',
+      '/assets/img/arcteryx/arcteryx-mobile-2.jpg',
+      '/assets/img/arcteryx/arcteryx-mobile-3.jpg',
+    ],
+    websiteImg: '/assets/img/arcteryx/arcteryx-project.jpg',
+    year: '2021',
+    company: `Arc'teryx`,
+    tech: 'React',
+    role: 'Developer',
+    color: 'var(--color-arcteryx)',
+  },
+  {
     name: 'Aurora Corporate',
     slug: 'aurora-corporate',
     banner: '/assets/img/auroracorp/auroracorp-banner.jpg',
@@ -41,11 +112,12 @@ export default [
       '/assets/img/auroracorp/auroracorp-mobile-2.jpg',
       '/assets/img/auroracorp/auroracorp-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/auroracorp-project.jpg',
+    websiteImg: '/assets/img/auroracorp/auroracorp-project.jpg',
     year: '2020',
     company: 'Aurora',
     tech: 'React',
     role: 'Manager',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'Aurora Medical',
@@ -92,11 +164,12 @@ export default [
       '/assets/img/auroramed/auroramed-mobile-2.jpg',
       '/assets/img/auroramed/auroramed-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/auroramed-project.jpg',
+    websiteImg: '/assets/img/auroramed/auroramed-project.jpg',
     year: '2020',
     company: 'Aurora',
     tech: 'React',
     role: 'Manager',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'The Daily Special',
@@ -139,11 +212,12 @@ export default [
       '/assets/img/dailyspecial/dailyspecial-mobile-2.jpg',
       '/assets/img/dailyspecial/dailyspecial-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/dailyspecial-project.jpg',
+    websiteImg: '/assets/img/dailyspecial/dailyspecial-project.jpg',
     year: '2020',
     company: 'Aurora',
     tech: 'React',
     role: 'Manager',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'Aurora Europe',
@@ -167,7 +241,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Manager, Web Developer & UX/UI Designer',
+        content: 'Manager, Software Developer & UX/UI Designer',
       },
       {
         name: 'Website',
@@ -186,11 +260,12 @@ export default [
       '/assets/img/auroraeurope/auroraeurope-mobile-2.jpg',
       '/assets/img/auroraeurope/auroraeurope-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/auroraeurope-project.jpg',
+    websiteImg: '/assets/img/auroraeurope/auroraeurope-project.jpg',
     year: '2020',
     company: 'Aurora',
     tech: 'React',
     role: 'Manager',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'Aurora Cannabis Store',
@@ -233,11 +308,12 @@ export default [
       '/assets/img/acs/acs-mobile-2.jpg',
       '/assets/img/acs/acs-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/acs-project.jpg',
+    websiteImg: '/assets/img/acs/acs-project.jpg',
     year: '2019',
     company: 'Aurora',
     tech: 'React',
     role: 'Developer',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'Aurora Investor',
@@ -258,7 +334,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -277,11 +353,12 @@ export default [
       '/assets/img/investor/investor-mobile-2.jpg',
       '/assets/img/investor/investor-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/investor-project.jpg',
+    websiteImg: '/assets/img/investor/investor-project.jpg',
     year: '2019',
     company: 'Aurora',
     tech: 'React',
     role: 'Developer',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'Aurora Comox',
@@ -304,7 +381,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer & UX/UI Designer',
+        content: 'Software Developer & UX/UI Designer',
       },
       {
         name: 'Website',
@@ -323,11 +400,12 @@ export default [
       '/assets/img/comox/comox-mobile-2.jpg',
       '/assets/img/comox/comox-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/comox-project.jpg',
+    websiteImg: '/assets/img/comox/comox-project.jpg',
     year: '2019',
     company: 'Aurora',
     tech: 'React',
     role: 'Developer',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'San Rafael 71',
@@ -352,7 +430,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -371,11 +449,12 @@ export default [
       '/assets/img/sanraf/sanraf-mobile-2.jpg',
       '/assets/img/sanraf/sanraf-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/sanraf-project.jpg',
+    websiteImg: '/assets/img/sanraf/sanraf-project.jpg',
     year: '2018',
     company: 'Aurora',
     tech: 'React',
     role: 'Developer',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'AltaVie',
@@ -400,7 +479,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -419,11 +498,12 @@ export default [
       '/assets/img/altavie/altavie-mobile-2.jpg',
       '/assets/img/altavie/altavie-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/altavie-project.jpg',
+    websiteImg: '/assets/img/altavie/altavie-project.jpg',
     year: '2018',
     company: 'Aurora',
     tech: 'React',
     role: 'Developer',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'AuroraCann',
@@ -444,7 +524,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -463,11 +543,12 @@ export default [
       '/assets/img/auroracann/auroracann-mobile-2.jpg',
       '/assets/img/auroracann/auroracann-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/auroracann-project.jpg',
+    websiteImg: '/assets/img/auroracann/auroracann-project.jpg',
     year: '2018',
     company: 'Aurora',
     tech: 'React',
     role: 'Developer',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'Aurora Nordic',
@@ -488,7 +569,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -507,11 +588,12 @@ export default [
       '/assets/img/auroranordic/auroranordic-mobile-2.jpg',
       '/assets/img/auroranordic/auroranordic-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/auroranordic-project.jpg',
+    websiteImg: '/assets/img/auroranordic/auroranordic-project.jpg',
     year: '2018',
     company: 'Aurora',
     tech: 'React',
     role: 'Developer',
+    color: 'var(--color-aurora)',
   },
   {
     name: 'Juneau By Amacon',
@@ -536,7 +618,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -556,11 +638,12 @@ export default [
       '/assets/img/juneau/juneau-mobile-2.jpg',
       '/assets/img/juneau/juneau-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/project-juneau.jpg',
+    websiteImg: '/assets/img/juneau/juneau-project.jpg',
     year: '2018',
     company: 'BAM',
     tech: 'Vue',
     role: 'Developer',
+    color: 'var(--color-bam)',
   },
   {
     name: 'Landmark On Robson',
@@ -585,7 +668,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -605,11 +688,12 @@ export default [
       '/assets/img/landmark/landmark-mobile-2.jpg',
       '/assets/img/landmark/landmark-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/project-landmark.jpg',
+    websiteImg: '/assets/img/landmark/landmark-project.jpg',
     year: '2018',
     company: 'BAM',
     tech: 'Vue',
     role: 'Developer',
+    color: 'var(--color-bam)',
   },
   {
     name: 'Gryphon Development',
@@ -633,7 +717,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -653,11 +737,12 @@ export default [
       '/assets/img/gryphon/gryphon-mobile-2.jpg',
       '/assets/img/gryphon/gryphon-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/project-gryphon.jpg',
+    websiteImg: '/assets/img/gryphon/gryphon-project.jpg',
     year: '2018',
     company: 'BAM',
     tech: 'Vue',
     role: 'Developer',
+    color: 'var(--color-bam)',
   },
   {
     name: 'Elenore On Fifth',
@@ -682,7 +767,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer',
+        content: 'Software Developer',
       },
       {
         name: 'Website',
@@ -701,11 +786,12 @@ export default [
       '/assets/img/elenore/elenore-mobile-2.jpg',
       '/assets/img/elenore/elenore-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/project-elenore.jpg',
+    websiteImg: '/assets/img/elenore/elenore-project.jpg',
     year: '2017',
     company: 'BAM',
     tech: 'Vue',
     role: 'Developer',
+    color: 'var(--color-bam)',
   },
   {
     name: 'Salt Digital',
@@ -729,7 +815,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer & UX/UI Designer',
+        content: 'Software Developer & UX/UI Designer',
       },
       {
         name: 'Website',
@@ -753,11 +839,12 @@ export default [
       '/assets/img/salt/salt-mobile-2.jpg',
       '/assets/img/salt/salt-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/project-salt.jpg',
+    websiteImg: '/assets/img/salt/salt-project.jpg',
     year: '2017',
     company: 'Freelance',
     tech: 'jQuery',
     role: 'Developer',
+    color: 'var(--color-freelance)',
   },
   {
     name: 'McColl Therapy',
@@ -781,7 +868,7 @@ export default [
       },
       {
         name: 'Role',
-        content: 'Web Developer & UX/UI Designer',
+        content: 'Software Developer & UX/UI Designer',
       },
       {
         name: 'Website',
@@ -805,10 +892,11 @@ export default [
       '/assets/img/mccoll/mccoll-mobile-2.jpg',
       '/assets/img/mccoll/mccoll-mobile-3.jpg',
     ],
-    websiteImg: '/assets/img/home/project-mccoll.jpg',
+    websiteImg: '/assets/img/mccoll/mccoll-project.jpg',
     year: '2016',
     company: 'Freelance',
     tech: 'WordPress',
     role: 'Developer',
+    color: 'var(--color-freelance)',
   },
 ]

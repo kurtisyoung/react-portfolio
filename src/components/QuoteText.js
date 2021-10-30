@@ -70,8 +70,8 @@ const QuoteText = ({
         <QuotationMark>”</QuotationMark>
       </StyledQuoteText>
       <Author>
-        <Colour style={{ color }}>{author}</Colour>
-        <Shadow style={{ transform: `translate3d(${(x / 10) - 30}px,${(y / 10) - 10}px,0)`}}>{author}</Shadow>
+        <Colour>{author}</Colour>
+        <Shadow style={{ color, transform: `translate3d(${(x / 10) - 30}px,${(y / 10) - 10}px,0)`}}>{author}</Shadow>
       </Author>
     </QuoteWrapper>
   )

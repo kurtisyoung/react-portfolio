@@ -80,8 +80,10 @@ const DetailList = styled.ul`
   .title {
     font-size: 0.75rem;
     font-weight: bold;
-    opacity: 0.6;
-    color: var(--color-secondary);
+  }
+  .market-title {
+    font-size: 0.75rem;
+    font-weight: bold;
   }
   li {
     margin-bottom: 5px;
@@ -89,7 +91,6 @@ const DetailList = styled.ul`
 `;
 
 const StyledButton = styled.a`
-  /* background: linear-gradient(-134deg, #3fdfa4 0%, #3e45b9 100%); */
   background-color: ${props => props.color ? props.color : 'var(--color-secondary)'};
   padding: 15px 30px;
   position: fixed;
@@ -171,7 +172,8 @@ const Project = ({project: {
   paragraph,
   buttonLink,
   videoSrc,
-  iphone,  
+  iphone,
+  color,
   details = []
 }}) => {
   useEffect(() => {
@@ -181,7 +183,7 @@ const Project = ({project: {
   return (
     <ProjectTemplate>
       <div className="container">
-        <Title>{name}</Title>
+        <Title style={{ color }}>{name}</Title>
       </div>
       <Banner style={{ backgroundImage: `url('${banner}')` }} />
       <InfoContainer>
@@ -193,7 +195,7 @@ const Project = ({project: {
             {
               details.map((detail, index) => (
                 <li key={index}>
-                  <p className="title">{detail.name}</p>
+                  <p className="title" style={{ color }}>{detail.name}</p>
                   <p
                     className="content"
                     dangerouslySetInnerHTML={{ __html: detail.content }}
@@ -204,7 +206,7 @@ const Project = ({project: {
           </DetailList>
         </div>
       </InfoContainer>
-      <StyledButton href={buttonLink} target="_blank">
+      <StyledButton href={buttonLink} target="_blank" color={color}>
         View Website
       </StyledButton>
       <VideoContent>

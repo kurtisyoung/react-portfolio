@@ -341,19 +341,13 @@ const HeroSection = (props) => {
           className="k k-shadow"
           parallaxData={shadowParallax} // your parallax effects, see beneath
         >
-          <img
-            src="/assets/img/home/k-shadow.svg"
-            alt="K"
-          />
+          <img src="/assets/img/k-shadow.svg" alt="K" />
         </Plx>
         <Plx
           className="k k-color"
           parallaxData={gradParallax} // your parallax effects, see beneath
         >
-          <img
-            src="/assets/img/home/k-color.svg"
-            alt="K"
-          />
+          <img src="/assets/img/k-color.svg" alt="K" />
         </Plx>
       </StyledContentContainer>
     </StyledContainer>

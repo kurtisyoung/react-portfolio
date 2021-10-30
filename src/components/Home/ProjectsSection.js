@@ -6,10 +6,10 @@ import styled from 'styled-components';
 const ProjectContainer = styled.div`
   width: 100%;
   height: 100%;
-  background: var(--color-primary);
   padding: 50px 0;
   position: relative;
   z-index: 0;
+  transition: background-color 100ms ease-in;
   h2 {
     font-family: var(--font-title);
     font-weight: bold;
@@ -116,15 +116,6 @@ const ProjectCompany = styled.span`
   font-weight: bold;
   left: 0;
   top: -14px;
-  &.Aurora {
-    color: var(--color-aurora);
-  }
-  &.BAM {
-    color: var(--color-bam);
-  }
-  &.Freelance {
-    color: var(--color-freelance);
-  }
 `
 
 const ProjectsSection = ({ projects }) => {
@@ -143,7 +134,7 @@ const ProjectsSection = ({ projects }) => {
   const _sectionEnter = (index) => setProjectPosition(index);
 
   return (
-    <ProjectContainer>
+    <ProjectContainer style={{ backgroundColor: projects[projectPosition].color}}>
       <div className="container">
         <h2>Projects</h2>
       </div>
@@ -160,9 +151,7 @@ const ProjectsSection = ({ projects }) => {
           >
             {projects[projectPosition].name}
             <ProjectYear>{projects[projectPosition].year}</ProjectYear>
-            <ProjectCompany
-              className={projects[projectPosition].company}
-            >
+            <ProjectCompany style={{ color: projects[projectPosition].color }} >
               {projects[projectPosition].company}
             </ProjectCompany>
           </ProjectName>

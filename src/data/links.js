@@ -1,3 +1,10 @@
+export const arcteryxLinks = [
+  {
+    link: '/arcteryx-cdps',
+    name: 'Arcteryx Catalog Display Pages',
+  }
+]
+
 export const auroraLinks = [
   {
     link: '/aurora-corporate',
@@ -70,7 +77,7 @@ export const freelanceLinks =  [
     name: 'Salt Digital',
   },
   {
-    link: '/mccoll',
+    link: '/mccoll-therapy',
     name: 'McColl Therapy',
   },
 ]

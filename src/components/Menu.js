@@ -1,7 +1,7 @@
-import React from 'react'
-import { NavLink } from 'react-static'
-import styled from 'styled-components'
-import { auroraLinks, bamLinks, freelanceLinks, externalLinks } from '../data/links'
+import React from 'react';
+import { NavLink } from 'react-static';
+import styled from 'styled-components';
+import { arcteryxLinks, auroraLinks, bamLinks, freelanceLinks, externalLinks } from '../data/links';
 
 const GridContainer = styled.div`
   display: grid;
@@ -79,15 +79,39 @@ const MenuList = styled.ul`
         display: inline-block;
         color: var(--color-secondary);
         @media (min-width: 768px) {
-          font-size: 25px;
+          font-size: 20px;
         }
+      }
+      &.active.aurora {
+        color: var(--color-aurora);
+      }
+      &.active.arcteryx {
+        color: var(--color-arcteryx);
+      }
+      &.active.bam {
+        color: var(--color-bam);
+      }
+      &.active.freelance {
+        color: var(--color-freelance);
       }
       @media (min-width: 1024px) {
         &:hover {
-          font-size: 25px;
+          font-size: 20px;
           font-weight: 700;
           display: inline-block;
           color: var(--color-secondary);
+        }
+        &.aurora:hover {
+          color: var(--color-aurora);
+        }
+        &.arcteryx:hover {
+          color: var(--color-arcteryx);
+        }
+        &.bam:hover {
+          color: var(--color-bam);
+        }
+        &.freelance:hover {
+          color: var(--color-freelance);
         }
       }
     }
@@ -135,10 +159,14 @@ const CategoryTitle = styled.h3`
   }
   &.bam {
     color: var(--color-bam);
+    margin-top: 40px;
   }
   &.freelance {
     color: var(--color-freelance);
     margin-top: 40px;
+  }
+  &.arcteryx {
+    color: var(--color-arcteryx);
   }
 `
 
@@ -171,6 +199,7 @@ const Menu = ({ active, closeMenu }) => {
                   onClick={closeMenu}
                   to={item.link}
                   activeClassName="active"
+                  className="aurora"
                 >
                   {item.name}
                 </NavLink>
@@ -179,6 +208,22 @@ const Menu = ({ active, closeMenu }) => {
           </MenuList>
         </GridItem>
         <GridItem>
+          <CategoryTitle className="arcteryx">Arc'teryx</CategoryTitle>
+          <MenuList className="main">
+            {arcteryxLinks.map((item, index) => (
+              <li key={index}>
+                <NavLink
+                  exact
+                  onClick={closeMenu}
+                  to={item.link}
+                  activeClassName="active"
+                  className="arcteryx"
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
+          </MenuList>
           <CategoryTitle className="bam">BAM</CategoryTitle>
           <MenuList className="main">
             {bamLinks.map((item, index) => (
@@ -188,6 +233,7 @@ const Menu = ({ active, closeMenu }) => {
                   onClick={closeMenu}
                   to={item.link}
                   activeClassName="active"
+                  className="bam"
                 >
                   {item.name}
                 </NavLink>
@@ -203,6 +249,7 @@ const Menu = ({ active, closeMenu }) => {
                   onClick={closeMenu}
                   to={item.link}
                   activeClassName="active"
+                  className="freelance"
                 >
                   {item.name}
                 </NavLink>
