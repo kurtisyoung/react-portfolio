@@ -7,6 +7,7 @@ export default {
   getSiteProps: () => ({
     title: 'Kurits Young - Software Developer',
   }),
+  siteRoot: 'https://kurtisyoung.ca',
   getRoutes: async () => {
     return [
       {
@@ -43,7 +44,6 @@ export default {
           ga('send', 'pageview');`,
           }}
         />
-        {renderMeta.styleTags}
       </Head>
       <Body>
         {children}
